@@ -33,10 +33,12 @@ const ItConsultancy = () => {
         <li>Content Management Systems (CMS): WordPress, Joomla, and custom CMS solutions</li>
       </ul>
 
-      {/* Get in Touch Button */}
-      <button onClick={handleGetInTouch} className="get-in-touch-button">
-        Get in Touch
-      </button>
+      {/* Button container for centering */}
+      <div className="button-container">
+        <button onClick={handleGetInTouch} className="get-in-touch-button">
+          Get in Touch
+        </button>
+      </div>
       
     </div>
   );

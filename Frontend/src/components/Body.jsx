@@ -4,15 +4,15 @@ import '../styles/Body.css';
 
 const images = [
   {
-    url: 'https://cdn.dribbble.com/userupload/3175370/file/original-9560edf6d021a75f7e780df9ff20a4e8.png?resize=1024x768',
+    url: 'https://media.istockphoto.com/id/2031594195/photo/devops-the-synchronization-concept-on-the-virtual-screen.webp?a=1&b=1&s=612x612&w=0&k=20&c=5V-JxYyyohyV0OBxF_83cF5ikDs1GvXn50axHhUNWfQ=',
     text: 'Welcome to Our Service',
   },
   {
-    url: 'https://cdn.dribbble.com/userupload/14973980/file/original-7d9c829d6f4fc38e06650144b2226184.png?resize=1024x768',
+    url: 'https://media.istockphoto.com/id/1158174820/photo/qa-quality-assurance-and-quality-control-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=g7fBIcIyBfRYdATMR2ugjWL5K8iE6-6nA7_1F9hWHIs=',
     text: 'Quality Assurance Guaranteed',
   },
   {
-    url: 'https://cdn.dribbble.com/userupload/10453555/file/original-96da84ad4ba17c8eb72b22f35f519dea.png?resize=1600x1200',
+    url: 'https://media.istockphoto.com/id/1983429400/photo/businessman-touching-standard-quality-control-certification-assurance-guarantee-for.webp?a=1&b=1&s=612x612&w=0&k=20&c=J6BODNPm4p8uBjUboGtMFytgcutfFwJOOeo_S3BYn5A=',
     text: 'Your Success is Our Priority',
   },
 ];

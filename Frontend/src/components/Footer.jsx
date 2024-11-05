@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css';
-
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -13,16 +12,17 @@ const Footer = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about-us">About Us</Link></li>
             <li><Link to="/contact-us">Contact Us</Link></li>
-            <li><Link to="/services">Services</Link></li> {/* Updated link */}
-            <li><Link to="/blogs">Blogs</Link></li> {/* Updated link */}
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h2 className="footer-heading">Contact Us</h2>
           <p>B2 Pune, Pune, India</p>
-          <p>Phone: +91 (812) 036-3091</p>
-          <p>Email: skylitedigitalsolutions@gmail.com</p>
+          <p>Phone: <a href="tel:+918120363091" className="contact-link">+91 (812) 036-3091</a></p>
+          <p>Email: <a href="mailto:skylitedigitalsolutions@gmail.com" className="contact-link">skylitedigitalsolutions@gmail.com</a></p>
+
         </div>
 
         <div className="footer-section">
