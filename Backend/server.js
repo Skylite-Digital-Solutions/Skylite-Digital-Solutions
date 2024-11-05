@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const { Parser } = require('json2csv');
 const contactRoutes = require("./routes/contactsRoutes");
+const Contact = require('./models/contact');
 
 // Load environment variables
 dotenv.config({path : './config.env'});
@@ -34,5 +36,37 @@ app.use('/api/contact', contactRoutes);
 app.get('/', (req,res) => {
   res.send("<h1>HI</h1>")
 })
+
+/// API endpoint to get data and return as CSV
+app.get('/api/contact/csv', async (req, res) => {
+  try {
+    // Fetch contacts from the database
+    const contact = await Contact.find().select('_id name email subject message createdAt'); // Ensure 'message' is used instead of 'contact'
+
+    // Check if contacts were found
+    if (contact.length === 0) {
+      return res.status(404).send('No contacts found');
+    }
+
+    // Define fields for CSV header
+    const fields = ['_id', 'name', 'email', 'subject', 'message', 'createdAt'];
+
+    // Convert JSON data to CSV format
+    const json2csvParser = new Parser({ fields });
+    const csv = json2csvParser.parse(contact);
+
+    // Set response headers to prompt download of CSV
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', 'attachment; filename=contacts.csv'); // Updated filename to reflect contact data
+    res.setHeader('Content-Length', Buffer.byteLength(csv)); // Set content length
+
+    // Send CSV file in response
+    res.send(csv);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 // Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
