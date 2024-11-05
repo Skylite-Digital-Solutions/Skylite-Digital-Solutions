@@ -34,7 +34,7 @@ const SoftwareDev = () => {
         </li>
       </ul>
 
-    <div className="footer">
+    <div className="footer-container">
       <p>
       With our extensive experience, dedication to quality, and cutting-edge technology stack, we bring your digital vision to life. Let us help you create an online presence that drives engagement, supports growth, and elevates your business.
       </p>
