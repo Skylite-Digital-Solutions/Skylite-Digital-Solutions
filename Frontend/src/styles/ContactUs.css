@@ -2,7 +2,8 @@
 
 /* General Contact Us Container */
 .contact-us-container {
-  background-color: #1a1a1a;
+  background: radial-gradient(#d1cbcb, #444040, #1f1e1d);
+  /* background: conic-gradient(#ff7e5f, #feb47b, #ff7e5f); */
   color: #ffffff;
   padding: 0 20px;
   display: flex;

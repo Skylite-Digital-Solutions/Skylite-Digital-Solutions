@@ -1,6 +1,6 @@
 /* Container style for the Software Development component */
 .QualityAssurance {
-  background-color: rgb(18, 18, 58); /* Dark background */
+  background: linear-gradient(to bottom, #231f41 20%, #042535 55%);
   padding: 20px;
   border-radius: 8px;
   width: 97%;
@@ -54,9 +54,8 @@
   margin-top: 20px;
 }
 
-/* Button styles */
 .get-in-touch-button {
-  background-color: #007bff; /* Primary button color */
+  background-color: #7969a0; /* Primary button color */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -68,7 +67,7 @@
 }
 
 .get-in-touch-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background: linear-gradient(to bottom, #231f41 40%, #8caab9 100%); /* Darker blue on hover */
   color: yellowgreen; /* Accent color on hover */
   transform: scale(1.05);
 }

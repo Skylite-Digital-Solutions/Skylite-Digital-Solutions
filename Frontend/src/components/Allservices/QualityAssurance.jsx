@@ -47,7 +47,7 @@ const QualityAssurance = () => {
         </li>
       </ul>
 
-    <div className="footer">
+    <div className="footer-container">
       <p>
       Our Quality Assurance expertise ensures secure, reliable, and high-performance software that aligns seamlessly with your business needs. From automated and 
       manual testing to API validation and security assessments, we utilize top-tier technologies like Selenium, Appium, and Burp Suit to safeguard every aspect 
