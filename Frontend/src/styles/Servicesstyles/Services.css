@@ -4,50 +4,74 @@
     color: black;
 }
 
+/* Container for service cards, ensuring only two cards per row */
 .service-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 10px; /* Space between cards */
 }
 
 .service-card {
-    background-color: #261e4d;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: rgb(18, 18, 58); /* Dark background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
     padding: 20px;
     margin: 10px;
-    width: 250px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    flex: 0 1 calc(50% - 40px); /* Two cards per row with margin */
+    max-width: 450px; /* Optional max width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    color: #f9f9f9;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Style for the heading (h2) */
+.service-card h2 {
+    font-size: 24px;
+    color: #f0a500;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Style for the paragraph (p) */
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 15px;
 }
 
 .service-card:hover {
     transform: scale(1.05);
 }
 
-.service-card h2 {
-    margin-top: 0;
+/* Button style within service card */
+.service-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: center; /* Center button horizontally */
+    margin-top: auto; /* Push button to the bottom */
 }
 
-.service-card button, /* General button styles for service cards */
-.get-in-touch-button { /* Specific styles for the "Get in Touch" button */
-    background-color: #007bff; /* Primary button color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+.service-card button:hover {
+    background-color: rgb(18, 18, 58);
+    color: #f0a500;
+    transform: scale(1.05);
 }
 
-.service-card button:hover, /* Hover effect for service card buttons */
-.get-in-touch-button:hover { /* Hover effect for the "Get in Touch" button */
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: scale(1.05); /* Scale effect on hover */
-}
-
-/* Additional style for the "Get in Touch" button if needed */
-.get-in-touch-button {
-    margin-top: 20px; /* Add space above the button */
+/* Media query for smaller screens to display one card per row */
+@media (max-width: 768px) {
+    .service-card {
+        flex: 0 1 100%; /* Full width on smaller screens */
+    }
 }

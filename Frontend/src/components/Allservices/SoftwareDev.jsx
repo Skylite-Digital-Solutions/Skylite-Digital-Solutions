@@ -10,26 +10,35 @@ const SoftwareDev = () => {
   };
 
   return (
-    <div className="SoftwareDev" style={{ color: "black" }}>
+    <div className="SoftwareDev">
       <h2>Our Software Development Services</h2>
       <p>
-        We provide comprehensive software development services tailored to meet your business needs. 
-        Our experienced team specializes in building scalable and robust solutions.
+        At <strong>Skylite Digital Solitions</strong>, we empower businesses with expert Web Development services designed to deliver impactful digital experiences. We specialize in creating fast, responsive, and scalable websites and applications that cater to your unique goals. Leveraging the latest technologies like React, Angular, Vue.js for frontend, and Node.js, Express, and Python for backend, we ensure a seamless, robust, and user-friendly interface across all devices.
       </p>
-      
-      <h3>Technologies Used:</h3>
-      <ul>
-        <li><strong>Frontend</strong>: React.js, Angular, Vue.js</li>
-        <li><strong>Backend</strong>: Node.js, Express.js, Python, Ruby</li>
-        <li><strong>Database</strong>: MySQL, PostgreSQL, MongoDB</li>
+      <ul className="keyfeature-list">
+        <h3>Key Features and Expertise in Development</h3>
+          <li>
+          <strong>Custom Development</strong>: We create web solutions uniquely crafted to reflect your brand identity and meet your specific requirements. From user experience to backend functionality, every detail is designed to enhance your business.
+        </li>
+        <li>
+          <strong>Responsive Design</strong>: Our websites are optimized to provide a seamless experience across all device types, ensuring accessibility for all users. This approach improves user engagement and helps retain visitors across platforms.
+        </li>
+        <li>
+          <strong>API Integration</strong>: We integrate third-party APIs to add essential features and boost your site's capabilities. This allows your website to interact seamlessly with external services, providing a more dynamic user experience.
+        </li>
+        <li>
+          <strong>E-commerce Solutions</strong>: Our e-commerce platforms are built to deliver a secure and efficient shopping experience, supporting large transaction volumes with high performance. We design each aspect of the online store for intuitive navigation, simplifying the shopping process from product browsing to final purchase.
+        </li>
+        <li>
+          <strong>Security and Compliance</strong>: We implement robust security protocols to safeguard your data and maintain user trust. Our solutions also adhere to industry standards and compliance regulations, ensuring full legal alignment
+        </li>
       </ul>
-  
-      <h4>Our Services Include:</h4>
-      <ul>
-        <li>Custom Software Development</li>
-        <li>Mobile App Development</li>
-        <li>API Development and Integration</li>
-      </ul>
+
+    <div className="footer">
+      <p>
+      With our extensive experience, dedication to quality, and cutting-edge technology stack, we bring your digital vision to life. Let us help you create an online presence that drives engagement, supports growth, and elevates your business.
+      </p>
+    </div>
 
       {/* Button container for centering */}
       <div className="button-container">

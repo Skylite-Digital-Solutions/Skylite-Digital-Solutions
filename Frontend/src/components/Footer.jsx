@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="footer-section">
           <h2 className="footer-heading">Follow Us</h2>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.facebook.com/profile.php?id=61568246071759" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
             <a href="https://www.linkedin.com/company/skylite-digital-solutions/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
