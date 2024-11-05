@@ -1,0 +1,116 @@
+/* styles/ContactUs.css */
+
+/* General Contact Us Container */
+.contact-us-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.contact-us-heading {
+  font-size: 2rem;
+  color: #f0a500;
+  margin-bottom: 5px;
+}
+
+.contact-us-description,
+.contact-us-description-1 {
+  max-width: 600px;
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #f0a500;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea,
+.submit-button {
+  width: 100%; /* Set width to 100% for uniformity */
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #333333;
+  background-color: #333333;
+  color: #ffffff;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f0a500;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background-color: #f0a500;
+  color: #1a1a1a;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e59400;
+}
+
+.submit-status {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Global Location Container */
+.global-location-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #262626;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+}
+
+.global-location-heading {
+  font-size: 1.8rem;
+  color: #f0a500;
+  margin-bottom: 15px;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  border: none;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

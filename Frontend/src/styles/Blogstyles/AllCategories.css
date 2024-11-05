@@ -1,0 +1,98 @@
+/* Style for the entire Digital Marketing and SEO component container */
+.AllCategories {
+  background-color: #a54343; /* Light background for readability */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Expand to full width */
+  max-width: 97.5%; /* Remove max width constraint */
+  margin: 20px 0; /* Centered margin removed for full-width */
+  color: #333333; /* Text color for readability */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Main title style */
+.AllCategories h2 {
+  font-size: 40px;
+  color: #2d3748; /* Darker color for title emphasis */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Introductory paragraph style */
+.AllCategories p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #080808; /* Dark grey for easy reading */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Blog container */
+.blogs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%; /* Expand to full width */
+  max-width: 97%; /* Remove max width constraint */
+  margin: 0 auto; /* Centering the grid */
+}
+
+/* Blog item styling */
+.blog-item {
+  background-color: #1b1736;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog title */
+.blog-title {
+  font-size: 1.5rem;
+  color: #f0a500;
+  margin: 0 0 10px;
+}
+
+/* Blog summary */
+.blog-summary {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 10px 0;
+}
+
+/* Read more button */
+.read-more {
+  display: inline-block;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #f0a500;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: auto; /* Optional: adjust as needed */
+  min-width: 120px; /* Optional: set a minimum width */
+  text-align: center; /* Ensures text alignment */
+}
+
+.read-more:hover {
+  background-color: #e59400;
+  color: #fff; /* Change text color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blogs-list {
+    grid-template-columns: 1fr;
+  }
+}

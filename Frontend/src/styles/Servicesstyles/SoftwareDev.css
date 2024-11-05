@@ -1,0 +1,81 @@
+/* Style for the entire Software Development component container */
+.SoftwareDev {
+    background-color: #f5f5f5; /* Light grey background for better readability */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333; /* Dark grey text color for readability */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Heading style for main title */
+  .SoftwareDev h2 {
+    font-size: 28px;
+    color: #2d3748; /* Darker shade for emphasis */
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the introductory paragraph */
+  .SoftwareDev p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5568; /* Slightly lighter grey */
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for Technology section heading */
+  .SoftwareDev h3 {
+    font-size: 22px;
+    color: #3182ce; /* Blue for visibility */
+    margin-top: 20px;
+  }
+  
+  /* List style for technologies and services */
+  .SoftwareDev ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  .SoftwareDev ul li {
+    font-size: 16px;
+    color: #4a5568; /* Same grey for consistency */
+    margin-bottom: 8px;
+  }
+  
+  /* Style for nested headings within the services section */
+  .SoftwareDev h4 {
+    font-size: 20px;
+    color: #2b6cb0; /* Darker blue for subtle emphasis */
+    margin-top: 20px;
+  }
+  
+  /* Emphasis on strong elements */
+  .SoftwareDev li strong {
+    color: #2d3748; /* Dark color to highlight strong text */
+  }
+  
+  .get-in-touch-button {
+    background-color: #007bff; /* Primary color */
+    color: white;               /* Text color */
+    border: none;               /* No border */
+    padding: 10px 20px;        /* Top/bottom and left/right padding */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    font-size: 16px;           /* Font size */
+    margin-top: 20px;          /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .get-in-touch-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: yellowgreen;
+  }
+  
+  .get-in-touch-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a custom focus shadow */
+  }
+  
