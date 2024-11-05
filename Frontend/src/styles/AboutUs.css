@@ -1,0 +1,114 @@
+.aboutus-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.aboutus-container,
+.vision-mission-container {
+  flex: 1;
+  min-width: 200px;
+  min-height: 76vh;
+  max-width: 48%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the aboutus-container */
+.aboutus-container:hover {
+  transform: scale(1.02); /* Slight scaling effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.vision-mission-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f8f9fa;
+}
+
+.vision, .mission {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover, .mission:hover {
+  transform: scale(1.03); /* Slight scaling effect */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.aboutus-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f0a500;
+}
+
+.accent-line {
+  width: 50px;
+  height: 4px;
+  background-color: #f0a500;
+  margin: 10px 0;
+}
+
+.aboutus-content,
+.our-vision,
+.our-mission {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: black;
+}
+
+.aboutus-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0f3358;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.aboutus-button:hover {
+  background-color: #0056b3;
+  color: #f0a500;
+}
+
+.our-vision-heading,
+.our-mission-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0a500;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .aboutus-page {
+    flex-direction: column;
+  }
+
+  .aboutus-container,
+  .vision-mission-container {
+    max-width: 100%;
+  }
+}
