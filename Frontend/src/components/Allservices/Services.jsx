@@ -18,9 +18,9 @@ const Services = () => {
                     <button onClick={() => alert("Get in touch clicked for Quality Assurance")}>Get in Touch</button>
                 </div>
                 <div className="service-card">
-                    <h2>IT Consultancy</h2>
-                    <p>We offer expert IT consultancy to help your business navigate the complexities of technology. Our solutions are designed to optimize your operations and drive growth.</p>
-                    <button onClick={() => alert("Get in touch clicked for IT Consultancy")}>Get in Touch</button>
+                    <h2>Blogs</h2>
+                    <p>Explore our insights and expertise through our blog. From tech trends to practical tips, we share knowledge to help you stay informed and make strategic technology decisions.</p>
+                    <button onClick={() => alert("Explore our blogs")}>Explore Blogs</button>
                 </div>
                 <div className="service-card">
                     <h2>Digital Marketing & SEO</h2>

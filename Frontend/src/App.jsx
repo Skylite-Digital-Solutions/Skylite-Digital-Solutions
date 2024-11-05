@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import SoftwareDev from './components/Allservices/SoftwareDev';
 import QualityAssurance from './components/Allservices/QualityAssurance';
 import DigitalSEO from './components/Allservices/DigitalSEO';
-import ItConsultancy from './components/Allservices/ItConsultancy';
 import AllCategories from './components/Blogscategory/AllCategories';
 import Services from './components/Allservices/Services';
 import Allservices from './components/Allservices/Services';
@@ -35,8 +34,8 @@ function App() {
             <Route path="all-services" element={<Services />} />
             <Route path="web-development" element={<SoftwareDev />} />
             <Route path="quality-assurance" element={<QualityAssurance />} />
-            <Route path="it-consultancy" element={<ItConsultancy />} />
             <Route path="digital-seo" element={<DigitalSEO />} />
+            <Route path='all-categories' element={<AllCategories />} />
           </Route>
 
           {/* Blog Routes */}

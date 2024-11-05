@@ -12,8 +12,7 @@ const Header = () => {
     { id: 1, name: 'All Services', url: '/services/all-services' },
     { id: 2, name: 'Web Development', url: '/services/web-development' },
     { id: 3, name: 'Quality Assurance', url: '/services/quality-assurance' },
-    { id: 4, name: 'IT Consultancy', url: '/services/it-consultancy' },
-    { id: 5, name: 'Digital Marketing & SEO', url: '/services/digital-seo' },
+    { id: 4, name: 'Digital Marketing & SEO', url: '/services/digital-seo' },
   ];
 
   // Blog Drop Down

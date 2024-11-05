@@ -1,91 +1,84 @@
-/* Style for the entire Software Development component container */
+/* Container style for the Software Development component */
 .SoftwareDev {
-  background-color: #c4baba; /* Light grey background for better readability */
+  background-color: rgb(18, 18, 58); /* Dark background */
   padding: 20px;
   border-radius: 8px;
-  width: 97%; /* Make the container full width */
-  margin: 20px 0; /* Adjust margin for top and bottom only */
-  color: #333; /* Dark grey text color for readability */
+  width: 97%;
+  margin: 20px 0;
+  color: white; /* White text color */
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  align-items: none; /* Center content horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
-
-/* Heading style for main title */
 .SoftwareDev h2 {
-  font-size: 28px;
-  color: #2d3748; /* Darker shade for emphasis */
-  margin-bottom: 10px;
+  color: #f0a500;
+  text-align: center;
 }
 
-/* Style for the introductory paragraph */
 .SoftwareDev p {
+  color: white;
+  text-align: left;
+}
+
+/* List styling */
+.keyfeature-list {
+  list-style-type: none;
+  padding: 20;
+  margin: 20px 0;
+  text-align: left;
+  color: white; /* White color for list items */
+}
+
+/* Keyfeature styling */
+.keyfeature-list h3 {
+  text-align: center;
+  color: #f0a500;
+}
+
+/* List item styling */
+.keyfeature-list li {
+  margin-bottom: 15px;
   font-size: 16px;
-  line-height: 1.6;
-  color: #4a5568; /* Slightly lighter grey */
-  margin-bottom: 20px;
 }
 
-/* Styling for Technology section heading */
-.SoftwareDev h3 {
-  font-size: 22px;
-  color: #3182ce; /* Blue for visibility */
-  margin-top: 20px;
+/* Emphasize strong text within list items */
+.keyfeature-list li strong {
+  color: #f0a500; /* White color for strong emphasis */
 }
 
-/* List style for technologies and services */
-.SoftwareDev ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-.SoftwareDev ul li {
-  font-size: 16px;
-  color: #4a5568; /* Same grey for consistency */
-  margin-bottom: 8px;
-}
-
-/* Style for nested headings within the services section */
-.SoftwareDev h4 {
-  font-size: 20px;
-  color: #2b6cb0; /* Darker blue for subtle emphasis */
-  margin-top: 20px;
-}
-
-/* Emphasis on strong elements */
-.SoftwareDev li strong {
-  color: #2d3748; /* Dark color to highlight strong text */
-}
-
+/* Button container for centering */
 .button-container {
-  display: flex;           /* Use flexbox for centering */
-  justify-content: center; /* Center child elements horizontally */
-  margin-top: 20px;       /* Add space above the button */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Button styles */
 .get-in-touch-button {
-  background-color: #007bff; /* Primary color */
-  color: white;               /* Text color */
-  border: none;               /* No border */
-  padding: 10px 20px;        /* Top/bottom and left/right padding */
-  border-radius: 5px;        /* Rounded corners */
-  cursor: pointer;            /* Pointer cursor on hover */
-  font-size: 16px;           /* Font size */
-  margin-top: 20px;          /* Space above the button */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .get-in-touch-button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
-  color: yellowgreen;         /* Change text color on hover */
-  transform: scale(1.05);     /* Slight scale effect on hover */
+  background-color: #0056b3; /* Darker blue on hover */
+  color: yellowgreen; /* Accent color on hover */
+  transform: scale(1.05);
 }
 
 .get-in-touch-button:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a custom focus shadow */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.footer {
+  text-align: left;
+  color: antiquewhite;
 }
