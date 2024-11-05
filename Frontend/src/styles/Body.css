@@ -1,6 +1,6 @@
 /* Main container for the slider */
 .slider-container {
-  width: 98.5vw;  /* Full viewport width */
+  width: 98.9vw;  /* Full viewport width */
   height: 90vh; /* Full viewport height */
   position: relative;
   overflow: hidden;

@@ -31,8 +31,12 @@ const SoftwareDev = () => {
         <li>API Development and Integration</li>
       </ul>
 
-      {/* Add the button that uses the handler */}
-      <button onClick={handleGetInTouch}>Get in Touch</button>
+      {/* Button container for centering */}
+      <div className="button-container">
+        <button onClick={handleGetInTouch} className="get-in-touch-button">
+          Get in Touch
+        </button>
+      </div>
     </div>
   );
 };

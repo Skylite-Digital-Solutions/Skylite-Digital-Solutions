@@ -4,7 +4,7 @@
   padding: 20px;
   border-radius: 8px;
   width: 100%; /* Expand to full width */
-  max-width: 97.5%; /* Remove max width constraint */
+  max-width: 97%; /* Remove max width constraint */
   margin: 20px 0; /* Centered margin removed for full-width */
   color: #333333; /* Text color for readability */
   font-family: Arial, sans-serif;

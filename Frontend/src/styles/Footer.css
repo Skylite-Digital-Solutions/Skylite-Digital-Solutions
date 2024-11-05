@@ -28,7 +28,19 @@
     margin-bottom: 15px;
     font-weight: bold;
   }
-  
+ 
+  /* Styles for phone and email links */
+.contact-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #f0a500;
+}
+
   /* Footer links */
   .footer-links {
     list-style: none;
