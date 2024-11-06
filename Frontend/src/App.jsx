@@ -11,6 +11,9 @@ import DigitalSEO from './components/Allservices/DigitalSEO';
 import AllCategories from './components/Blogscategory/AllCategories';
 import Services from './components/Allservices/Services';
 import Allservices from './components/Allservices/Services';
+import Ourservices from './Knowmore/Ourservices';
+import Quality from './Knowmore/Quality';
+import Success from './Knowmore/Success';
 
 
 function App() {
@@ -27,6 +30,13 @@ function App() {
             <Route path="about-us" element={<AboutUs />} />
             <Route path="blogs" element={<AllCategories />} />
             <Route path="/services" element={<Services />} />
+          </Route>
+
+          {/* { Body Routes} */}
+          <Route>
+            <Route path="our-services" element={<Ourservices />} />
+            <Route path="/quality" element={<Quality />} />
+            <Route path="/success" element={<Success />} />
           </Route>
 
           {/* Services Routes */}
