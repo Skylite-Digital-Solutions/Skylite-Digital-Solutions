@@ -1,0 +1,78 @@
+/* KnowMore.css */
+.Quality-container {
+    max-width: 100%;
+    background: linear-gradient(to top, #231f41 20%, #8caab9 85%); /* Light background for contrast */
+    border-radius: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+
+/* Container styling */
+.Quality-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #231f41 20%, #8caab9 85%); /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #0a0a0a;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Main title styling */
+  .Quality-container h2 {
+    font-size: 2.5rem;
+    color: #f0a500; /* Accent color for title */
+    margin-bottom: 20px;
+  }
+  
+  /* Subtitle styling */
+  .Quality-container h3 {
+    font-size: 1.75rem;
+    color: #f0a500;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraph styling */
+  .Quality-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  /* List styling */
+  .Quality-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Align list to the left */
+  }
+  
+  .Quality-container li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .Quality-container {
+      padding: 20px;
+    }
+  
+    .Quality-container h1 {
+      font-size: 2rem;
+    }
+  
+    .Quality-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .Quality-container p,
+    .Quality-container li {
+      font-size: 1rem;
+    }
+  }
+  

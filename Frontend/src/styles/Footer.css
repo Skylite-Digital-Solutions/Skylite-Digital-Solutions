@@ -6,82 +6,146 @@
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
-  }
-  
-  .footer-content {
+}
+
+/* Footer content flex container */
+.footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
-  }
-  
-  .footer-section {
+}
+
+/* Footer section styling */
+.footer-section {
     flex: 1;
     min-width: 200px;
     margin: 20px;
-  }
-  
-  /* Section headings */
-  .footer-heading {
+}
+
+/* Section headings */
+.footer-heading {
     font-size: 1.5rem;
     color: #f0a500; /* Gold accent color */
     margin-bottom: 15px;
     font-weight: bold;
-  }
- 
-  /* Styles for phone and email links */
+}
+
+/* Styles for phone and email links */
 .contact-link {
-  color: white;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .contact-link:hover {
-  color: #f0a500;
+    color: #f0a500;
 }
 
-  /* Footer links */
-  .footer-links {
+/* Footer links */
+.footer-links {
     list-style: none;
     padding: 0;
-    /* text-align: left;
-    margin-left: 145px; */
-  }
-  
-  .footer-links li {
+}
+
+.footer-links li {
     margin: 8px 0;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: #cccccc;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
+}
+
+.footer-links a:hover {
     color: #f0a500; /* Gold accent on hover */
-  }
-  
-  /* Social icons styling */
-  .social-icons a {
+}
+
+/* Social icons styling */
+.social-icons a {
     display: inline-block;
     color: #cccccc;
     margin: 5px 10px;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #f0a500;
-  }
-  
-  /* Bottom copyright section */
-  .footer-bottom {
+}
+
+/* Bottom copyright section */
+.footer-bottom {
     border-top: 1px solid #333333;
     padding-top: 15px;
     color: #cccccc;
     font-size: 0.9rem;
-  }
-  
+}
+
+/* Responsive Design */
+
+/* Tablet and smaller screens (up to 1024px) */
+@media (max-width: 1024px) {
+    .footer-content {
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        min-width: 150px;
+        margin: 15px;
+    }
+
+    .footer-heading {
+        font-size: 1.3rem;
+    }
+
+    .footer-links li {
+        margin: 6px 0;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
