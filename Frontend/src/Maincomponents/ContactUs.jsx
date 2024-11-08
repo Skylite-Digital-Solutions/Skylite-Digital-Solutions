@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/ContactUs.css';
+import '../styles/Mainstyles/ContactUs.css';
 import axios from 'axios';
 
 const ContactUs = () => {
@@ -116,6 +116,7 @@ const ContactUs = () => {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7960296849215!2d73.8567438146921!3d18.520430087400558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08993c17f97%3A0xf47e8cccb0de418!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1603130022210!5m2!1sen!2sus"
+            // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.7028746661747!2d77.6736743148269!3d12.841266390934012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c1b2062f0f9%3A0xa17dd070fa10636d!2sElectronic%20City%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1603130022210!5m2!1sen!2sin"
             width="100%"
             height="300"
             style={{ border: 0 }}

@@ -9,7 +9,7 @@ const contactRoutes = require("./routes/contactsRoutes");
 const Contact = require('./models/contact');
 
 // Load environment variables
-dotenv.config({path : './config.env'});
+dotenv.config({ path: './config.env' });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -33,9 +33,9 @@ mongoose
 // Routes
 app.use('/api/contact', contactRoutes);
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
   res.send("<h1>HI</h1>")
-})
+});
 
 /// API endpoint to get data and return as CSV
 app.get('/api/contact/csv', async (req, res) => {
@@ -66,6 +66,24 @@ app.get('/api/contact/csv', async (req, res) => {
     console.error(error);
     res.status(500).send('Internal Server Error');
   }
+});
+
+// Chatbot endpoint
+app.post('/api/chatbot', async (req, res) => {
+  const userMessage = req.body.message;
+
+  // Simple rule-based response for demonstration purposes
+  let botReply;
+  if (userMessage.toLowerCase().includes('hello')) {
+    botReply = 'Hello! How can I assist you today?';
+  } else if (userMessage.toLowerCase().includes('help')) {
+    botReply = 'Sure! Please tell me more about the help you need.';
+  } else {
+    botReply = 'I am here to help! Please ask me a question.';
+  }
+
+  // Send the response back to the client
+  res.json({ reply: botReply });
 });
 
 // Start server

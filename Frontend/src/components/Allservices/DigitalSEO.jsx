@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/ServicesStyles/SoftwareDev.css';
+import '../../styles/ServicesStyles/DigitalSEO.css';
 
 const DigitalSEO = () => {
   const navigate = useNavigate();

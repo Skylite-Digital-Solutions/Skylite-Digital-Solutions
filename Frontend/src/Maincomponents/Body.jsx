@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Body.css';
+import '../styles/Mainstyles/Body.css';
 
 const images = [
   {
