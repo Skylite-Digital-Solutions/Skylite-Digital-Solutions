@@ -1,6 +1,6 @@
 /* Style for the entire Digital Marketing and SEO component container */
 .AllCategories {
-  background: radial-gradient(#b9b8ae, #4b8372, #1f1e1d); /* Dark to light gradient */
+  background: radial-gradient(#141f1b, #174235, #5ef0c4); /* Dark to light gradient */
   padding: 20px;
   border-radius: 8px;
   width: 100%; /* Expand to full width */
@@ -40,7 +40,8 @@
 
 /* Blog item styling */
 .blog-item {
-  background: linear-gradient(to bottom, #231f41 40%, #8caab9 70%); /* Dark gradient for blog items */
+  background: linear-gradient(to bottom, #171146 40%, #0b0e20 70%); /* Dark gradient for blog items */
+  opacity: 85%;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
