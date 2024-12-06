@@ -56,13 +56,13 @@
 }
 
 .footer-links a {
-    color: #062157;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #f0a500;
+    color: #cccccc;
 }
 
 /* Social and Logo Section */
@@ -88,14 +88,14 @@
 }
 
 .social-icons a {
-    color: #062157;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #f0a500;
+    color: #cccccc;
 }
 
 /* Logo Image */
@@ -109,7 +109,7 @@
 .footer-bottom {
     border-top: 1px solid #333333;
     padding-top: 15px;
-    color: #062157;
+    color: #ffffff;
     font-size: 0.9rem;
 }
 

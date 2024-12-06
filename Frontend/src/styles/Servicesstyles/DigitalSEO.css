@@ -1,7 +1,7 @@
 /* Container style for the Software Development component */
 .DigitalSEO {
-  /* background: linear-gradient(to bottom, #231f41 20%, #042535 55%); */
-  background-color: #231f41;
+  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+  background-color: #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 99.9%;
@@ -13,13 +13,13 @@
   flex-direction: column;
 }
 .DigitalSEO h2 {
-  color: #f0a500;
+  color: #231f41;
   text-align: center;
   font-size: 2.5rem;
 }
 
 .DigitalSEO p {
-  color: white;
+  color: black;
   text-align: left;
   font-size: 0.9rem;
 }
@@ -30,14 +30,14 @@
   padding: 20;
   margin: 20px 0;
   text-align: left;
-  color: white; /* White color for list items */
+  color: black; /* White color for list items */
   font-size: 1.1rem;
 }
 
 /* Keyfeature styling */
 .keyfeature-list h3 {
   text-align: center;
-  color: #f0a500;
+  color: #231f41;
   font-size: 1.5rem;
 }
 
@@ -45,12 +45,12 @@
 .keyfeature-list li {
   margin-bottom: 15px;
   font-size: 16px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* Emphasize strong text within list items */
 .keyfeature-list li strong {
-  color: #f0a500; /* White color for strong emphasis */
+  color: #231f41; /* White color for strong emphasis */
   font-size: 1.2rem;
 }
 
