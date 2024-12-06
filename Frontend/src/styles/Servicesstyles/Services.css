@@ -1,19 +1,21 @@
 .services {
-    background: linear-gradient(to bottom, #231f41 20%, #8caab9 55%); /* Dark gradient for blog items */
+    /* background: linear-gradient(to bottom, #231f41 20%, #8caab9 55%); Dark gradient for blog items */
+    /* background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); */
+    background-color: #cccccc;
     padding: 20px;
     text-align: center;
 }
 .services h1 {
     padding: 20px;
     text-align: center;
-    color: #f0a500;
+    color: black;
     font-size: 220%
 }
 
 .services p {
     padding: 20px;
     text-align: center;
-    color: white;
+    color: #2c2e30;
 }
 
 /* Container for service cards, ensuring only two cards per row */
@@ -25,26 +27,25 @@
 }
 
 .service-card {
-    background: linear-gradient(to bottom, #231f41 70%, #8caab9 100%); /* Dark gradient for blog items */
-    border: 1px solid #ddd; /* Light border */
+    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
     border-radius: 8px; /* Rounded corners */
-    padding: 20px;
-    margin: 10px;
-    flex: 0 1 calc(50% - 40px); /* Two cards per row with margin */
-    max-width: 450px; /* Optional max width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 30px; /* Increased padding for more space inside the card */
+    margin: 15px; /* Adjusted margin for spacing between cards */
+    flex: 0 1 calc(100% - 30px); /* Wider card, spans most of the container width */
+    max-width: 550px; /* Increased max width */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow for better effect */
     text-align: center;
-    color: #f9f9f9;
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
 /* Style for the heading (h2) */
 .service-card h2 {
     font-size: 24px;
-    color: #f0a500;
+    color: black;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -53,7 +54,7 @@
 .service-card p {
     font-size: 16px;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: #2c2e30;
     margin-bottom: 15px;
 }
 
@@ -63,7 +64,7 @@
 
 /* Button style within service card */
 .service-card button {
-    background-color: #007bff;
+    background-color: #231f41;
     color: white;
     border: none;
     padding: 10px 15px;

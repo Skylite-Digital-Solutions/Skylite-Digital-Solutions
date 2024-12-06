@@ -1,11 +1,12 @@
-/* styles/Footer.css */
-
 /* Footer main container */
 .footer {
-    background-color: rgb(18, 18, 58); /* Matches the dark theme */
-    color: #ffffff;
+    color: #000000;
     padding: 40px 20px;
     text-align: center;
+    /* background: linear-gradient(to bottom, rgba(33, 173, 252, 1) 0%, rgba(177, 178, 181, 0) 100%); */
+    background-color: #231f41;
+    border: none;
+    border-radius: 0;
 }
 
 /* Footer content flex container */
@@ -26,27 +27,28 @@
 /* Section headings */
 .footer-heading {
     font-size: 1.5rem;
-    color: #f0a500; /* Gold accent color */
+    color: #cccccc;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
-/* Styles for phone and email links */
+/* Contact links (phone and email) */
 .contact-link {
-    color: white;
+    color: #cccccc;;
     text-decoration: underline;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .contact-link:hover {
-    color: #f0a500;
+    color: #ffffff;
 }
 
 /* Footer links */
 .footer-links {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
@@ -54,20 +56,39 @@
 }
 
 .footer-links a {
-    color: #cccccc;
+    color: #062157;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #f0a500; /* Gold accent on hover */
+    color: #f0a500;
 }
 
-/* Social icons styling */
+/* Social and Logo Section */
+.social-logo {
+    display: flex;
+    flex-direction: column; /* Arranges social and logo containers in rows */
+    align-items: cente;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+/* Social Column */
+.social-column {
+    text-align: center;
+    width: 100%; /* Ensures full width for both rows */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 .social-icons a {
-    display: inline-block;
-    color: #cccccc;
-    margin: 5px 10px;
+    color: #062157;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
@@ -77,11 +98,18 @@
     color: #f0a500;
 }
 
-/* Bottom copyright section */
+/* Logo Image */
+.logo-image {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    align-items: flex-end;
+}
+
+/* Footer Bottom Section */
 .footer-bottom {
     border-top: 1px solid #333333;
     padding-top: 15px;
-    color: #cccccc;
+    color: #062157;
     font-size: 0.9rem;
 }
 
@@ -104,48 +132,5 @@
 
     .footer-links li {
         margin: 6px 0;
-    }
-
-    .social-icons a {
-        font-size: 1rem;
-    }
-
-    .footer-bottom {
-        font-size: 0.8rem;
-    }
-}
-
-/* Mobile screens (up to 768px) */
-@media (max-width: 768px) {
-    .footer {
-        padding: 30px 15px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        width: 100%;
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    .footer-heading {
-        font-size: 1.2rem;
-    }
-
-    .footer-links li {
-        margin: 5px 0;
-    }
-
-    .social-icons a {
-        font-size: 1rem;
-        margin: 5px;
-    }
-
-    .footer-bottom {
-        font-size: 0.8rem;
     }
 }

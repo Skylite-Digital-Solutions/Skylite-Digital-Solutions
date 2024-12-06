@@ -11,12 +11,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Main title style */
+/* Main header banner style */
 .AllCategories h2 {
   font-size: 40px;
   color: #f0a500; /* Darker color for title emphasis */
-  margin-bottom: 10px;
-  text-align: center;
+  margin-bottom: 20px;
+  text-align: center; /* Centering the heading */
+  padding: 0 20px; /* Add horizontal padding to create space on both sides */
+  width: 100%; /* Full width */
+  max-width: 100%; /* Ensure it takes up the full width of the screen */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Introductory paragraph style */
@@ -96,4 +100,48 @@
   .blogs-list {
     grid-template-columns: 1fr; /* Single column on smaller screens */
   }
+}
+
+/* Main header styling */
+.main-header {
+  width: auto;
+  height: 25px;
+  margin-bottom: 50px;
+  background: #17184b; /* Dark background for main header */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd; /* Optional border for styling */
+  border-radius: 15px
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Navigation links */
+.main-header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.main-header nav a {
+  color: #f0a500;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-header nav a:hover {
+  background-color: #f0a500;
+  color: #1a1a1a;
 }

@@ -2,9 +2,10 @@
 
 /* General Contact Us Container */
 .contact-us-container {
-  background: radial-gradient(#d1cbcb, #444040, #1f1e1d);
+  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+  /* background: linear-gradient(to top, #231f41 20%, #053349 65%); */
   /* background: conic-gradient(#ff7e5f, #feb47b, #ff7e5f); */
-  color: #ffffff;
+  color: #1a1a1a;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -15,15 +16,16 @@
 
 .contact-us-heading {
   font-size: 2rem;
-  color: #f0a500;
+  color: #000000;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .contact-us-description,
 .contact-us-description-1 {
   max-width: 600px;
   font-size: 1rem;
-  color: #cccccc;
+  color: #1b1a1a;
   margin-bottom: 15px;
 }
 
@@ -38,7 +40,7 @@
 
 .contact-form label {
   font-size: 1rem;
-  color: #f0a500;
+  color: #000000;
   text-align: left;
 }
 
@@ -53,26 +55,26 @@
 
 .contact-form input,
 .contact-form textarea {
-  border: 1px solid #333333;
-  background-color: #333333;
-  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: black;
   outline: none;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #999999;
+  color: #4e4e4e;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #f0a500;
+  border-color: #000000;
 }
 
 /* Submit Button Styling */
 .submit-button {
-  background-color: #f0a500;
-  color: #1a1a1a;
+  background-color: #23144d;
+  color: #ffffff;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -80,7 +82,7 @@
 }
 
 .submit-button:hover {
-  background-color: #e59400;
+  background-color: #23144d;
 }
 
 .submit-status {
@@ -103,7 +105,7 @@
 
 .global-location-heading {
   font-size: 1.8rem;
-  color: #f0a500;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
