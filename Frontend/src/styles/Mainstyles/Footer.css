@@ -24,6 +24,10 @@
     margin: 20px;
 }
 
+.footer-section p {
+ color: #ffffff;
+}
+
 /* Section headings */
 .footer-heading {
     font-size: 1.5rem;
@@ -41,7 +45,8 @@
 }
 
 .contact-link:hover {
-    color: #ffffff;
+    color: #cccccc;
+    text-decoration: none;
 }
 
 /* Footer links */
