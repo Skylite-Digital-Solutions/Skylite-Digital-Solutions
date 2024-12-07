@@ -1,6 +1,6 @@
 /* Container style for the Software Development component */
 .SoftwareDev {
-background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
   background-color: #cccccc;
   padding: 20px;
   border-radius: 8px;

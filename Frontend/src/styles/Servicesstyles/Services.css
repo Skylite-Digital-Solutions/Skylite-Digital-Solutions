@@ -64,21 +64,23 @@
 
 /* Button style within service card */
 .service-card button {
-    background-color: #231f41;
-    color: white;
+
+    background-color: #23144d;
+    color: #ffffff;
     border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
     align-self: center; /* Center button horizontally */
     margin-top: auto; /* Push button to the bottom */
 }
 
 .service-card button:hover {
     background-color: rgb(18, 18, 58);
-    color: #f0a500;
+    color: #cccccc;
     transform: scale(1.05);
 }
 

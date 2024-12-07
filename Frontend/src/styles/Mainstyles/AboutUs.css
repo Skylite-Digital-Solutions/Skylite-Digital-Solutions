@@ -78,15 +78,16 @@
 }
 
 .aboutus-button {
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: #231f41;
+  background-color: #23144d;
   color: #ffffff;
   border: none;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  padding: 10px 15px;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .aboutus-button:hover {
