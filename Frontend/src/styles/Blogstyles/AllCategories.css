@@ -1,12 +1,12 @@
 /* Style for the entire Digital Marketing and SEO component container */
 .AllCategories {
-  background: radial-gradient(#141f1b, #174235, #5ef0c4); /* Dark to light gradient */
+  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%); /* Dark to light gradient */
   padding: 20px;
   border-radius: 8px;
   width: 100%; /* Expand to full width */
   max-width: 99.9%; /* Remove max width constraint */
   margin: 20px 0; /* Centered margin removed for full-width */
-  color: #f0a500; /* Text color for readability */
+  color: #1a1a1a; /* Text color for readability */
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -14,7 +14,7 @@
 /* Main header banner style */
 .AllCategories h2 {
   font-size: 40px;
-  color: #f0a500; /* Darker color for title emphasis */
+  color: #1a1a1a; /* Darker color for title emphasis */
   margin-bottom: 20px;
   text-align: center; /* Centering the heading */
   padding: 0 20px; /* Add horizontal padding to create space on both sides */
@@ -27,7 +27,7 @@
 .AllCategories p {
   font-size: 16px;
   line-height: 1.6;
-  color: white; /* White for easy reading */
+  color: black; /* White for easy reading */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -44,7 +44,7 @@
 
 /* Blog item styling */
 .blog-item {
-  background: linear-gradient(to bottom, #171146 40%, #0b0e20 70%); /* Dark gradient for blog items */
+  background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Dark gradient for blog items */
   opacity: 85%;
   border-radius: 8px;
   padding: 20px;
@@ -61,7 +61,7 @@
 /* Blog title */
 .blog-title {
   font-size: 1.5rem;
-  color: #f0a500;
+  color: #17184b;
   margin: 0 0 10px;
 }
 
@@ -74,13 +74,16 @@
 
 /* Read more button */
 .read-more {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
   display: inline-block;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   margin-top: 15px;
   padding: 10px 15px;
-  background-color: #f0a500; /* Button color */
-  color: #1a1a1a; /* Dark text */
+  background-color: #17184b; /* Button color */
+  color: #ffffff; /* Dark text */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -91,8 +94,8 @@
 }
 
 .read-more:hover {
-  background-color: #e59400; /* Hover color */
-  color: #fff; /* Change text color on hover */
+  background-color: #4b4774; /* Hover color */
+  color: #cccccc; /* Change text color on hover */
 }
 
 /* Responsive adjustments */
@@ -132,7 +135,7 @@
 }
 
 .main-header nav a {
-  color: #f0a500;
+  color: #cccccc;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -142,6 +145,6 @@
 }
 
 .main-header nav a:hover {
-  background-color: #f0a500;
+  background-color: #9593ac;
   color: #1a1a1a;
 }

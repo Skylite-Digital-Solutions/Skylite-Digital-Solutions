@@ -63,9 +63,11 @@
 
 /* Button styles */
 .get-in-touch-button {
-  background-color: #7969a0; /* Primary button color */
-  color: white;
+  background-color: #23144d;
+  color: #ffffff;
   border: none;
+  font-weight: bold;
+  cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -75,8 +77,8 @@
 }
 
 .get-in-touch-button:hover {
-  background: linear-gradient(to bottom, #231f41 40%, #8caab9 100%); /* Darker blue on hover */
-  color: yellowgreen; /* Accent color on hover */
+  background: #23144d; /* Darker blue on hover */
+  color: #cccccc; /* Accent color on hover */
   transform: scale(1.05);
 }
 
