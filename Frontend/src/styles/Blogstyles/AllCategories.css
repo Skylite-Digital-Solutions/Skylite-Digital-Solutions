@@ -14,7 +14,7 @@
 /* Main header banner style */
 .AllCategories h2 {
   font-size: 40px;
-  color: #1a1a1a; /* Darker color for title emphasis */
+  color: #000000d8; /* Darker color for title emphasis */
   margin-bottom: 20px;
   text-align: center; /* Centering the heading */
   padding: 0 20px; /* Add horizontal padding to create space on both sides */
@@ -61,7 +61,7 @@
 /* Blog title */
 .blog-title {
   font-size: 1.5rem;
-  color: #17184b;
+  color: #000000d8;
   margin: 0 0 10px;
 }
 
@@ -107,17 +107,16 @@
 
 /* Main header styling */
 .main-header {
-  width: auto;
   height: 25px;
   margin-bottom: 50px;
-  background: #17184b; /* Dark background for main header */
+  background: #9bb7c4; /* Dark background for main header */
   padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ddd; /* Optional border for styling */
-  border-radius: 15px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid #9bb7c4; /* Optional border for styling */
+  border-radius: 5px
 }
 
 .header-content {
@@ -135,7 +134,7 @@
 }
 
 .main-header nav a {
-  color: #cccccc;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;

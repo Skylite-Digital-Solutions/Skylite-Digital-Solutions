@@ -61,6 +61,26 @@
     text-align: center;
 }
 
+.aboutus-button {
+    background-color: #23144d;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 220px;
+    margin-right: 220px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .aboutus-button:hover {
+    background:  #4b4774;
+    color: #cccccc;
+  }
+
 /* Subtitle styling */
 .Partner-container-main h2 {
     font-size: 2rem;

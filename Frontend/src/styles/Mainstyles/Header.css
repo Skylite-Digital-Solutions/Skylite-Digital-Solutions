@@ -1,18 +1,21 @@
 /* styles/Header.css */
 
 .header {
+  background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 5px;
-  background:#231f41;
   color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+  border: 1px solid #9bb7c4; /* Optional border for styling */
+  border-radius: 0 0 5px 5px;
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  width: 98.9vw;
+  width: 98.7vw;
+  height: 60px;
 }
 
 .logo {
@@ -23,8 +26,6 @@
   cursor: pointer;
   text-decoration: none;
   margin: 10px;
-
-  /* Add styles for resizing the image */
   display: inline-block; /* Ensures proper alignment for the image */
 }
 
@@ -32,13 +33,11 @@
   justify-content: left;
   font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   margin: 0px;
-
-  /* Add styles for resizing the image */
   display: inline-block; /* Ensures proper alignment for the image */
 }
 
@@ -60,7 +59,7 @@
 
 .nav-item, .nav-item-blog {
   position: relative;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 1.1rem;
   padding: 10px;
@@ -70,8 +69,8 @@
 }
 
 .nav-item:hover, .nav-item-blog:hover {
-  color: #f0a500;
-  background-color: rgb(6, 36, 53);
+  color: #cccccc;
+  background-color: #4b4774;
   border-radius: 4px;
 }
 

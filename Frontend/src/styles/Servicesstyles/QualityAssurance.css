@@ -63,8 +63,8 @@ background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
 }
 
 .get-in-touch-button:hover {
-  background: #23144d; /* Darker blue on hover */
-  color: #cccccc; /* Accent color on hover */
+  background-color: #4b4774;
+  color: #cccccc;
   transform: scale(1.05);
 }
 

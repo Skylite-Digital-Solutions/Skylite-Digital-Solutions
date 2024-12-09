@@ -77,7 +77,7 @@
 }
 
 .get-in-touch-button:hover {
-  background: #23144d; /* Darker blue on hover */
+  background-color: #4b4774;
   color: #cccccc; /* Accent color on hover */
   transform: scale(1.05);
 }
