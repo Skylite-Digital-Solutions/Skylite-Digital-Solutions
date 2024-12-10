@@ -9,12 +9,12 @@
   color: #ffffff;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
   border: 1px solid #9bb7c4; /* Optional border for styling */
-  border-radius: 0 0 5px 5px;
+  /* border-radius: 0 0 5px 5px; */
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  width: 98.7vw;
+  width: 98.75vw;
   height: 60px;
 }
 

@@ -76,7 +76,7 @@ const AllCategories = () => {
           <div className="blog-item" key={blog.id}>
             <h3 className="blog-title">{blog.title}</h3>
             <p className="blog-summary">{blog.summary}</p>
-            <Link to={blog.link} className="read-more">Read More</Link>
+            <Link to={blog.link} className="read-more">Explore Blogs</Link>
           </div>
         ))}
       </div>
