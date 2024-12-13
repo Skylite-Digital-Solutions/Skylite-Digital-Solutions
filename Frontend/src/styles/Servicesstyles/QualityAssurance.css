@@ -1,7 +1,7 @@
 /* Container style for the Software Development component */
 .QualityAssurance {
-  /* background: linear-gradient(to bottom, #060320 20%, #cacfd1 55%); */
-  background-color: #231f41;
+background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+  background-color: #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 99.9%;
@@ -13,15 +13,15 @@
   flex-direction: column;
 }
 .QualityAssurance h2 {
-  color: #f0a500;
+  color: #231f41;
   text-align: center;
   font-size: 2.5rem;
 }
 
 .QualityAssurance p {
-  color: white;
+  color: black;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* List styling */
@@ -30,15 +30,8 @@
   padding: 20;
   margin: 20px 0;
   text-align: left;
-  color: white; /* White color for list items */
+  color: #231f41; /* White color for list items */
   font-size: 1rem;
-}
-
-/* Keyfeature styling */
-.keyfeature-list h3 {
-  text-align: center;
-  color: #f0a500;
-  font-size: 1.8rem;
 }
 
 /* List item styling */
@@ -46,12 +39,6 @@
   margin-bottom: 15px;
   font-size: 16px;
   font-size: 0.9rem;
-}
-
-/* Emphasize strong text within list items */
-.keyfeature-list li strong {
-  color: #f0a500; /* White color for strong emphasis */
-  font-size: 1.1rem;
 }
 
 /* Button container for centering */
@@ -62,9 +49,11 @@
 }
 
 .get-in-touch-button {
-  background-color: #7969a0; /* Primary button color */
-  color: white;
+  background-color: #23144d;
+  color: #ffffff;
   border: none;
+  font-weight: bold;
+  cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -74,8 +63,8 @@
 }
 
 .get-in-touch-button:hover {
-  background: linear-gradient(to bottom, #231f41 40%, #8caab9 100%); /* Darker blue on hover */
-  color: yellowgreen; /* Accent color on hover */
+  background-color: #4b4774;
+  color: #cccccc;
   transform: scale(1.05);
 }
 

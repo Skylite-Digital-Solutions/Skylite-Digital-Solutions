@@ -1,0 +1,78 @@
+<svg width="400" xmlns="http://www.w3.org/2000/svg" height="180" id="screenshot-7e6674e8-98e1-801a-8005-506b6e8d09cc" viewBox="1265 584 400 180" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+  <style>
+  </style>
+  <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09cc" rx="0" ry="0">
+    <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09cd" style="opacity:1" rx="0" ry="0">
+      <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09d0">
+        <defs>
+          <linearGradient id="fill-color-gradient-render-1648-0" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="">
+            <stop offset="0" stop-color="#0d0d7b" stop-opacity="1">
+            </stop>
+            <stop offset="1" stop-color="#003fff" stop-opacity="0">
+            </stop>
+          </linearGradient>
+          <pattern patternUnits="userSpaceOnUse" x="1435.0573374305877" y="584" width="57.74233306787619" height="23.475731820797023" patternTransform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" id="fill-0-render-1648">
+            <g>
+              <rect width="57.74233306787619" height="23.475731820797023" style="fill:url(#fill-color-gradient-render-1648-0)">
+              </rect>
+            </g>
+          </pattern>
+        </defs>
+        <g class="fills" id="fills-7e6674e8-98e1-801a-8005-506b6e8d09d0">
+          <path d="M1464.005,584.000C1449.997,584.000,1438.234,593.408,1435.057,606.065L1441.892,607.476C1444.396,597.885,1453.353,590.780,1464.005,590.780C1474.441,590.780,1483.250,597.600,1485.957,606.897L1492.800,605.485C1489.414,593.121,1477.798,584.000,1464.005,584.000Z" fill="url(#fill-0-render-1648)">
+          </path>
+        </g>
+      </g>
+      <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09d1">
+        <defs>
+          <linearGradient id="fill-color-gradient-render-1649-0" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="">
+            <stop offset="0" stop-color="#0d0d7b" stop-opacity="1">
+            </stop>
+            <stop offset="1" stop-color="#003fff" stop-opacity="0">
+            </stop>
+          </linearGradient>
+          <pattern patternUnits="userSpaceOnUse" x="1404" y="609.3107344632768" width="120" height="54.689265536723155" patternTransform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" id="fill-0-render-1649">
+            <g>
+              <rect width="120" height="54.689265536723155" style="fill:url(#fill-color-gradient-render-1649-0)">
+              </rect>
+            </g>
+          </pattern>
+        </defs>
+        <g class="fills" id="fills-7e6674e8-98e1-801a-8005-506b6e8d09d1">
+          <path d="M1449.442,625.564L1446.351,622.006C1442.643,618.619,1437.651,616.542,1432.163,616.542C1420.730,616.542,1411.448,625.555,1411.448,636.655C1411.448,647.756,1420.730,656.768,1432.163,656.768C1434.308,656.768,1436.377,656.451,1438.323,655.862L1445.194,655.919L1445.169,660.911C1441.278,662.884,1436.853,664.000,1432.163,664.000C1416.619,664.000,1404.000,651.747,1404.000,636.655C1404.000,621.563,1416.619,609.311,1432.163,609.311C1441.797,609.311,1450.309,614.018,1455.387,621.192L1467.705,635.372C1467.705,635.369,1467.705,635.365,1467.706,635.362L1478.932,648.275C1478.965,648.321,1478.998,648.365,1479.031,648.410L1481.054,650.739C1484.814,654.459,1490.050,656.768,1495.837,656.768C1507.270,656.768,1516.552,647.756,1516.552,636.655C1516.552,625.555,1507.270,616.542,1495.837,616.542C1493.826,616.542,1491.882,616.821,1490.042,617.341L1482.946,617.284L1482.971,612.329C1486.828,610.400,1491.203,609.311,1495.837,609.311C1511.381,609.311,1524.000,621.563,1524.000,636.655C1524.000,651.747,1511.381,664.000,1495.837,664.000C1486.553,664.000,1478.311,659.628,1473.180,652.890L1450.611,626.911L1449.442,625.564ZC1449.450,625.576,1449.457,625.587,1449.442,625.564ZL1450.611,626.911M1483.665,620.384C1480.964,622.293,1478.755,624.821,1477.260,627.752L1472.407,629.549L1470.910,623.926C1472.725,620.586,1475.230,617.655,1478.241,615.311L1478.241,620.384L1483.665,620.384ZM1444.516,652.798C1447.016,650.990,1449.083,648.648,1450.537,645.946L1455.793,644.000L1457.181,649.216C1455.388,652.572,1452.900,655.523,1449.902,657.888L1449.902,652.798L1444.516,652.798Z" fill="url(#fill-0-render-1649)">
+          </path>
+        </g>
+      </g>
+    </g>
+    <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09ce">
+      <g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="text-container" x="1369.610770586472" y="674.8906325097422" width="217.0542635658917" height="68.06223014765919" rx="0" ry="0">
+        <defs>
+          <pattern patternUnits="userSpaceOnUse" x="1369.610770586472" y="674.8906325097422" width="179.015625" height="35" id="fill-0-render-1650-0">
+            <g>
+              <rect width="179.015625" height="35" style="fill:#000000;fill-opacity:1">
+              </rect>
+            </g>
+          </pattern>
+        </defs>
+        <g class="fills" id="fills-7e6674e8-98e1-801a-8005-506b6e8d09ce">
+          <text x="1388.626395586472" y="720.9062575097422" dominant-baseline="ideographic" textLength="179.015625" lengthAdjust="spacingAndGlyphs" style="text-transform:none;font-family:&quot;Roboto Flex&quot;;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:30px;text-decoration:none solid rgb(0, 0, 0);direction:ltr;fill:#000000;fill-opacity:1">Skylite Digital</text>
+        </g>
+      </g>
+    </g>
+    <g id="shape-7e6674e8-98e1-801a-8005-506b6e8d09cf">
+      <g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="text-container" x="1265" y="717.2072167734842" width="400" height="46.79278322651578" rx="0" ry="0">
+        <defs>
+          <pattern patternUnits="userSpaceOnUse" x="1265" y="717.2072167734842" width="309.25" height="24" id="fill-0-render-1651-0">
+            <g>
+              <rect width="309.25" height="24" style="fill:#000000;fill-opacity:1">
+              </rect>
+            </g>
+          </pattern>
+        </defs>
+        <g class="fills" id="fills-7e6674e8-98e1-801a-8005-506b6e8d09cf">
+          <text x="1310.375" y="752.5978417734842" dominant-baseline="ideographic" textLength="309.25" lengthAdjust="spacingAndGlyphs" style="text-transform:uppercase;font-family:Roboto;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:20px;text-decoration:none solid rgb(0, 0, 0);direction:ltr;fill:#000000;fill-opacity:1">INPIRED BY YOU, CRAFTING BY US</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
