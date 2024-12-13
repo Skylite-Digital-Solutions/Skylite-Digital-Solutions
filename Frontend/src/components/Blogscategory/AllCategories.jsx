@@ -1,3 +1,4 @@
+// src/components/Blog/AllCategories.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Blogstyles/AllCategories.css';
@@ -48,16 +49,34 @@ const AllCategories = () => {
 
   return (
     <div className="AllCategories">
-      <h2>Our Blogs</h2>
+      {/* Main header should stay the same */}
+      <header className="main-header">
+        <div className="header-content">
+          <nav>
+            <Link to="/about-us">About Us</Link>
+            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/create-blog">Create Blog</Link>
+            <Link to="/blogfirebase/signin-container">Sign In</Link>
+          </nav>
+        </div>
+      </header>
+
+      {/* Inner header for blogs page */}
+      <div className="inner-header">
+        <h2>Blogs</h2>
+      </div>
+
       <p>
         Drive traffic, engage users, and grow your online presence with our Digital Marketing and SEO services. We use data-driven strategies to ensure you reach your target audience effectively.
       </p>
+
       <div className="blogs-list">
         {sortedBlogs.map((blog) => (
           <div className="blog-item" key={blog.id}>
             <h3 className="blog-title">{blog.title}</h3>
             <p className="blog-summary">{blog.summary}</p>
-            <Link to={blog.link} className="read-more">Read More</Link>
+            <Link to={blog.link} className="read-more">Explore Blogs</Link>
           </div>
         ))}
       </div>

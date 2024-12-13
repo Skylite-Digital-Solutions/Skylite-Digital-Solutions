@@ -1,8 +1,9 @@
 .aboutus-page {
-  background: linear-gradient(to bottom, #231f41 20%, #8caab9 85%);
+  /* background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%); */
+  background: #cccccc;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
   padding: 20px;
 }
@@ -15,13 +16,14 @@
   max-width: 48%;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to top, #231f41 20%, #053349 65%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
 }
 
 /* Hover effect for the aboutus-container */
@@ -33,19 +35,18 @@
 .vision-mission-container {
   display: flex;
   justify-content: space-around;
-  border: 2px solid rgb(18, 18, 58);
   border-radius: 8px;
   padding: 16px;
   background-color: rgb(18, 18, 58);
+  gap: 10px;
 }
 
 .vision, .mission {
   flex: 1;
   padding: 16px;
-  border: 1px solid #dddddd;
+  box-shadow: black;
   border-radius: 8px;
-  /* background-color: rgb(18, 18, 58); */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -57,13 +58,13 @@
 .aboutus-heading {
   font-size: 2rem;
   font-weight: bold;
-  color: #f0a500;
+  color: black;
 }
 
 .accent-line {
   width: 50px;
   height: 4px;
-  background-color: #f0a500;
+  background-color: black;
   margin: 10px 0;
 }
 
@@ -73,31 +74,32 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 10px;
-  color: whitesmoke;
+  color: #231f41;
 }
 
 .aboutus-button {
+  background-color: #23144d;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: #7969a0;
-  color: #fff;
-  border: none;
-  cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .aboutus-button:hover {
-  background: linear-gradient(to bottom, #231f41 40%, #8caab9 100%);
-  color: #f0a500;
+  background:  #4b4774;
+  color: #cccccc;
 }
 
 .our-vision-heading,
 .our-mission-heading {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #f0a500;
+  color: black;
   margin-top: 20px;
   text-align: center;
 }

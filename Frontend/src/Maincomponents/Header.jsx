@@ -15,15 +15,14 @@ function Header() {
     { id: 4, name: 'Digital Marketing & SEO', url: '/services/digital-seo' },
   ];
 
-  // Blog Drop Down
   const Blogs = [
     { id: 1, name: 'All Categories', url: '/blogs/all-categories' },
-    { id: 2, name: 'Digital Marketing & SEO', url: '/blogs/digital-seo' },
-    { id: 3, name: 'Expert Interviews', url: '/blogs/interviews' },
-    { id: 4, name: 'Understanding Q&A', url: '/blogs/quality-assurance' },
-    { id: 5, name: 'Technology Trends', url: '/blogs/technology' },
-    { id: 6, name: 'Future of Web Development', url: '/blogs/web-dev' },
-    { id: 7, name: 'IT Best Practices', url: '/blogs/it-best-practice' },
+    // { id: 2, name: 'Digital Marketing & SEO', url: '/blogs/digital-seo' },
+    // { id: 3, name: 'Expert Interviews', url: '/blogs/interviews' },
+    // { id: 4, name: 'Understanding Q&A', url: '/blogs/quality-assurance' },
+    // { id: 5, name: 'Technology Trends', url: '/blogs/technology' },
+    // { id: 6, name: 'Future of Web Development', url: '/blogs/web-dev' },
+    // { id: 7, name: 'IT Best Practices', url: '/blogs/it-best-practice' },
   ];
 
   const Login = [
@@ -31,12 +30,10 @@ function Header() {
     { id: 2, name: 'Sign Up', url: '/blogfirebase/signup-container' },
   ];
 
-  // Toggle dropdown visibility
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
   const toggleBlogDropdown = () => setBlogDropdownVisible(!blogDropdownVisible);
   const toggleLoginDropdown = () => setLoginDropdownVisible(!loginDropdownVisible);
 
-  // Close dropdown if clicked outside
   const handleClickOutside = (event) => {
     if (!event.target.closest('.dropdown') && dropdownVisible) {
       setDropdownVisible(false);
@@ -56,11 +53,14 @@ function Header() {
 
   return (
     <header className="header">
-      <Link to="/" className="logo">Logo</Link>
+      <Link to="/" className="logo">
+        <img src="/logo.svg" alt="Company Logo" className="logo-image" />
+      </Link>
+      <Link to="/" className="logo-title">
+        <h3>Skylite Digital</h3>
+        <h4>INPIRED BY YOU, CRAFTING BY US</h4>
+      </Link>
       <nav className="nav">
-        <Link to="/create-blog" className="nav-item">Create Blog</Link>
-        <Link to="/blog-page" className="nav-item">Blog Page</Link>
-        <Link to="/about-us" className="nav-item">About Us</Link>
         
         {/* Services Dropdown */}
         <div className="nav-item" onClick={toggleDropdown}>
@@ -75,11 +75,12 @@ function Header() {
             </div>
           )}
         </div>
-
+        <Link to="/blogs/all-categories" className="nav-item">Blogs</Link>
+        <Link to="/about-us" className="nav-item">About Us</Link>
         <Link to="/contact-us" className="nav-item">Contact Us</Link>
 
         {/* Blogs Dropdown */}
-        <div className="nav-item" onClick={toggleBlogDropdown}>
+        {/* <div className="nav-item" onClick={toggleBlogDropdown}>
           Blogs
           {blogDropdownVisible && (
             <div className="dropdown">
@@ -90,9 +91,9 @@ function Header() {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
 
-        {/* Login Dropdown */}
+        {/* Login Dropdown
         <div className="nav-item" onClick={toggleLoginDropdown}>
           Login
           {loginDropdownVisible && (
@@ -104,7 +105,7 @@ function Header() {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
       </nav>
     </header>
   );

@@ -1,31 +1,36 @@
 /* KnowMore.css */
 
 .Background-container {
+    background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
     max-width: 100%;
-    background: linear-gradient(to top, #231f41 20%, #8caab9 85%);
     border-radius: 0.5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
 }
 
 /* Container styling */
 .success-container {
     max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background: linear-gradient(to bottom, #231f41 20%, #8caab9 85%);
+    margin: 10px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #0a0a0a;
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Container styling */
 .Partner-container-main {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 30px;
-    background: linear-gradient(to bottom, #231f41 20%, #8caab9 85%);
+    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #0a0a0a;
@@ -34,29 +39,52 @@
 
 /* Main title styling */
 .success-container h1 {
-    font-size: 2.5rem;
-    color: #f0a500;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color:  #231f41;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .success-container h2 {
-    font-size: 1.75rem;
-    color: #f0a500;
+    font-size: 1.5rem;
+    color:  #231f41;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Paragraph styling */
 .success-container p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: whitesmoke;
+    color: #0a0a0a;
+    text-align: center;
 }
+
+.aboutus-button {
+    background-color: #23144d;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 220px;
+    margin-right: 220px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .aboutus-button:hover {
+    background:  #4b4774;
+    color: #cccccc;
+  }
 
 /* Subtitle styling */
 .Partner-container-main h2 {
-    font-size: 1.75rem;
-    color: #f0a500;
+    font-size: 2rem;
+    color: #231f41;
     margin-top: 30px;
     margin-bottom: 15px;
     text-align: center;
@@ -71,13 +99,13 @@
 
 .Partner-container li strong {
     font-weight: bold; /* Bold style for <strong> */
-    color: #f0a500;
-    font-size: 1.2rem;
+    color: #231f41;
+    font-size: 1.1rem;
 }
 
 .Partner-container li {
-    font-size: 0.9rem;
-    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    color: #0a0a0a;
     margin-bottom: 10px;
 }
 
