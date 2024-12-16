@@ -25,8 +25,14 @@
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 700px;
+  height: 720px;
   margin-top: 20px;
+}
+
+.Partner-container-main:hover {
+  transform: scale(1.02); /* Slightly scales up the container */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increases shadow intensity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
 }
 
 .Partner-container h2 {
@@ -53,9 +59,16 @@
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 700px;
+  height: 720px;
   margin-top: 10px;
 }
+
+.contact-us-container:hover {
+  transform: scale(1.02); /* Slightly scales up the container */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increases shadow intensity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
 
 .contact-us-heading {
   font-size: 1.8rem;
@@ -111,8 +124,8 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #231f41;
-  box-shadow: 0 0 5px #231f41;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
 }
 
 .contact-form textarea {
