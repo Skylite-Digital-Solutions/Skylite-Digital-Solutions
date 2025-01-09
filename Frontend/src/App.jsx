@@ -9,10 +9,10 @@ import SoftwareDev from './components/Allservices/SoftwareDev';
 import QualityAssurance from './components/Allservices/QualityAssurance';
 import DigitalSEO from './components/Allservices/DigitalSEO';
 import AllCategories from './components/Blogscategory/AllCategories';
-import Services from './components/Services/Services';
-import Ourservices from './components/Knowmore/Ourservices';
-import Quality from './components/Knowmore/Quality';
-import Success from './components/Knowmore/Success';
+import Services from './components/Allservices/Services';
+import Ourservices from './Knowmore/Ourservices';
+import Quality from './Knowmore/Quality';
+import Success from './Knowmore/Success';
 import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
 import BlogPage from './components/Blogfirebase/BlogPage';
 import BlogPostForm from './components/Blogfirebase/BlogPostForm';
