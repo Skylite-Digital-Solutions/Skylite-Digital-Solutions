@@ -13,7 +13,6 @@
     "@formfacade/embed-react": "^1.0.4",
     "axios": "^1.7.7",
     "exceljs": "^4.4.0",
-    "firebase": "^11.1.0",
     "force": "^0.0.3",
     "next": "^15.0.1",
     "pdfkit": "^0.15.0",
