@@ -25,7 +25,6 @@
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 720px;
   margin-top: 20px;
 }
 
@@ -36,6 +35,11 @@
 }
 
 .Partner-container h2 {
+  margin-top: 10px;
+  /* text-align: center; */
+}
+
+.Partner-container-us h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #444;
@@ -59,7 +63,6 @@
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 720px;
   margin-top: 10px;
 }
 
