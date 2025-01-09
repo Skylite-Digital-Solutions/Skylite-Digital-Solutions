@@ -1,18 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Body from './Maincomponents/Body';
-import Header from './Maincomponents/Header';
-import ContactUs from './Maincomponents/ContactUs';
-import AboutUs from './Maincomponents/AboutUs';
-import Footer from './Maincomponents/Footer';
+import Body from '../src/components/Maincomponents/Body';
+import Header from '../src/components/Maincomponents/Header';
+import ContactUs from '../src/components/Maincomponents/ContactUs';
+import AboutUs from '../src/components/Maincomponents/AboutUs';
+import Footer from '../src/components/Maincomponents/Footer';
 import SoftwareDev from './components/Allservices/SoftwareDev';
 import QualityAssurance from './components/Allservices/QualityAssurance';
 import DigitalSEO from './components/Allservices/DigitalSEO';
 import AllCategories from './components/Blogscategory/AllCategories';
-import Services from './components/Allservices/Services';
-import Ourservices from './Knowmore/Ourservices';
-import Quality from './Knowmore/Quality';
-import Success from './Knowmore/Success';
+import Services from '../src/components/Allservices/Services';
+import Ourservices from '../src/components/Knowmore/Ourservices';
+import Quality from '../src/components/Knowmore/Quality';
+import Success from '../src/components/Knowmore/Success';
 import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
 
 function App() {

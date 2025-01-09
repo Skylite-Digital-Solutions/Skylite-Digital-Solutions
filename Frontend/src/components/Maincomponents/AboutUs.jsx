@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Mainstyles/AboutUs.css';
-import '../styles/color.css';
+import ContactUs from './ContactUs';
+import '../../styles/Mainstyles/AboutUs.css';
+import '../../styles/color.css';
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -38,6 +39,10 @@ const AboutUs = () => {
     </p>
   </div>
 </div>
+      {/* Contact Us Section */}
+      <section>
+        <ContactUs />
+      </section>
 
     </div>
   );

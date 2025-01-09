@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Mainstyles/Body.css';
+import '../../styles/Mainstyles/Body.css';
 import AboutUs from './AboutUs';
-import Services from '../components/Allservices/Services'; // Corrected to uppercase for React component
+import Services from '../Allservices/Services'; // Corrected to uppercase for React component
 import ContactUs from './ContactUs';
+import '../../styles/color.css';
 
 const images = [
   {
@@ -129,23 +130,17 @@ const Body = () => {
       </section>
 
       <section>
-        <h2>Service Offering</h2>
         <Services /> {/* Corrected component usage */}
       </section>
 
-      <section>
+      {/* <section>
         <h2>Our Partners</h2>
         <p>We collaborate with leading partners to deliver exceptional value to our clients.</p>
-      </section>
+      </section> */}
 
       <section>
         <h2>And Our Clients Absolutely Love Us!</h2>
         <p>Don't just take our word for it—hear what our clients have to say about us!</p>
-      </section>
-
-      {/* Contact Us Section */}
-      <section>
-        <ContactUs />
       </section>
     </div>
   );

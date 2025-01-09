@@ -40,6 +40,15 @@
     --submit-status-color: green;
     --light-text-color: #555;
     --dark-text-color: #444;
+
+    /* Footer Colors */
+    --footer-bg-color: #231f41;
+  --footer-text-color: #000000;
+  --footer-heading-color: #cccccc;
+  --footer-link-color: #ffffff;
+  --footer-link-hover-color: #cccccc;
+  --footer-border-color: #333333;
+  
   }
   
   /* Utility Classes */

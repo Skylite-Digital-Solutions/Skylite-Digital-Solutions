@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/Knowmorestyles/Quality.css'
-import '../styles/Color.css'
+import '../../styles/Knowmorestyles/Quality.css'
+import '../../styles/color.css';
 
 const Quality = () => {
   return (
