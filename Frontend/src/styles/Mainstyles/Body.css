@@ -1,8 +1,8 @@
 /* Main container for the body */
 .body-container {
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f9;
+  color: var(--text-primary);
+  background-color: var(--background-light);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -10,11 +10,11 @@
 
 /* Slider Section */
 .slider-container {
-  width: 100vw; /* Full viewport width */
-  height: 90vh; /* Full viewport height */
+  width: 100vw;
+  height: 90vh;
   position: relative;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: var(--background-dark);
 }
 
 .slide {
@@ -36,11 +36,11 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 8px;
   max-width: 80%;
-  color: #fff;
+  color: var(--text-light);
 }
 
 .slide-text h2 {
@@ -51,7 +51,7 @@
 .slider-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 35px;
 }
 
 .know-more-button,
@@ -66,22 +66,22 @@
 }
 
 .know-more-button {
-  background-color: #f0a500;
-  color: #1a1a1a;
+  background-color: var(--secondary-color);
+  color: var(--background-dark);
 }
 
 .know-more-button:hover {
-  background-color: #e59400;
+  background-color: var(--secondary-hover);
   transform: scale(1.05);
 }
 
 .schedule-call-button {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
 .schedule-call-button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
   transform: scale(1.05);
 }
 
@@ -98,72 +98,13 @@
   height: 12px;
   margin: 0 5px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: var(--border-color);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .indicator-dot.active {
-  background-color: #1f62c7;
-}
-
-/* Leadership Section */
-.leadership-container {
-  background-color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.leadership-container h2 {
-  font-size: 2.5rem;
-  color: #231f41;
-  margin-bottom: 20px;
-}
-
-.leadership {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.leadership-member {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.leadership-member:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.leadership-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.leadership-info h2 {
-  font-size: 1.5rem;
-  color: #231f41;
-  margin-bottom: 5px;
-}
-
-.leadership-info h3 {
-  font-size: 1.2rem;
-  color: #555555;
-  margin-bottom: 10px;
-}
-
-.leadership-info p {
-  font-size: 1rem;
-  color: #666666;
+  background-color: var(--accent-color);
 }
 
 /* About Us Section */
@@ -180,7 +121,7 @@ section h2 {
 
 section p {
   font-size: 1.2rem;
-  color: #555555;
+  color: var(--leadership-subtext);
 }
 
 /* Responsive Design */

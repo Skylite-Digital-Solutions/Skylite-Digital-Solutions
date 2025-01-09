@@ -8,11 +8,11 @@ import Footer from '../src/components/Maincomponents/Footer';
 import SoftwareDev from './components/Allservices/SoftwareDev';
 import QualityAssurance from './components/Allservices/QualityAssurance';
 import DigitalSEO from './components/Allservices/DigitalSEO';
-import AllCategories from './components/Blogscategory/AllCategories';
-import Services from '../src/components/Allservices/Services';
-import Ourservices from '../src/components/Knowmore/Ourservices';
-import Quality from '../src/components/Knowmore/Quality';
-import Success from '../src/components/Knowmore/Success';
+import Blogs from './components/Maincomponents/Blogs';
+import Services from '../src/components/Maincomponents/Services';
+import Ourservices from '../src/components/Maincomponents/Ourservices';
+import Quality from '../src/components/Maincomponents/Quality'
+import Success from '../src/components/Maincomponents/Success';
 import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Body />} />
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
-        <Route path="blogs" element={<AllCategories />} />
+        <Route path="blogs" element={<Blogs />} />
         
         {/* Services Routes */}
         <Route path="services" element={<Services />} />
@@ -39,7 +39,7 @@ function App() {
         <Route path="success" element={<Success />} />
 
         {/* Blog Routes */}
-        <Route path="blogs/all-categories" element={<AllCategories />} />
+        <Route path="blogs/all-categories" element={<Blogs />} />
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}

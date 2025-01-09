@@ -39,6 +39,34 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.Partner-container {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.Partner-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--primary-color); /* Example color variable */
+  text-align: center;
+}
+
+.Partner-container li {
+  margin-bottom: 20px; /* Add spacing between list items */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary); /* Example color variable */
+  text-align: left;
+}
+
+.Partner-container li strong {
+  font-weight: bold;
+  color: var(--secondary-color); /* Example color variable */
+}
+
+
 /* Contact Us Section */
 .contact-us-container {
   flex: 1;
@@ -122,7 +150,7 @@
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid black; /* Updated border color to black */
+  border: 1px solid var(--text-primary); /* Updated border color to black */
   border-radius: 5px;
   font-size: 1rem;
   color: var(--primary-color);
