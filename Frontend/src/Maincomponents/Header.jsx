@@ -17,18 +17,7 @@ function Header() {
 
   const Blogs = [
     { id: 1, name: 'All Categories', url: '/blogs/all-categories' },
-    // { id: 2, name: 'Digital Marketing & SEO', url: '/blogs/digital-seo' },
-    // { id: 3, name: 'Expert Interviews', url: '/blogs/interviews' },
-    // { id: 4, name: 'Understanding Q&A', url: '/blogs/quality-assurance' },
-    // { id: 5, name: 'Technology Trends', url: '/blogs/technology' },
-    // { id: 6, name: 'Future of Web Development', url: '/blogs/web-dev' },
-    // { id: 7, name: 'IT Best Practices', url: '/blogs/it-best-practice' },
   ];
-
-  // const Login = [
-  //   { id: 1, name: 'Sign In', url: '/blogfirebase/signin-container' },
-  //   { id: 2, name: 'Sign Up', url: '/blogfirebase/signup-container' },
-  // ];
 
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
   const toggleBlogDropdown = () => setBlogDropdownVisible(!blogDropdownVisible);
