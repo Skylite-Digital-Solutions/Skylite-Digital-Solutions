@@ -1,97 +1,80 @@
 /* General Styles */
 .Background-container {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;  /* Ensure full width */
+  box-sizing: border-box;  /* Include padding in width calculation */
+  overflow: hidden;  /* Prevent overflow */
 }
 
 /* Top Section Container */
 .background-container-top {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; /* Centers content when there's extra space */
+  justify-content: center;
+  width: 100%; /* Ensure it doesn't overflow */
 }
 
 /* Partner Section */
 .Partner-container-main {
   flex: 1;
-  min-width: 500px; /* Ensures it doesn't shrink too much on smaller screens */
+  max-width: 400px;
   padding: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--secondary-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
   border-radius: 8px;
   margin-top: 20px;
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 .Partner-container-main:hover {
-  transform: scale(1.02); /* Slightly scales up the container */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increases shadow intensity */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
-}
-
-.Partner-container h2 {
-  margin-top: 10px;
-  /* text-align: center; */
-}
-
-.Partner-container-us h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #444;
-}
-
-.Partner-container li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.Partner-container strong {
-  color: #231f41;
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px var(--hover-shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Contact Us Section */
 .contact-us-container {
   flex: 1;
-  min-width: 500px; /* Ensures it doesn't shrink too much on smaller screens */
+  max-width: 600px;
   padding: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--secondary-color);
+  box-shadow: 0 4px 6px var(--primary-color); /* Updated shadow to primary color */
   border-radius: 8px;
   margin-top: 10px;
 }
 
 .contact-us-container:hover {
-  transform: scale(1.02); /* Slightly scales up the container */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increases shadow intensity */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px var(--primary-color); /* Updated shadow to primary color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .contact-us-heading {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #231f41;
+  color: var(--primary-color);
   text-align: center;
 }
 
 .contact-us-description {
   font-size: 1rem;
   margin-bottom: 5px;
-  color: black;
+  color: var(--primary-color);
   text-align: center;
 }
 
 .contact-us-description-1 {
   font-size: 0.9rem;
   margin-bottom: 15px;
-  color: black;
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -107,17 +90,22 @@
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #555;
+  color: var(--light-text-color);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--input-border-color);
   border-radius: 5px;
   font-size: 1rem;
-  color: #333;
+  color: var(--primary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-color: black; /* Updated border color to black for both input and textarea */
 }
 
 .contact-form textarea {
@@ -127,35 +115,34 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px #007bff;
+  border-color: var(--blue-focus);
+  box-shadow: 0 0 5px var(--input-focus-box-shadow);
 }
 
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid black; /* Updated border color to black */
   border-radius: 5px;
   font-size: 1rem;
-  color: #333;
-  height: 170px; /* Set a taller default height */
-  resize: vertical; /* Allow vertical resizing */
+  color: var(--primary-color);
+  height: 170px;
+  resize: vertical;
 }
 
 .contact-form textarea:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: var(--blue-focus);
+  box-shadow: 0 0 5px var(--secondary-color);
 }
-
 
 .submit-button {
   padding: 10px 15px;
   margin-top: 20px;
-  background-color: #23144d;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
-  color: #ffffff;
+  color: var(--text-light);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -163,14 +150,14 @@
 }
 
 .submit-button:hover {
-  background-color: #4b4774;
-  color: #cccccc;
+  background-color: var(--button-hover-color);
+  color: var(--muted-color);
 }
 
 .submit-status {
   margin-top: 10px;
   font-size: 0.9rem;
-  color: green;
+  color: var(--submit-status-color);
 }
 
 /* Global Location Section */
@@ -180,34 +167,23 @@
   display: flex;
   flex-direction: column;
   flex: 2;
-}
-
-.global-location-container {
-  background: #ffffff;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  justify-content: center;
-}
-
-.global-location-heading {
-  font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.map-container iframe {
-  border-radius: 8px;
+  max-width: 100%; /* Prevent overflow */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .background-container-top {
-    flex-direction: column; /* Stacks sections on smaller screens */
+    flex-direction: column;
   }
 
   .Partner-container-main,
   .contact-us-container {
     min-width: 100%; /* Ensures sections take up full width */
+    max-width: 100%; /* Ensures sections take up full width */
+  }
+
+  /* Make sure location does not exceed screen size */
+  .location {
+    max-width: 100%;
   }
 }

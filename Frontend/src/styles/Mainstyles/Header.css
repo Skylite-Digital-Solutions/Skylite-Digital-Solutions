@@ -1,15 +1,14 @@
 /* styles/Header.css */
 
 .header {
-  background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%);
+  background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 5px;
-  color: #ffffff;
+  color: var(--text-light);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
-  border: 1px solid #9bb7c4; /* Optional border for styling */
-  /* border-radius: 0 0 5px 5px; */
+  border: 1px solid var(--primary-hover-color); /* Using hover blue for the border */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -21,34 +20,34 @@
 .logo {
   font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-light);
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   margin: 10px;
-  display: inline-block; /* Ensures proper alignment for the image */
+  display: inline-block;
 }
 
 .logo-title {
   justify-content: left;
   font-size: 1rem;
   font-weight: bold;
-  color: #000000;
+  color: var(--text-primary); /* Dark Blue for logo title */
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   margin: 0px;
-  display: inline-block; /* Ensures proper alignment for the image */
+  display: inline-block;
 }
 
 .logo img {
-  max-width: 70px; /* Default size for the image */
-  height: 30px; /* Maintains aspect ratio */
-  transition: transform 0.3s ease, max-width 0.2s ease; /* Smooth resizing and hover effect */
+  max-width: 70px;
+  height: 30px;
+  transition: transform 0.3s ease, max-width 0.2s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.1); /* Slight zoom-in effect on hover */
+  transform: scale(1.1);
 }
 
 .nav {
@@ -59,7 +58,7 @@
 
 .nav-item, .nav-item-blog {
   position: relative;
-  color: #000000;
+  color: var(--text-primary); /* Dark Blue for nav items */
   text-decoration: none;
   font-size: 1.1rem;
   padding: 10px;
@@ -69,35 +68,34 @@
 }
 
 .nav-item:hover, .nav-item-blog:hover {
-  color: #cccccc;
-  background-color: #4b4774;
+  color: var(--text-light);
+  background-color: var(--primary-hover-color); /* Blue on hover */
   border-radius: 4px;
 }
 
 .dropdown, .dropdown-items {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: var(--card-background); /* White for dropdown */
+  color: var(--text-primary);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 5px); /* Small gap between nav item and dropdown */
+  top: calc(100% + 5px);
   left: 0;
   padding: 10px 0;
   min-width: 180px;
   z-index: 10;
   overflow-y: auto;
-  max-height: 300px; /* Limit dropdown height */
-  /* Ensure dropdown stays within the screen */
+  max-height: 300px;
   right: auto;
   white-space: nowrap;
 }
 
 .nav-item-blog .dropdown {
   left: auto;
-  right: 0; /* Aligns the blog dropdown to the right if it overflows the screen */
+  right: 0;
 }
 
 .dropdown-items {
@@ -114,11 +112,11 @@
 }
 
 .dropdown-item:hover {
-  color: #231f41;
+  color: var(--text-primary); /* Dark Blue for item hover */
 }
 
 .dropdown-items:hover {
-  background-color: #cccccc;
+  background-color: var(--indicator-active); /* Active indicator color */
 }
 
 /* Responsive Design */

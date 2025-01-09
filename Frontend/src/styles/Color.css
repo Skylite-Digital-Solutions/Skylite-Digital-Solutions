@@ -1,0 +1,73 @@
+/* Base Colors */
+:root {
+    /* Primary Colors */
+    --primary-color: #0A74DA; /* Primary Blue */
+    --primary-hover-color: #0A74DA; /* Hover Blue (same as primary) */
+    --secondary-color: #f4f4f9; /* Light Gray (for background) */
+    --secondary-hover-color: #0056b3; /* Hover Blue (same as primary hover) */
+  
+    /* Background Colors */
+    --background-light: #f4f4f9; /* Light Background */
+    --background-dark: #1a1a1a; /* Dark Background */
+    --overlay-dark: rgba(0, 0, 0, 0.6); /* Dark Overlay */
+    --card-background: #f4f4f9; /* Light Background for cards */
+    --slider-background: #1a1a1a; /* Slider Background */
+  
+    /* Text Colors */
+    --text-primary: #231f41; /* Dark Blue for primary text */
+    --text-secondary: #2c2e30; /* Dark Gray for secondary text */
+    --text-light: #ffffff; /* Light Text */
+    --text-muted: #666666; /* Muted Text */
+    --text-link: #1f62c7; /* Link Text (same as active indicator) */
+  
+    /* Border Colors */
+    --border-light: #ccc; /* Light Border */
+    --border-dark: #555555; /* Dark Border */
+  
+    /* Button Colors */
+    --button-know-more: #0A74DA; /* Button Background Blue */
+    --button-know-more-hover: #ffffff; /* Button Hover White */
+    --button-schedule-call: #0A74DA; /* Button Schedule Call Blue */
+    --button-schedule-call-hover: #ffffff; /* Button Hover White */
+  
+    /* Indicator Colors */
+    --indicator-default: #ccc; /* Default Indicator */
+    --indicator-active: #0A74DA; /* Active Indicator (Blue) */
+  
+    /* Shadow Colors */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Light Shadow */
+    --shadow-medium: rgba(0, 0, 0, 0.2); /* Medium Shadow */
+    --submit-status-color: green;
+    --light-text-color: #555;
+    --dark-text-color: #444;
+  }
+  
+  /* Utility Classes */
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .text-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .text-light {
+    color: var(--text-light);
+  }
+  
+  .shadow-light {
+    box-shadow: 0 2px 6px var(--shadow-light);
+  }
+  
+  .shadow-medium {
+    box-shadow: 0 4px 10px var(--shadow-medium);
+  }
+  

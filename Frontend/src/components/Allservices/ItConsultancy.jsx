@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/ServicesStyles/ITConsultancy.css';
+import '../../styles/color.css';
 
 const ITConsulting = () => {
   const navigate = useNavigate();

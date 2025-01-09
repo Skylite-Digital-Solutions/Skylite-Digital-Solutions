@@ -1,89 +1,99 @@
+/* .services Section */
 .services {
-    /* background: linear-gradient(to bottom, #231f41 20%, #8caab9 55%); Dark gradient for blog items */
-    /* background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); */
-    background-color: #cccccc;
+    background-color: var(--background-light); /* Light background */
     padding: 20px;
     text-align: center;
 }
+
 .services h1 {
     padding: 20px;
     text-align: center;
-    color: #000000d8;
-    font-size: 220%
+    color: var(--text-primary); /* Primary text color */
+    font-size: 220%;
 }
 
 .services p {
     padding: 20px;
     text-align: center;
-    color: #2c2e30;
+    color: var(--text-secondary); /* Secondary text color */
 }
 
-/* Container for service cards, ensuring only two cards per row */
+/* Container for service cards */
 .service-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* Space between cards */
+    gap: 10px;
 }
 
 .service-card {
-    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
-    border-radius: 8px; /* Rounded corners */
-    padding: 30px; /* Increased padding for more space inside the card */
-    margin: 15px; /* Adjusted margin for spacing between cards */
-    flex: 0 1 calc(100% - 30px); /* Wider card, spans most of the container width */
-    max-width: 550px; /* Increased max width */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow for better effect */
+    background-color: var(--background-light); /* Light background for cards */
+    border-radius: 8px;
+    padding: 30px;
+    margin: 15px;
+    flex: 0 1 calc(100% - 30px);
+    max-width: 500px;
+    box-shadow: 0 2px 4px var(--primary-color); /* Use primary color for shadow */
     text-align: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-
-/* Style for the heading (h2) */
+/* Style for the heading (h2) inside service card */
 .service-card h2 {
     font-size: 24px;
-    color: #000000d8;
+    color: var(--text-primary); /* Primary text color for h2 */
     margin-bottom: 10px;
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
-/* Style for the paragraph (p) */
+/* Style for the paragraph (p) inside service card */
 .service-card p {
     font-size: 16px;
     line-height: 1.6;
-    color: #2c2e30;
+    color: var(--text-muted); /* Muted text color */
     margin-bottom: 15px;
+    transition: color 0.2s ease;
 }
 
 .service-card:hover {
     transform: scale(1.05);
+    background-color: var(--primary-color); /* Primary color for hover */
+}
+
+.service-card:hover h2 {
+    color: var(--text-light); /* Light text color for heading on hover */
+}
+
+.service-card:hover p {
+    color: var(--text-light); /* Light text color for paragraph on hover */
 }
 
 /* Button style within service card */
 .service-card button {
-    background-color: #23144d;
-    color: #ffffff;
+    background-color: var(--primary-color); /* Primary button color */
+    color: var(--text-light); /* Light text color for button */
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 16px;
-    align-self: center; /* Center button horizontally */
-    margin-top: auto; /* Push button to the bottom */
+    align-self: center;
+    margin-top: auto;
 }
 
 .service-card button:hover {
-    background-color: #4b4774;
-    color: #cccccc;
+    background-color: var(--text-light); /* Button background changes to light color on hover */
+    color: var(--primary-color); /* Button text changes to primary color on hover */
     transform: scale(1.05);
 }
 
-/* Media query for smaller screens to display one card per row */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .service-card {
         flex: 0 1 100%; /* Full width on smaller screens */

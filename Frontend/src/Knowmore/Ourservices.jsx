@@ -1,6 +1,7 @@
 // KnowMore.jsx
 import React from 'react';
 import '../styles/Knowmorestyles/Ourservices.css'; // Import styles for the Know More page
+import '../styles/color.css';
 
 const Ourservices = () => {
   return (

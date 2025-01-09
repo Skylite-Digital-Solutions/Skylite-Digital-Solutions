@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Blogstyles/AllCategories.css';
+import '../../styles/color.css';
 
 const AllCategories = () => {
   // Blog data with added Technology and Interviews categories

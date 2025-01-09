@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Knowmorestyles/Quality.css'
+import '../styles/Color.css'
 
 const Quality = () => {
   return (

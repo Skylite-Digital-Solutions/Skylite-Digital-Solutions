@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Mainstyles/Blogs.css'; // Importing the CSS file for the Blogs component
+import '../styles/color.css';
 
 const blogs = [
   {

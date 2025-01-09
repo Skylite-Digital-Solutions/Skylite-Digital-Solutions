@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../styles/Knowmorestyles/Success.css';
+import '../styles/Color.css';
 
 const Success = () => { // Correct component name to PascalCase
   const navigate = useNavigate();

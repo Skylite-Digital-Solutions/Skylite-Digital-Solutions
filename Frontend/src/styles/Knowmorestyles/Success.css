@@ -1,53 +1,77 @@
 /* KnowMore.css */
 
+/* Background container */
 .Background-container {
-    background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+    background: var(--secondary-color);
     max-width: 100%;
     border-radius: 0.5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--primary-color);
     gap: 20px;
     padding: 20px;
+    display: flex;
+    flex-direction: row; /* Flex direction changed to row */
+    justify-content: center;
+    width: 100%; /* Ensure full width */
 }
 
-/* Container styling */
+/* Success container */
 .success-container {
-    max-width: 800px;
-    margin: 10px auto;
+    max-width: 100%; /* Full width */
+    margin: 10px;
     padding: 20px;
-    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
+    background: var(--secondary-color);
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #0a0a0a;
+    box-shadow: 0 4px 12px var(--primary-color);
+    color: var(--text-primary);
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%; /* Ensure full width */
 }
 
-/* Container styling */
+/* Hover effect for success container */
+.success-container:hover {
+    background: var(--primary-color); /* Change to primary color on hover */
+    color: var(--text-light); /* Change text color to light */
+}
+
+/* Partner container */
 .Partner-container-main {
-    max-width: 800px;
-    margin: 10px auto;
+    max-width: 100%; /* Full width */
+    margin: 10px;
     padding: 30px;
-    background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Updated gradient direction */
+    background: var(--secondary-color);
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #0a0a0a;
+    box-shadow: 0 4px 12px var(--primary-color);
+    color: var(--text-primary);
     font-family: Arial, sans-serif;
+    width: 100%; /* Ensure full width */
+}
+
+/* Hover effect for partner container */
+.Partner-container-main:hover {
+    background: var(--primary-color); /* Change to primary color on hover */
+    color: var(--text-light); /* Change text color to light */
+}
+
+/* Change color of li strong when hovering over Partner container */
+.Partner-container-main:hover li strong {
+    color: var(--text-light); /* Change color to white */
 }
 
 /* Main title styling */
 .success-container h1 {
     font-size: 2rem;
-    color:  #231f41;
+    color: var(--text-dark); /* Primary dark color */
     margin-bottom: 10px;
     text-align: center;
 }
 
 .success-container h2 {
     font-size: 1.5rem;
-    color:  #231f41;
+    color: var(--text-dark); /* Primary dark color */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -57,34 +81,34 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #0a0a0a;
+    color: var(--text-primary); /* Primary text color */
     text-align: center;
 }
 
 .aboutus-button {
-    background-color: #23144d;
-    color: #ffffff;
+    background-color: var(--text-light); /* Light background color */
+    color: var(--text-dark); /* Dark text color */
     border: none;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    margin-left: 220px;
-    margin-right: 220px;
+    margin-left: 550px;
+    margin-right: 550px;
     padding: 10px 15px;
     border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .aboutus-button:hover {
-    background:  #4b4774;
-    color: #cccccc;
-  }
+}
+
+/* Button hover effect */
+.aboutus-button:hover {
+    background: var(--text-dark); /* Dark background color on hover */
+    color: var(--text-light); /* Light text color on hover */
+}
 
 /* Subtitle styling */
 .Partner-container-main h2 {
     font-size: 2rem;
-    color: #231f41;
+    color: var(--text-dark); /* Primary dark color */
     margin-top: 30px;
     margin-bottom: 15px;
     text-align: center;
@@ -98,14 +122,14 @@
 }
 
 .Partner-container li strong {
-    font-weight: bold; /* Bold style for <strong> */
-    color: #231f41;
+    font-weight: bold;
+    color: var(--text-dark); /* Primary dark color */
     font-size: 1.1rem;
 }
 
 .Partner-container li {
     font-size: 1rem;
-    color: #0a0a0a;
+    color: var(--text-primary); /* Primary text color */
     margin-bottom: 10px;
 }
 

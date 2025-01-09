@@ -1,33 +1,33 @@
-/* Style for the entire Digital Marketing and SEO component container */
+/* .AllCategories Section */
 .AllCategories {
-  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%); /* Dark to light gradient */
+  background: var(--secondary-color);; /* Gradient using primary and secondary colors */
   padding: 20px;
   border-radius: 8px;
-  width: 100%; /* Expand to full width */
-  max-width: 99.9%; /* Remove max width constraint */
-  margin: 20px 0; /* Centered margin removed for full-width */
-  color: #1a1a1a; /* Text color for readability */
+  width: 100%;
+  max-width: 99.9%;
+  margin: 20px 0;
+  color: var(--text-primary); /* Primary text color */
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Main header banner style */
 .AllCategories h2 {
   font-size: 40px;
-  color: #000000d8; /* Darker color for title emphasis */
+  color: var(--text-primary); /* Primary text color for header */
   margin-bottom: 20px;
-  text-align: center; /* Centering the heading */
-  padding: 0 20px; /* Add horizontal padding to create space on both sides */
-  width: 100%; /* Full width */
-  max-width: 100%; /* Ensure it takes up the full width of the screen */
-  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Introductory paragraph style */
 .AllCategories p {
   font-size: 16px;
   line-height: 1.6;
-  color: black; /* White for easy reading */
+  color: var(--text-primary); /* Primary text color */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -37,38 +37,38 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
-  width: 100%; /* Expand to full width */
-  max-width: 97%; /* Remove max width constraint */
-  margin: 0 auto; /* Centering the grid */
+  width: 100%;
+  max-width: 97%;
+  margin: 0 auto;
 }
 
 /* Blog item styling */
 .blog-item {
-  background: linear-gradient(to bottom, #9593ac 20%, #9bb7c4 65%); /* Dark gradient for blog items */
+  background: var(--secondary-color);
   opacity: 85%;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px var(--primary-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-item:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Blog title */
 .blog-title {
   font-size: 1.5rem;
-  color: #000000d8;
+  color: var(--text-primary); /* Primary text color */
   margin: 0 0 10px;
 }
 
 /* Blog summary */
 .blog-summary {
   font-size: 1rem;
-  color: #cccccc; /* Light grey for summary */
+  color: var(--text-muted); /* Muted text color for summary */
   margin: 10px 0;
 }
 
@@ -78,45 +78,45 @@
   cursor: pointer;
   font-size: 16px;
   display: inline-block;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
   padding: 10px 15px;
-  background-color: #17184b; /* Button color */
-  color: #ffffff; /* Dark text */
+  background-color: var(--primary-color); /* Secondary button color */
+  color: var(--text-light); /* Light text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  width: auto; /* Optional: adjust as needed */
-  min-width: 120px; /* Optional: set a minimum width */
-  text-align: center; /* Ensures text alignment */
+  width: auto;
+  min-width: 120px;
+  text-align: center;
 }
 
 .read-more:hover {
-  background-color: #4b4774; /* Hover color */
-  color: #cccccc; /* Change text color on hover */
+  background-color: var(--secondary-hover-color); /* Hover color for button */
+  color: var(--text-light); /* Change text color on hover */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .blogs-list {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+    grid-template-columns: 1fr;
   }
 }
 
 /* Main header styling */
 .main-header {
-  height: 25px;
+  height: 20px;
   margin-bottom: 50px;
-  background: #9bb7c4; /* Dark background for main header */
-  padding: 20px 0;
+  background: var(--secondary-color); /* Primary background color */
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  border: 1px solid #9bb7c4; /* Optional border for styling */
-  border-radius: 5px
+  border: 1px solid var(--primary-color); /* Border with primary color */
+  border-radius: 5px;
 }
 
 .header-content {
@@ -134,7 +134,7 @@
 }
 
 .main-header nav a {
-  color: #ffffff;
+  color: var(--text-primary); /* Light text color for nav links */
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -144,6 +144,6 @@
 }
 
 .main-header nav a:hover {
-  background-color: #9593ac;
-  color: #1a1a1a;
+  background-color: var(--primary-hover-color); /* Hover color for nav links */
+  color: var(--text-primary); /* Change text color on hover */
 }

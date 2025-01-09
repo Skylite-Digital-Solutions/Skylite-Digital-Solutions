@@ -1,67 +1,68 @@
-/* Main container for the slider */
+/* Main container for the body */
+.body-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Slider Section */
 .slider-container {
-  width: 98.9vw;  /* Full viewport width */
+  width: 100vw; /* Full viewport width */
   height: 90vh; /* Full viewport height */
   position: relative;
   overflow: hidden;
-  display: flex;
   background-color: #1a1a1a;
-  color: #ffffff;
 }
 
-/* Individual slide styling */
 .slide {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute; /* Positioned absolutely to layer slides on top of each other */
-  transition: opacity 0.8s ease; /* Fade transition for slide changes */
+  position: relative;
 }
 
-/* Slide image styling */
 .slide-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the full area while maintaining aspect ratio */
+  object-fit: cover;
   opacity: 0.85;
 }
 
-/* Slide text overlay */
 .slide-text {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
-  padding: 15px 30px;
+  padding: 20px;
   border-radius: 8px;
   max-width: 80%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .slide-text h2 {
   font-size: 2rem;
-  color: #f0a500;
+  margin-bottom: 15px;
 }
 
-/* Button styling */
 .slider-buttons {
   display: flex;
-  justify-content: space-around
+  justify-content: center;
+  gap: 15px;
 }
 
 .know-more-button,
 .schedule-call-button {
   padding: 10px 20px;
   border: none;
-  font-size: 1rem;
-  cursor: pointer;
   border-radius: 5px;
+  font-size: 1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .know-more-button {
@@ -84,7 +85,6 @@
   transform: scale(1.05);
 }
 
-/* Slide indicators */
 .slide-indicators {
   position: absolute;
   bottom: 5%;
@@ -99,7 +99,6 @@
   margin: 0 5px;
   border-radius: 50%;
   background-color: #ccc;
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -108,7 +107,83 @@
   background-color: #1f62c7;
 }
 
-/* Responsive adjustments */
+/* Leadership Section */
+.leadership-container {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.leadership-container h2 {
+  font-size: 2.5rem;
+  color: #231f41;
+  margin-bottom: 20px;
+}
+
+.leadership {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.leadership-member {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.leadership-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leadership-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.leadership-info h2 {
+  font-size: 1.5rem;
+  color: #231f41;
+  margin-bottom: 5px;
+}
+
+.leadership-info h3 {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.leadership-info p {
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* About Us Section */
+section {
+  margin: 40px 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .slide-text h2 {
     font-size: 1.5rem;
@@ -117,5 +192,14 @@
   .slider-buttons button {
     padding: 8px 16px;
     font-size: 0.9rem;
+  }
+
+  .leadership {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .leadership-member {
+    max-width: 90%;
   }
 }
