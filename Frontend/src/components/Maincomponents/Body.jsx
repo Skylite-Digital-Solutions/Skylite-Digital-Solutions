@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Mainstyles/Body.css';
 import AboutUs from './AboutUs';
-import Services from '../Allservices/Services'; // Corrected to uppercase for React component
+import Services from '../Maincomponents/Services'; // Corrected to uppercase for React component
 import ContactUs from './ContactUs';
 import '../../styles/color.css';
 
