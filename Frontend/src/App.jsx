@@ -14,10 +14,6 @@ import Ourservices from './Knowmore/Ourservices';
 import Quality from './Knowmore/Quality';
 import Success from './Knowmore/Success';
 import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
-import BlogPage from './components/Blogfirebase/BlogPage';
-import BlogPostForm from './components/Blogfirebase/BlogPostForm';
-import SignInForm from './components/Blogfirebase/SignInForm';
-import SignupForm from './components/Blogfirebase/SignupForm';
 
 function App() {
   return (
@@ -44,14 +40,6 @@ function App() {
 
         {/* Blog Routes */}
         <Route path="blogs/all-categories" element={<AllCategories />} />
-        
-        {/* Blog Firebase Routes */}
-        <Route path="blog-page" element={<BlogPage />} />
-        <Route path="create-blog" element={<BlogPostForm />} />
-
-        {/* Login Firebase Routes */}
-        <Route path="blogfirebase/signin-container" element={<SignInForm />} />
-        <Route path="blogfirebase/signup-container" element={<SignupForm />} />
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}

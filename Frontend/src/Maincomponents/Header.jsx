@@ -25,10 +25,10 @@ function Header() {
     // { id: 7, name: 'IT Best Practices', url: '/blogs/it-best-practice' },
   ];
 
-  const Login = [
-    { id: 1, name: 'Sign In', url: '/blogfirebase/signin-container' },
-    { id: 2, name: 'Sign Up', url: '/blogfirebase/signup-container' },
-  ];
+  // const Login = [
+  //   { id: 1, name: 'Sign In', url: '/blogfirebase/signin-container' },
+  //   { id: 2, name: 'Sign Up', url: '/blogfirebase/signup-container' },
+  // ];
 
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
   const toggleBlogDropdown = () => setBlogDropdownVisible(!blogDropdownVisible);
