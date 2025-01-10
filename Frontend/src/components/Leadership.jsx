@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/color.css';
-import '../../styles/Mainstyles/Leadership.css';
+import '../styles/color.css';
+import '../styles/Leadership.css';
 
 const Leadership = () => {
   const leadership = [

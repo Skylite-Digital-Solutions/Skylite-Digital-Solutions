@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../../styles/Mainstyles/ContactUs.css';
+import '../styles/ContactUs.css';
 import axios from 'axios';
-import '../../styles/color.css';
+import '../styles/color.css';
 
 const ContactUs = () => {
   const YOUR_BACKEND_API_URL = 'http://localhost:5000/api/contact'; // Replace with your backend API endpoint

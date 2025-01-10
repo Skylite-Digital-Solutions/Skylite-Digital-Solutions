@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/ServicesStyles/DigitalSEO.css';
-import '../../styles/color.css';
+import '../styles/DigitalSEO.css';
+import '../styles/color.css';
 
 const DigitalSEO = () => {
   const navigate = useNavigate();

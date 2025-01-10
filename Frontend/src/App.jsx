@@ -1,19 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Body from '../src/components/Maincomponents/Body';
-import Header from '../src/components/Maincomponents/Header';
-import ContactUs from '../src/components/Maincomponents/ContactUs';
-import AboutUs from '../src/components/Maincomponents/AboutUs';
-import Footer from '../src/components/Maincomponents/Footer';
-import SoftwareDev from './components/Maincomponents/SoftwareDev';
-import QualityAssurance from './components/Maincomponents/QualityAssurance';
-import DigitalSEO from './components/Maincomponents/DigitalSEO';
-import Blogs from './components/Maincomponents/Blogs';
-import Services from '../src/components/Maincomponents/Services';
-import Ourservices from '../src/components/Maincomponents/Ourservices';
-import Quality from '../src/components/Maincomponents/Quality'
-import Success from '../src/components/Maincomponents/Success';
-import Chatbot from './components/Maincomponents/Chatboat'; // Import the Chatbot component
+import Body from '../src/components/Body';
+import Header from '../src/components/Header';
+import ContactUs from '../src/components/ContactUs';
+import AboutUs from '../src/components/AboutUs';
+import Footer from '../src/components/Footer';
+import SoftwareDev from './components/SoftwareDev';
+import QualityAssurance from './components/QualityAssurance';
+import DigitalSEO from './components/DigitalSEO';
+import Blogs from './components/Blogs';
+import Services from '../src/components/Services';
+import Ourservices from '../src/components/Ourservices';
+import Quality from '../src/components/Quality'
+import Success from '../src/components/Success';
+import Chatbot from './components/Chatboat'; // Import the Chatbot component
 
 function App() {
   return (
