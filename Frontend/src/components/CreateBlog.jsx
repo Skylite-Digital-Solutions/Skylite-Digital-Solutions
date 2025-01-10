@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './CreateBlog.css'; // Ensure to create a CSS file for styling
+import axios from 'axios';
+import '../styles/CreateBlog.css'; // Ensure to create a CSS file for styling
 
 const CreateBlog = () => {
   const [blog, setBlog] = useState({
@@ -9,16 +10,27 @@ const CreateBlog = () => {
   });
 
   const [preview, setPreview] = useState(null);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBlog({ ...blog, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setPreview(blog);
-    setBlog({ title: '', content: '', author: '' }); // Clear form after submission
+
+    // Send POST request to backend to create a new blog
+    try {
+      const response = await axios.post('http://localhost:5000/api/blogs', blog);
+      console.log('Blog created:', response.data);
+      setBlog({ title: '', content: '', author: '' }); // Clear form after submission
+      setError('');
+    } catch (err) {
+      console.error('Error creating blog:', err);
+      setError('Error creating blog, please try again.');
+    }
   };
 
   return (
@@ -62,6 +74,8 @@ const CreateBlog = () => {
         </div>
         <button type="submit" className="submit-button">Create Blog</button>
       </form>
+
+      {error && <p className="error-message">{error}</p>}
 
       {preview && (
         <div className="blog-preview">

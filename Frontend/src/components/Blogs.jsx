@@ -1,10 +1,12 @@
 // src/components/Blog/AllCategories.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 import '../styles/Blogs.css';
 import '../styles/color.css';
 
 const Blogs = () => {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
   // Blog data with added Technology and Interviews categories
   const blogs = [
     {
@@ -43,20 +45,34 @@ const Blogs = () => {
       summary: 'Insights from leading professionals in technology and innovation.',
       link: '/blogs/expert-interviews-tech-industry',
     },
+    {
+      id: 7,
+      title: 'Threats of Cyber Security',
+      summary: 'Insights from leading professionals in technology and innovation.',
+      link: '/blogs/expert-interviews-tech-industry',
+    },
   ];
 
   // Sort blogs alphabetically by title
   const sortedBlogs = [...blogs].sort((a, b) => a.title.localeCompare(b.title));
 
+  const handleNavigate = (path) => {
+    navigate(path); // Navigate to the specific blog page
+  };
+
+  const handleCreateBlogClick = () => {
+    navigate('/create-blog'); // Redirect to the create-blog page
+  };
+
   return (
     <div className="Blogs">
-
       {/* Inner header for blogs page */}
       <div className="inner-header">
-        <h2>Our Blogs Insights</h2>
-      <p>
-        Drive traffic, engage users, and grow your online presence with our Digital Marketing and SEO services. We use data-driven strategies to ensure you reach your target audience effectively.
-      </p>
+        <h2>Our Blog Insights</h2>
+        <p>
+          Drive traffic, engage users, and grow your online presence with our Digital Marketing and SEO services. We use
+          data-driven strategies to ensure you reach your target audience effectively.
+        </p>
       </div>
 
       <div className="blogs-list">
@@ -64,9 +80,24 @@ const Blogs = () => {
           <div className="blog-item" key={blog.id}>
             <h3 className="blog-title">{blog.title}</h3>
             <p className="blog-summary">{blog.summary}</p>
-            <Link to={blog.link} className="read-more">Explore Blogs</Link>
+            <button
+              className="read-more-button"
+              onClick={() => handleNavigate(blog.link)}
+            >
+              Read More
+            </button>
           </div>
         ))}
+      </div>
+
+      <div className="create-blog-section">
+        <h3>Create Your Blog</h3>
+        <p>
+          Ready to share your ideas? Click below to start creating and publishing your blog posts on our platform.
+        </p>
+        <button className="create-blog-button" onClick={handleCreateBlogClick}>
+          Create Blog
+        </button>
       </div>
     </div>
   );

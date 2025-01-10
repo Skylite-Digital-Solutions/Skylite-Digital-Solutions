@@ -11,9 +11,10 @@ import DigitalSEO from './components/DigitalSEO';
 import Blogs from './components/Blogs';
 import Services from '../src/components/Services';
 import Ourservices from '../src/components/Ourservices';
-import Quality from '../src/components/Quality'
+import Quality from '../src/components/Quality';
 import Success from '../src/components/Success';
 import Chatbot from './components/Chatboat'; // Import the Chatbot component
+import CreateBlog from './components/CreateBlog';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="blogs" element={<Blogs />} />
-        
+
         {/* Services Routes */}
         <Route path="services" element={<Services />} />
         <Route path="services/all-services" element={<Services />} />
@@ -39,7 +40,7 @@ function App() {
         <Route path="success" element={<Success />} />
 
         {/* Blog Routes */}
-        <Route path="blogs/all-categories" element={<Blogs />} />
+        <Route path="create-blog" element={<CreateBlog />} />
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}

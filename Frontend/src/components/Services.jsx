@@ -31,6 +31,11 @@ const Services = () => {
                     <p>Explore our insights and expertise through our blog. From tech trends to practical tips, we share knowledge to help you stay informed and make strategic technology decisions.</p>
                     <button onClick={() => navigate('/blogs/all-categories')}>Explore</button>
                 </div>
+                <div className="service-card">
+                    <h2>Cyber Security</h2>
+                    <p>We create responsive and user-friendly websites that drive engagement and growth. Our team uses the latest technologies to deliver high-quality web solutions.</p>
+                    <button onClick={() => navigate('/services/web-development')}>Explore</button>
+                </div>
             </div>
         </div>
     );

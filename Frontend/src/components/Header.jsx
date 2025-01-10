@@ -47,7 +47,7 @@ function Header() {
         <img src="/logo.svg" alt="Company Logo" className="logo-image" />
       </Link>
       <Link to="/" className="logo-title">
-        <h3>Skylite Digital</h3>
+        <h3>Heading</h3>
         <h4>INPIRED BY YOU, CRAFTING BY US</h4>
       </Link>
       <nav className="nav">
@@ -65,23 +65,9 @@ function Header() {
             </div>
           )}
         </div>
-        <Link to="/blogs/all-categories" className="nav-item">Blogs</Link>
+        <Link to="/blogs" className="nav-item">Blogs</Link>
         <Link to="/about-us" className="nav-item">About Us</Link>
         <Link to="/contact-us" className="nav-item">Contact Us</Link>
-
-        {/* Blogs Dropdown */}
-        {/* <div className="nav-item" onClick={toggleBlogDropdown}>
-          Blogs
-          {blogDropdownVisible && (
-            <div className="dropdown">
-              {Blogs.map(({ name, id, url }) => (
-                <div className='dropdown-items' key={id}>
-                  <Link to={url} className='dropdown-item'>{name}</Link>
-                </div>
-              ))}
-            </div>
-          )}
-        </div> */}
 
         {/* Login Dropdown
         <div className="nav-item" onClick={toggleLoginDropdown}>
