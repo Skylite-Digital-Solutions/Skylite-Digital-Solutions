@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -30,14 +29,51 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
+// Blog Schema
+const blogSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+  author: String,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+const Blog = mongoose.model('Blog', blogSchema);
+
 // Routes
 app.use('/api/contact', contactRoutes);
 
-app.get('/', (req, res) => {
-  res.send("<h1>HI</h1>")
+// Blog Routes
+// Create a new blog
+app.post('/api/blogs', async (req, res) => {
+  try {
+    const { title, content, author } = req.body;
+    const newBlog = new Blog({ title, content, author });
+    await newBlog.save();
+    res.status(201).json(newBlog);
+  } catch (error) {
+    res.status(500).json({ message: "Error creating blog", error });
+  }
 });
 
-/// API endpoint to get data and return as CSV
+// Get all blogs
+app.get('/api/blogs', async (req, res) => {
+  try {
+    const blogs = await Blog.find();
+    res.status(200).json(blogs);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching blogs", error });
+  }
+});
+
+// Default route
+app.get('/', (req, res) => {
+  res.send("<h1>HI</h1>");
+});
+
+// API endpoint to get data and return as CSV
 app.get('/api/contact/csv', async (req, res) => {
   try {
     // Fetch contacts from the database
