@@ -6,8 +6,5 @@ export default defineConfig({
   plugins: [react()],
   plugins: [react()],
   resolve: { 
-    alias: {
-      'firebase/firestore': 'firebase/firestore/lite',
-    }
   }
 })

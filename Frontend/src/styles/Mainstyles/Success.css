@@ -1,0 +1,154 @@
+/* KnowMore.css */
+
+/* Background container */
+.Background-container {
+    background: var(--secondary-color);
+    max-width: 100%;
+    border-radius: 0.5px;
+    box-shadow: 0 4px 12px var(--primary-color);
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Flex direction changed to row */
+    justify-content: center;
+    width: 100%; /* Ensure full width */
+}
+
+/* Success container */
+.success-container {
+    max-width: 100%; /* Full width */
+    margin: 10px;
+    padding: 20px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--primary-color);
+    color: var(--text-primary);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Ensure full width */
+}
+
+/* Hover effect for success container */
+.success-container:hover {
+    background: var(--primary-color); /* Change to primary color on hover */
+    color: var(--text-light); /* Change text color to light */
+}
+
+/* Partner container */
+.Partner-container-main {
+    max-width: 100%; /* Full width */
+    margin: 10px;
+    padding: 30px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--primary-color);
+    color: var(--text-primary);
+    font-family: Arial, sans-serif;
+    width: 100%; /* Ensure full width */
+}
+
+/* Hover effect for partner container */
+.Partner-container-main:hover {
+    background: var(--primary-color); /* Change to primary color on hover */
+    color: var(--text-light); /* Change text color to light */
+}
+
+/* Change color of li strong when hovering over Partner container */
+.Partner-container-main:hover li strong {
+    color: var(--text-light); /* Change color to white */
+}
+
+/* Main title styling */
+.success-container h1 {
+    font-size: 2rem;
+    color: var(--text-dark); /* Primary dark color */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.success-container h2 {
+    font-size: 1.5rem;
+    color: var(--text-dark); /* Primary dark color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Paragraph styling */
+.success-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-primary); /* Primary text color */
+    text-align: center;
+}
+
+.aboutus-button {
+    background-color: var(--text-light); /* Light background color */
+    color: var(--text-dark); /* Dark text color */
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Button hover effect */
+.aboutus-button:hover {
+    background: var(--text-dark); /* Dark background color on hover */
+    color: var(--text-light); /* Light text color on hover */
+}
+
+/* Subtitle styling */
+.Partner-container-main h2 {
+    font-size: 2rem;
+    color: var(--text-dark); /* Primary dark color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* List styling */
+.Partner-container ul {
+    display: flex;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.Partner-container li strong {
+    font-weight: bold;
+    color: var(--text-dark); /* Primary dark color */
+    font-size: 1.1rem;
+}
+
+.Partner-container li {
+    font-size: 1rem;
+    color: var(--text-primary); /* Primary text color */
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .know-more-container {
+        padding: 20px;
+    }
+
+    .know-more-container h1 {
+        font-size: 2rem;
+    }
+
+    .know-more-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .know-more-container p,
+    .know-more-container li {
+        font-size: 1rem;
+    }
+}

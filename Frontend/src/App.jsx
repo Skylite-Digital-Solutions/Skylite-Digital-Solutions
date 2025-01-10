@@ -1,23 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Body from './Maincomponents/Body';
-import Header from './Maincomponents/Header';
-import ContactUs from './Maincomponents/ContactUs';
-import AboutUs from './Maincomponents/AboutUs';
-import Footer from './Maincomponents/Footer';
-import SoftwareDev from './components/Allservices/SoftwareDev';
-import QualityAssurance from './components/Allservices/QualityAssurance';
-import DigitalSEO from './components/Allservices/DigitalSEO';
-import AllCategories from './components/Blogscategory/AllCategories';
-import Services from './components/Allservices/Services';
-import Ourservices from './Knowmore/Ourservices';
-import Quality from './Knowmore/Quality';
-import Success from './Knowmore/Success';
-import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
-import BlogPage from './components/Blogfirebase/BlogPage';
-import BlogPostForm from './components/Blogfirebase/BlogPostForm';
-import SignInForm from './components/Blogfirebase/SignInForm';
-import SignupForm from './components/Blogfirebase/SignupForm';
+import Body from '../src/components/Maincomponents/Body';
+import Header from '../src/components/Maincomponents/Header';
+import ContactUs from '../src/components/Maincomponents/ContactUs';
+import AboutUs from '../src/components/Maincomponents/AboutUs';
+import Footer from '../src/components/Maincomponents/Footer';
+import SoftwareDev from './components/Maincomponents/SoftwareDev';
+import QualityAssurance from './components/Maincomponents/QualityAssurance';
+import DigitalSEO from './components/Maincomponents/DigitalSEO';
+import Blogs from './components/Maincomponents/Blogs';
+import Services from '../src/components/Maincomponents/Services';
+import Ourservices from '../src/components/Maincomponents/Ourservices';
+import Quality from '../src/components/Maincomponents/Quality'
+import Success from '../src/components/Maincomponents/Success';
+import Chatbot from './components/Maincomponents/Chatboat'; // Import the Chatbot component
 
 function App() {
   return (
@@ -28,7 +24,7 @@ function App() {
         <Route path="/" element={<Body />} />
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
-        <Route path="blogs" element={<AllCategories />} />
+        <Route path="blogs" element={<Blogs />} />
         
         {/* Services Routes */}
         <Route path="services" element={<Services />} />
@@ -43,19 +39,11 @@ function App() {
         <Route path="success" element={<Success />} />
 
         {/* Blog Routes */}
-        <Route path="blogs/all-categories" element={<AllCategories />} />
-        
-        {/* Blog Firebase Routes */}
-        <Route path="blog-page" element={<BlogPage />} />
-        <Route path="create-blog" element={<BlogPostForm />} />
-
-        {/* Login Firebase Routes */}
-        <Route path="blogfirebase/signin-container" element={<SignInForm />} />
-        <Route path="blogfirebase/signup-container" element={<SignupForm />} />
+        <Route path="blogs/all-categories" element={<Blogs />} />
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}
-      {/* <Chatbot /> */}
+      <Chatbot />
     </div>
   );
 }

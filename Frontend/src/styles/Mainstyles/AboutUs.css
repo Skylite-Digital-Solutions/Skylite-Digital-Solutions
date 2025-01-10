@@ -1,6 +1,6 @@
+/* About Us Page Styles */
 .aboutus-page {
-  /* background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%); */
-  background: #cccccc;
+  background: var(--background-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -8,28 +8,37 @@
   padding: 20px;
 }
 
-.aboutus-container,
-.vision-mission-container {
+.aboutus-container {
   flex: 1;
-  min-width: 200px;
-  min-height: 76vh;
-  max-width: 48%;
+  max-width: 98.5%;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
+  background: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 8px var(--primary-color);
 }
+
+.vision-mission-container {
+  flex: 1;
+  max-width: 98.5%;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Hover effect for the aboutus-container */
 .aboutus-container:hover {
   transform: scale(1.02); /* Slight scaling effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px var(primary-color); /* Enhanced shadow on hover */
 }
 
 .vision-mission-container {
@@ -37,34 +46,47 @@
   justify-content: space-around;
   border-radius: 8px;
   padding: 16px;
-  background-color: rgb(18, 18, 58);
+  background-color: var(--secondary-color);
   gap: 10px;
 }
 
 .vision, .mission {
   flex: 1;
   padding: 16px;
-  box-shadow: black;
+  box-shadow: var(--primary-color);
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 8px var(--primary-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.vision:hover, .mission:hover {
+.aboutus-container:hover {
+  background-color: var(--primary-color);
   transform: scale(1.03); /* Slight scaling effect */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  box-shadow: 0px 6px 12px var(--primary-color); /* Deeper shadow on hover */
+}
+
+.vision:hover, .mission:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.03); /* Slight scaling effect */
+  box-shadow: 0px 6px 12px var(--primary-color); /* Deeper shadow on hover */
 }
 
 .aboutus-heading {
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: var(--text-primary);
+}
+
+.vision-mission-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
 }
 
 .accent-line {
   width: 50px;
   height: 4px;
-  background-color: black;
+  background-color: var(--text-dark);
   margin: 10px 0;
 }
 
@@ -74,12 +96,12 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 10px;
-  color: #231f41;
+  color: var(--text-primary);
 }
 
 .aboutus-button {
-  background-color: #23144d;
-  color: #ffffff;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -91,15 +113,15 @@
 }
 
 .aboutus-button:hover {
-  background:  #4b4774;
-  color: #cccccc;
+  background: var(--muted-color);
+  color: var(--background-color);
 }
 
 .our-vision-heading,
 .our-mission-heading {
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;
+  color: var(--text-dark);
   margin-top: 20px;
   text-align: center;
 }

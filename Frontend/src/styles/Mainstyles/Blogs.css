@@ -1,104 +1,149 @@
-/* styles/Blogs.css */
-.blogs-container {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 80vh;
-  text-align: center;
-}
-
-.blog-categories {
+/* .AllCategories Section */
+.Blogs {
+  background: var(--secondary-color);; /* Gradient using primary and secondary colors */
+  padding: 20px;
+  border-radius: 8px;
   width: 100%;
-  max-width: 800px;
-  margin-bottom: 40px; /* Space between categories and blogs */
-  text-align: center; /* Align categories text to the left */
+  max-width: 99.9%;
+  margin: 20px 0;
+  color: var(--text-primary); /* Primary text color */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.blog-categories h2 {
-  font-size: 2rem;
-  color: #f0a500;
-  margin-bottom: 15px;
+/* Main header banner style */
+.Blogs h2 {
+  font-size: 40px;
+  color: var(--text-primary); /* Primary text color for header */
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.blog-categories ul {
-  list-style: none;
-  padding: 0;
-  display: flex; /* Use flexbox for horizontal layout */
-  flex-wrap: wrap; /* Allow wrapping to new line if necessary */
-  gap: 20px; /* Space between category items */
-  justify-content: center; /* Center the items horizontally */
-}
-
-
-.blog-categories li {
-  display: flex;/* Remove margin to use gap instead */
+/* Introductory paragraph style */
+.Blogs p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary); /* Primary text color */
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.blog-categories a {
-  color: #f0a500;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.blog-categories a:hover {
-  color: #e59400; /* Change color on hover */
-}
-
-.blogs-heading {
-  font-size: 3rem;
-  color: #f0a500;
-  margin-bottom: 40px;
-}
-
+/* Blog container */
 .blogs-list {
-  width: 100%;
-  max-width: 800px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 25px;
+  width: 100%;
+  max-width: 97%;
+  margin: 0 auto;
 }
 
+/* Blog item styling */
 .blog-item {
-  background-color: #333333;
+  background: var(--secondary-color);
+  opacity: 85%;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Blog title */
 .blog-title {
   font-size: 1.5rem;
-  color: #f0a500;
-  margin: 0;
+  color: var(--text-primary); /* Primary text color */
+  margin: 0 0 10px;
 }
 
+/* Blog summary */
 .blog-summary {
   font-size: 1rem;
-  color: #cccccc;
+  color: var(--text-muted); /* Muted text color for summary */
   margin: 10px 0;
 }
 
+/* Read more button */
 .read-more {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
   padding: 10px 15px;
-  background-color: #f0a500;
-  color: #1a1a1a;
+  background-color: var(--primary-color); /* Secondary button color */
+  color: var(--text-light); /* Light text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  width: auto;
+  min-width: 120px;
+  text-align: center;
 }
 
 .read-more:hover {
-  background-color: #e59400;
+  background-color: var(--secondary-hover-color); /* Hover color for button */
+  color: var(--text-light); /* Change text color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blogs-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Main header styling */
+.main-header {
+  height: 20px;
+  margin-bottom: 50px;
+  background: var(--secondary-color); /* Primary background color */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--primary-color); /* Border with primary color */
+  border-radius: 5px;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Navigation links */
+.main-header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.main-header nav a {
+  color: var(--text-primary); /* Light text color for nav links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-header nav a:hover {
+  background-color: var(--primary-hover-color); /* Hover color for nav links */
+  color: var(--text-primary); /* Change text color on hover */
 }
