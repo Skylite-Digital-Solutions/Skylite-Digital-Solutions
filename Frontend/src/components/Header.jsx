@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/Mainstyles/Header.css'; // Updated CSS file
-import '../../styles/color.css';
+import '../styles/Header.css'; // Updated CSS file
+import '../styles/color.css';
 
 function Header() {
   const [dropdownVisible, setDropdownVisible] = useState(false);

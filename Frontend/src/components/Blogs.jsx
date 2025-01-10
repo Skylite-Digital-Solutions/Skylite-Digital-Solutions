@@ -1,8 +1,8 @@
 // src/components/Blog/AllCategories.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/Mainstyles/Blogs.css';
-import '../../styles/color.css';
+import '../styles/Blogs.css';
+import '../styles/color.css';
 
 const Blogs = () => {
   // Blog data with added Technology and Interviews categories

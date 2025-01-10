@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/ServicesStyles/QualityAssurance.css';
-import '../../styles/color.css';
+import '../styles/QualityAssurance.css';
+import '../styles/color.css';
 
 const QualityAssurance = () => {
   const navigate = useNavigate();

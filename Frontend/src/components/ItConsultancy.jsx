@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/ServicesStyles/SoftwareDev.css';
-import '../../styles/color.css';
+import '../styles/ITConsultancy.css';
+import '../styles/color.css';
 
-const SoftwareDev = () => {
+const ITConsulting = () => {
   const navigate = useNavigate();
 
   const handleGetInTouch = () => {
@@ -11,8 +11,8 @@ const SoftwareDev = () => {
   };
 
   return (
-    <div className="SoftwareDev">
-      <h2>Our Software Development Services</h2>
+    <div className="ITConsulting">
+      <h2>Our IT Consultancy Services</h2>
       <p>
         At <strong>Skylite Digital Solitions</strong>, we empower businesses with expert Web Development services designed to deliver impactful digital experiences. We specialize in creating fast, responsive, and scalable websites and applications that cater to your unique goals. Leveraging the latest technologies like React, Angular, Vue.js for frontend, and Node.js, Express, and Python for backend, we ensure a seamless, robust, and user-friendly interface across all devices.
       </p>
@@ -51,4 +51,4 @@ const SoftwareDev = () => {
   );
 };
 
-export default SoftwareDev;
+export default ITConsulting;

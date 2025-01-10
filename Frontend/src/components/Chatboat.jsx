@@ -1,7 +1,8 @@
 // Chatbot.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../../styles/Mainstyles/Chatboat.css'; // Import the CSS file
+import '../styles/Chatboat.css'; // Import the CSS file
+import '../styles/color.css';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);

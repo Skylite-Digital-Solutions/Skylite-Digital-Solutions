@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Mainstyles/OurClients.css' // Ensure you have appropriate CSS for styling
+import '../styles/OurClients.css' // Ensure you have appropriate CSS for styling
 
 const partners = [
   {

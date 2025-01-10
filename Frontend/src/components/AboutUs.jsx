@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContactUs from './ContactUs';
-import '../../styles/Mainstyles/AboutUs.css';
-import '../../styles/color.css';
+import '../styles/AboutUs.css';
+import '../styles/color.css';
 
 const AboutUs = () => {
   const navigate = useNavigate();
