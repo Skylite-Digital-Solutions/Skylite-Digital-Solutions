@@ -9,17 +9,17 @@ import OurClient from './OurClients';
 
 const images = [
   {
-    url: '/Quality.png',
+    url: '/Partners.png',
     text: 'Welcome to Our Service',
     route: '/our-services',
   },
   {
-    url: '/DigitalSEO.png',
+    url: '/Qualities.png',
     text: 'Quality Assurance Guaranteed',
     route: '/quality',
   },
   {
-    url: '/SoftwareDev.png',
+    url: '/Software.png',
     text: 'Your Success is Our Priority',
     route: '/success',
   },

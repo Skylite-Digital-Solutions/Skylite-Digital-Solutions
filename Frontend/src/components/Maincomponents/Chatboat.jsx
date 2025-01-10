@@ -1,7 +1,7 @@
 // Chatbot.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../Chatboat/Chatboat.css'; // Import the CSS file
+import '../../styles/Mainstyles/Chatboat.css'; // Import the CSS file
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ const Chatbot = () => {
     <>
       <button className="chatbot-button" onClick={toggleChatbot}>
         {/* <img src={chatbotIcon} alt="Chatbot Icon" className="chatbot-icon" /> */}
-        <img src="/Chatboat-icon.png" alt="Chatboat Icon" />
+        <img src="/Chatboat.png" alt="Chatboat Icon" />
       </button>
 
       {isOpen && (

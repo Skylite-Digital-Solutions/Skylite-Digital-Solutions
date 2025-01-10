@@ -132,21 +132,29 @@
   }
   
   /* Chatbot Button */
+/* Floating Chatbot Button */
 .chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1000;
-  }
-  
-  .chatbot-icon {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Ensure good contrast */
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* Reduced size */
+  height: 40px; /* Reduced size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chatbot-icon {
+  width: 10px; /* Icon size proportional to button */
+  height: 10px;
+  object-fit: contain; /* Ensures the image fits well */
+}
   
   /* Close Button */
   .close-button {

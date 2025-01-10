@@ -5,15 +5,15 @@ import Header from '../src/components/Maincomponents/Header';
 import ContactUs from '../src/components/Maincomponents/ContactUs';
 import AboutUs from '../src/components/Maincomponents/AboutUs';
 import Footer from '../src/components/Maincomponents/Footer';
-import SoftwareDev from './components/Allservices/SoftwareDev';
-import QualityAssurance from './components/Allservices/QualityAssurance';
-import DigitalSEO from './components/Allservices/DigitalSEO';
+import SoftwareDev from './components/Maincomponents/SoftwareDev';
+import QualityAssurance from './components/Maincomponents/QualityAssurance';
+import DigitalSEO from './components/Maincomponents/DigitalSEO';
 import Blogs from './components/Maincomponents/Blogs';
 import Services from '../src/components/Maincomponents/Services';
 import Ourservices from '../src/components/Maincomponents/Ourservices';
 import Quality from '../src/components/Maincomponents/Quality'
 import Success from '../src/components/Maincomponents/Success';
-import Chatbot from './components/Chatboat/Chatboat'; // Import the Chatbot component
+import Chatbot from './components/Maincomponents/Chatboat'; // Import the Chatbot component
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}
-      {/* <Chatbot /> */}
+      <Chatbot />
     </div>
   );
 }
