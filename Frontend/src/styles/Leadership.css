@@ -31,6 +31,8 @@
   .leadership-member:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px var(--shadow-dark);
+    background-color: var( --secondary-hover-color);
+    color: var(--text-light);
   }
   
   .leadership-image {

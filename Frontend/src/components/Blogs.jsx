@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 import '../styles/Blogs.css';
 import '../styles/color.css';
+import BlogList from './BlogCategories/Bloglist';
 
 const Blogs = () => {
   const navigate = useNavigate(); // Hook to navigate programmatically
@@ -74,6 +75,10 @@ const Blogs = () => {
           data-driven strategies to ensure you reach your target audience effectively.
         </p>
       </div>
+
+      <section>
+        <BlogList />
+      </section>
 
       <div className="blogs-list">
         {sortedBlogs.map((blog) => (

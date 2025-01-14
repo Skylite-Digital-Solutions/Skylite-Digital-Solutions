@@ -15,6 +15,9 @@ import Quality from '../src/components/Quality';
 import Success from '../src/components/Success';
 import Chatbot from './components/Chatboat'; // Import the Chatbot component
 import CreateBlog from './components/CreateBlog';
+import LoginPage from './components/LoginPage';
+import BlogList from './components/BlogCategories/BlogList'; // Import Blog List component
+import BlogDetail from './components/BlogCategories/BlogDetail'; // Import Blog Detail component
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="blogs" element={<Blogs />} />
+        <Route path="LoginPage" element={<LoginPage />} />
 
         {/* Services Routes */}
         <Route path="services" element={<Services />} />
@@ -41,6 +45,8 @@ function App() {
 
         {/* Blog Routes */}
         <Route path="create-blog" element={<CreateBlog />} />
+        <Route path="blogs" element={<BlogList />} />
+        <Route path="blogs/:blogId" element={<BlogDetail />} /> {/* Corrected route */}
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}

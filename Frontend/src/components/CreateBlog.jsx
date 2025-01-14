@@ -1,93 +1,135 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import '../styles/CreateBlog.css'; // Ensure to create a CSS file for styling
+import React, { useState } from "react";
+import "../styles/CreateBlog.css"; // Ensure to create a CSS file for styling
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { app } from '../Firebase/firebaseConfig'; // assuming firebase.js file to initialize Firebase
 
 const CreateBlog = () => {
-  const [blog, setBlog] = useState({
-    title: '',
-    content: '',
-    author: '',
-  });
-
-  const [preview, setPreview] = useState(null);
+  const [blogTitle, setBlogTitle] = useState('');
+  const [blogBodySections, setBlogBodySections] = useState(['']); // Initialize with one section
+  const [category, setCategory] = useState(''); // New state for category
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setBlog({ ...blog, [name]: value });
+  const db = getFirestore(app);
+
+  const handleBodyChange = (index, value) => {
+    const newBodySections = [...blogBodySections];
+    newBodySections[index] = value;
+    setBlogBodySections(newBodySections);
+  };
+
+  const addBodySection = () => {
+    if (blogBodySections.length < 3) {
+      setBlogBodySections([...blogBodySections, '']); // Add new section if less than 3
+    }
+  };
+
+  const removeBodySection = (index) => {
+    if (blogBodySections.length > 1) {
+      const newBodySections = [...blogBodySections];
+      newBodySections.splice(index, 1); // Remove section
+      setBlogBodySections(newBodySections);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setPreview(blog);
 
-    // Send POST request to backend to create a new blog
+    if (!category) {
+      setError('Please select a category.');
+      return;
+    }
+
+    setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/blogs', blog);
-      console.log('Blog created:', response.data);
-      setBlog({ title: '', content: '', author: '' }); // Clear form after submission
+      const blogRef = collection(db, 'blogs');
+      await addDoc(blogRef, {
+        title: blogTitle,
+        body: blogBodySections,
+        category: category, // Include category in the Firestore document
+      });
+
+      setBlogTitle('');
+      setBlogBodySections(['']);
+      setCategory(''); // Reset category after successful submission
       setError('');
-    } catch (err) {
-      console.error('Error creating blog:', err);
-      setError('Error creating blog, please try again.');
+      alert('Blog created successfully!');
+    } catch (error) {
+      console.error('Error creating blog:', error);
+      setError('There was an error creating the blog.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="create-blog-container">
-      <h1>Create a Blog</h1>
-      <form className="blog-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="title">Blog Title</label>
+    <div className="create-blog">
+      <h2>Create Blog</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Blog Title</label>
           <input
             type="text"
-            id="title"
-            name="title"
-            value={blog.title}
-            onChange={handleChange}
-            placeholder="Enter the blog title"
+            value={blogTitle}
+            onChange={(e) => setBlogTitle(e.target.value)}
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="content">Content</label>
-          <textarea
-            id="content"
-            name="content"
-            value={blog.content}
-            onChange={handleChange}
-            placeholder="Write your blog content here"
-            required
-          ></textarea>
+
+        <div>
+          <label>Blog Body</label>
+          {blogBodySections.map((section, index) => (
+            <div key={index} className="blog-body-section">
+              <textarea
+                value={section}
+                onChange={(e) => handleBodyChange(index, e.target.value)}
+                rows="5"
+                required
+              />
+              <div className="add-remove-buttons">
+                <button
+                  type="button"
+                  onClick={() => removeBodySection(index)}
+                  disabled={blogBodySections.length <= 1} // Prevent removal if there's only one section
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  onClick={addBodySection}
+                  disabled={blogBodySections.length >= 3}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="form-group">
-          <label htmlFor="author">Author</label>
-          <input
-            type="text"
-            id="author"
-            name="author"
-            value={blog.author}
-            onChange={handleChange}
-            placeholder="Enter your name"
+
+        <div>
+          <label>Category</label>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
             required
-          />
+          >
+            <option value="">Select Category</option>
+            <option value="The Future of Web Development">The Future of Web Development</option>
+            <option value="Digital Marketing Strategies">Digital Marketing</option>
+            <option value="Expert Interviews in Tech Industry">Business</option>
+            <option value="IT Consultancy Best Practices">IT Consultancy</option>
+            <option value="Technology Trends">Technology Trends</option>
+            <option value="Threats of Cyber Security">Cyber Security</option>
+            <option value="Understanding Quality Assurance">Quality Assurance</option>
+          </select>
         </div>
-        <button type="submit" className="submit-button">Create Blog</button>
+
+        {error && <p className="error">{error}</p>}
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Creating Blog...' : 'Create Blog'}
+        </button>
       </form>
-
-      {error && <p className="error-message">{error}</p>}
-
-      {preview && (
-        <div className="blog-preview">
-          <h2>Blog Preview</h2>
-          <h3>{preview.title}</h3>
-          <p>{preview.content}</p>
-          <p>
-            <strong>Author: </strong>
-            {preview.author}
-          </p>
-        </div>
-      )}
     </div>
   );
 };
