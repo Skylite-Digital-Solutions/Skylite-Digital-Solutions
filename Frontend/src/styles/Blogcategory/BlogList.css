@@ -1,73 +1,142 @@
+/* Main container for the Blog List */
 .blog-list {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 99.9%;
+  margin: 20px 0;
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for Blogs Section */
+.blog-list h2 {
+  font-size: 40px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Container holding all the categories */
+.categories-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  gap: 20px; /* Space between cards */
+  justify-content: flex-start;
+  width: 100%; /* Full screen width */
+  margin: 0;
+  padding: 0 20px; /* Add padding for spacing */
+  box-sizing: border-box;
+}
+
+/* Category card */
+.blog-category {
+  flex: 1 1 calc(33.33% - 20px); /* Three cards per row */
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+/* Container inside each category */
+.category-container {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 85%;
+}
+
+/* Hover effect for category container */
+.category-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Title inside each category card */
+.category-container h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* Category item list */
+.category-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category-container ul li {
+  margin: 5px 0;
+}
+
+.category-container ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.category-container ul li a:hover {
+  color: var(--secondary-hover-color);
+  text-decoration: underline;
+}
+
+/* Message for no data in category */
+.no-data {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Error message */
+.error {
+  color: red;
+  text-align: center;
+}
+
+.explore-button {
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.explore-button:hover {
+  background-color: var(--secondary-hover-color);
+  color: var(--text-light);
+}
+
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 1024px) {
+  .blog-category {
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row on medium screens */
+    max-width: calc(33.33% - 20px);
   }
-  
-  .category-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .blog-category {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+    max-width: calc(50% - 20px);
   }
-  
-  .category-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .blog-category {
+    flex: 1 1 100%; /* One card per row on very small screens */
+    max-width: 100%;
   }
-  
-  .category-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .blog-titles {
-    margin-top: 20px;
-  }
-  
-  .blog-titles ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .blog-title {
-    cursor: pointer;
-    margin: 8px 0;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease;
-  }
-  
-  .blog-title:hover {
-    background-color: #e9ecef;
-  }
-  
-  .blog-details {
-    margin-top: 20px;
-  }
-  
-  .back-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .back-button:hover {
-    background-color: #c82333;
-  }
-  
-  .blog-body p {
-    margin: 10px 0;
-    line-height: 1.6;
-  }
-  
+}

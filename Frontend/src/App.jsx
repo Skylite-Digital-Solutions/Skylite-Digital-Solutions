@@ -1,23 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Body from '../src/components/Body';
-import Header from '../src/components/Header';
-import ContactUs from '../src/components/ContactUs';
-import AboutUs from '../src/components/AboutUs';
-import Footer from '../src/components/Footer';
+import Body from './components/Body';
+import Header from './components/Header';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
 import SoftwareDev from './components/SoftwareDev';
 import QualityAssurance from './components/QualityAssurance';
 import DigitalSEO from './components/DigitalSEO';
 import Blogs from './components/Blogs';
-import Services from '../src/components/Services';
-import Ourservices from '../src/components/Ourservices';
-import Quality from '../src/components/Quality';
-import Success from '../src/components/Success';
-import Chatbot from './components/Chatboat'; // Import the Chatbot component
-import CreateBlog from './components/CreateBlog';
+import Services from './components/Services';
+import Ourservices from './components/Ourservices';
+import Quality from './components/Quality';
+import Success from './components/Success';
+import Chatbot from './components/Chatboat';
+import CreateBlog from './components/BlogCategories/CreateBlog';
 import LoginPage from './components/LoginPage';
-import BlogList from './components/BlogCategories/BlogList'; // Import Blog List component
 import BlogDetail from './components/BlogCategories/BlogDetail'; // Import Blog Detail component
+import CategoryPage from './components/BlogCategories/CategoryPage';
+import BlogList from './components/BlogCategories/Bloglist';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="create-blog" element={<CreateBlog />} />
         <Route path="blogs" element={<BlogList />} />
         <Route path="blogs/:blogId" element={<BlogDetail />} /> {/* Corrected route */}
+        <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
       <Footer />
       {/* Uncomment to add the Chatbot component */}

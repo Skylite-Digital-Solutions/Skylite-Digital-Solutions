@@ -48,6 +48,8 @@
   --footer-link-color: #ffffff;
   --footer-link-hover-color: #cccccc;
   --footer-border-color: #333333;
+/* error-color */
+  --error-color:red;
   
   }
   

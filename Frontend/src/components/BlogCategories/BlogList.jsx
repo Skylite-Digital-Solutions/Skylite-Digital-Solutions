@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../../styles/Blogcategory/BlogList.css"; // Ensure to create a CSS file for styling
+import { Link } from "react-router-dom";
+import "../../styles/Blogcategory/BlogList.css"; // CSS for Blog List
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { app } from "../../Firebase/firebaseConfig"; // Import your Firebase configuration
+import { app } from "../../Firebase/firebaseConfig";
+
+// List of predefined categories
+const predefinedCategories = [
+  "The Future of Web Development",
+  "Digital Marketing Strategies",
+  "Expert Interviews in Tech Industry",
+  "IT Consultancy Best Practices",
+  "Technology Trends",
+  "Threats of Cyber Security",
+  "Understanding Quality Assurance",
+];
 
 const BlogList = () => {
   const [blogsByCategory, setBlogsByCategory] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const navigate = useNavigate();
 
   const db = getFirestore(app);
 
@@ -23,13 +32,19 @@ const BlogList = () => {
           ...doc.data(),
         }));
 
-        // Group blogs by category
-        const groupedByCategory = blogData.reduce((acc, blog) => {
-          const category = blog.category || "Uncategorized";
-          if (!acc[category]) acc[category] = [];
-          acc[category].push(blog);
+        // Group blogs by category and ensure all predefined categories are included
+        const groupedByCategory = predefinedCategories.reduce((acc, category) => {
+          acc[category] = [];
           return acc;
         }, {});
+
+        blogData.forEach((blog) => {
+          const category = blog.category || "Uncategorized";
+          if (!groupedByCategory[category]) {
+            groupedByCategory[category] = [];
+          }
+          groupedByCategory[category].push(blog);
+        });
 
         setBlogsByCategory(groupedByCategory);
       } catch (err) {
@@ -54,36 +69,31 @@ const BlogList = () => {
   return (
     <div className="blog-list">
       <h2>Blogs by Category</h2>
-      <div className="category-row">
-        {Object.keys(blogsByCategory).map((category) => (
-          <button
-            key={category}
-            className="category-button"
-            onClick={() =>
-              setSelectedCategory(selectedCategory === category ? null : category)
-            }
-          >
-            {category}
-          </button>
+      <div className="categories-container">
+        {predefinedCategories.map((category) => (
+          <div key={category} className="blog-category">
+            <div className="category-container">
+              <h3>{category}</h3>
+              {blogsByCategory[category] && blogsByCategory[category].length > 0 ? (
+                <div className="blog-cards-container">
+                  {blogsByCategory[category].slice(0, 3).map((blog) => (
+                    <div key={blog.id} className="blog-card">
+                      <h4>{blog.title}</h4>
+                      <p>{blog.summary}</p>
+                      {/* Explore button linking to the category page */}
+                      <Link to={`/category/${category}`} className="explore-button">
+                        Explore
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="no-data">No blogs available for this category.</p>
+              )}
+            </div>
+          </div>
         ))}
       </div>
-
-      {selectedCategory && (
-        <div className="blog-titles">
-          <h3>{selectedCategory}</h3>
-          <ul>
-            {blogsByCategory[selectedCategory].map((blog) => (
-              <li
-                key={blog.id}
-                className="blog-title"
-                onClick={() => navigate(`/blog/${blog.id}`)}
-              >
-                {blog.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 };

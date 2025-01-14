@@ -1,0 +1,40 @@
+.category-page {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+  }
+  
+  .blogs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .blogs-table th, .blogs-table td {
+    padding: 10px;
+    text-align: left;
+    color: var(--text-primary);
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .blogs-table th {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .blogs-table tr:hover {
+    background-color: var(--secondary-hover-color);
+  }
+  
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
