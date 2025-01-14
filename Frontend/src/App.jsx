@@ -19,6 +19,7 @@ import LoginPage from './components/LoginPage';
 import BlogDetail from './components/BlogCategories/BlogDetail'; // Import Blog Detail component
 import CategoryPage from './components/BlogCategories/CategoryPage';
 import BlogList from './components/BlogCategories/Bloglist';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         {/* Main Routes */}
         <Route path="/" element={<Body />} />
         <Route path="about-us" element={<AboutUs />} />
-        <Route path="contact-us" element={<ContactUs />} />
+        <Route path="contact-us" element={<Contacts />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="LoginPage" element={<LoginPage />} />
 
