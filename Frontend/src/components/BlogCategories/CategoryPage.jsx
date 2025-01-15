@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // To access the category from URL
+import { useParams, Link } from "react-router-dom"; // Import Link for navigation
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 import { app } from "../../Firebase/firebaseConfig";
 import "../../styles/Blogcategory/CategoryPage.css";
@@ -25,7 +25,7 @@ const CategoryPage = () => {
 
         setBlogs(blogData);
       } catch (err) {
-        console.error("Error fetching blogs by category:", err);
+        console.error("Error fetching blogs by category:", err.message, err);
         setError("Failed to fetch blogs. Please try again.");
       } finally {
         setLoading(false);
@@ -57,8 +57,11 @@ const CategoryPage = () => {
           <tbody>
             {blogs.map((blog) => (
               <tr key={blog.id}>
-                <td>{blog.title}</td>
-                <td>{blog.author}</td> {/* Assuming the 'author' field exists in your blog data */}
+                <td>
+                  {/* Corrected Link to point to the correct blog details page */}
+                  <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
+                </td>
+                <td>{blog.author || "Unknown Author"}</td> {/* Handle undefined author field */}
               </tr>
             ))}
           </tbody>

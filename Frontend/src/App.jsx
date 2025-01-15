@@ -48,7 +48,8 @@ function App() {
         {/* Blog Routes */}
         <Route path="create-blog" element={<CreateBlog />} />
         <Route path="blogs" element={<BlogList />} />
-        <Route path="blogs/:blogId" element={<BlogDetail />} /> {/* Corrected route */}
+        {/* Corrected Route to open BlogDetail page */}
+        <Route path="blogs/:blogId" element={<BlogDetail />} />
         <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
       <Footer />

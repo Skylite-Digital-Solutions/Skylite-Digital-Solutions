@@ -15,17 +15,21 @@ const BlogDetail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
+        if (!blogId) {
+          throw new Error("Blog ID is undefined. Check the route and URL.");
+        }
+
         const blogDoc = doc(db, "blogs", blogId);
         const blogSnapshot = await getDoc(blogDoc);
 
         if (blogSnapshot.exists()) {
           setBlog({ id: blogId, ...blogSnapshot.data() });
         } else {
-          setError("Blog not found.");
+          throw new Error("Blog not found.");
         }
       } catch (err) {
-        console.error("Error fetching blog:", err);
-        setError("Failed to fetch blog. Please try again.");
+        console.error("Error fetching blog:", err.message, err);
+        setError(err.message || "Failed to fetch blog. Please try again.");
       } finally {
         setLoading(false);
       }
@@ -44,11 +48,13 @@ const BlogDetail = () => {
 
   return (
     <div className="blog-detail">
-      <h2>{blog.title}</h2>
+      <h2>{blog?.title || "Untitled Blog"}</h2>
       <div className="blog-body">
-        {blog.body.map((section, index) => (
-          <p key={index}>{section}</p>
-        ))}
+        {Array.isArray(blog?.body) ? (
+          blog.body.map((section, index) => <p key={index}>{section}</p>)
+        ) : (
+          <p>{blog?.body || "No content available."}</p>
+        )}
       </div>
     </div>
   );
