@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithRedirect, signOut } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore';
+import { getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult, signOut } from "firebase/auth";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
+// import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
@@ -34,6 +35,25 @@ const handleGoogleLogin = async () => {
   }
 };
 
+// Real-time listener for chat messages (for the Chatbot feature)
+const listenForChatMessages = (chatId, callback) => {
+  const q = query(collection(db, `chats/${chatId}/messages`), orderBy("timestamp", "asc"));
+  const unsubscribe = onSnapshot(q, (snapshot) => {
+    const messagesData = snapshot.docs.map(doc => doc.data());
+    callback(messagesData); // Call the provided callback to update the UI with the latest messages
+  });
+
+  return unsubscribe; // Return the unsubscribe function to stop listening when necessary
+};
+
+// Add new message to Firestore (for both user and bot)
+const sendMessageToFirestore = async (chatId, message) => {
+  try {
+    await addDoc(collection(db, `chats/${chatId}/messages`), message);
+  } catch (error) {
+    console.error("Error sending message to Firestore:", error);
+  }
+};
 
 // Exports for use in other components
-export { auth, provider, signInWithRedirect, signOut, app, db, storage };
+export { auth, provider, signInWithRedirect, getRedirectResult, signOut, app, db, storage, handleGoogleLogin, listenForChatMessages, sendMessageToFirestore };

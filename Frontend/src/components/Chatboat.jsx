@@ -1,47 +1,54 @@
-// Chatbot.js
-import React, { useState } from 'react';
-import axios from 'axios';
-import '../styles/Chatboat.css'; // Import the CSS file
-import '../styles/color.css';
+import React, { useState, useEffect } from 'react';
+import { getChatbotMessage } from '../Firebase/chatbotService'; // Import the helper function
+import { FaComments } from 'react-icons/fa';
+import '../styles/Chatboat.css';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    { text: 'Hello! How can I assist you today?', sender: 'bot' }
-  ]);
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
-  const toggleChatbot = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const fetchWelcomeMessage = async () => {
+      const welcomeMessage = await getChatbotMessage("welcome-message");
+      if (welcomeMessage) {
+        setMessages([{ ...welcomeMessage, sender: "bot" }]);
+      } else {
+        console.log("Welcome message not found in Firestore.");
+      }
+    };
+
+    fetchWelcomeMessage();
+  }, []);
 
   const sendMessage = async (message) => {
     if (!message) return;
 
-    setMessages([...messages, { text: message, sender: 'user' }]);
-    try {
-      const response = await axios.post('http://localhost:5000/api/chatbot', {
-        message: message
-      });
-      setMessages([...messages, { text: message, sender: 'user' }, { text: response.data.reply, sender: 'bot' }]);
-      setInput('');
-    } catch (error) {
-      setMessages([...messages, { text: message, sender: 'user' }, { text: 'Oops! Something went wrong.', sender: 'bot' }]);
-      setInput('');
-    }
-  };
+    // Add the user message to the chat
+    const userMessage = { text: message, sender: "user" };
+    setMessages((prev) => [...prev, userMessage]);
 
-  const handleSendClick = () => {
-    if (input) {
-      sendMessage(input);
+    // Get bot's response based on user message
+    let botResponse;
+    if (message.toLowerCase().includes('hi')) {
+      console.log("User said 'Hi'. Fetching welcome message...");
+      botResponse = await getChatbotMessage("welcome-message"); // Return welcome message for 'hi'
+    } else {
+      console.log("User said something else. Fetching services overview...");
+      botResponse = await getChatbotMessage("services-overview"); // Default response
+    }
+
+    if (botResponse) {
+      setMessages((prev) => [...prev, { ...botResponse, sender: "bot" }]);
+    } else {
+      console.log("No response from bot.");
     }
   };
 
   return (
     <>
-      <button className="chatbot-button" onClick={toggleChatbot}>
-        {/* <img src={chatbotIcon} alt="Chatbot Icon" className="chatbot-icon" /> */}
-        <img src="/Chatboat.png" alt="Chatboat Icon" />
+      <button className="chatbot-button" onClick={() => setIsOpen(!isOpen)}>
+        <FaComments size={30} />
       </button>
 
       {isOpen && (
@@ -49,27 +56,26 @@ const Chatbot = () => {
           <div className="chatbot-container">
             <div className="chatbot-header">
               <h4>Skylite Assistance</h4>
-              <button onClick={toggleChatbot} className="close-button">
-                ×
-              </button>
+              <button onClick={() => setIsOpen(false)} className="close-button">×</button>
             </div>
+
             <div className="chatbot-messages">
               {messages.map((msg, index) => (
                 <div key={index} className={`message ${msg.sender}`}>
                   <p>{msg.text}</p>
+                  {msg.sender === "bot" && msg.options?.length > 0 && (
+                    <div className="bot-options">
+                      {msg.options.map((option, idx) => (
+                        <button key={idx} onClick={() => sendMessage(option)}>
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
 
-            {/* Predefined Options */}
-            <div className="predefined-options">
-              <button onClick={() => sendMessage('Know More')}>Know More</button>
-              <button onClick={() => sendMessage('Get a Callback')}>Get a Callback</button>
-              <button onClick={() => sendMessage('Schedule a Call')}>Schedule a Call</button>
-              <button onClick={() => sendMessage('Requirement')}>Requirement</button>
-            </div>
-
-            {/* Message Input */}
             <div className="chatbot-input-container">
               <input
                 type="text"
@@ -77,7 +83,7 @@ const Chatbot = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type a message..."
               />
-              <button onClick={handleSendClick}>Send</button>
+              <button onClick={() => sendMessage(input)}>Send</button>
             </div>
           </div>
         </div>

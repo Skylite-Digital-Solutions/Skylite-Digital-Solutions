@@ -16,12 +16,18 @@ import Success from './components/Success';
 import Chatbot from './components/Chatboat';
 import CreateBlog from './components/BlogCategories/CreateBlog';
 import LoginPage from './components/LoginPage';
-import BlogDetail from './components/BlogCategories/BlogDetail'; // Import Blog Detail component
+import BlogDetail from './components/BlogCategories/BlogDetail';
 import CategoryPage from './components/BlogCategories/CategoryPage';
-import BlogList from './components/BlogCategories/Bloglist';
+import BlogList from './components/BlogCategories/BlogList';
 import Contacts from './components/Contacts';
 
 function App() {
+  // Define the handleLoginSuccess function
+  const handleLoginSuccess = (user) => {
+    console.log('User logged in:', user);
+    // Perform any additional actions upon successful login
+  };
+
   return (
     <div className="App">
       <Header />
@@ -32,6 +38,7 @@ function App() {
         <Route path="contact-us" element={<Contacts />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="LoginPage" element={<LoginPage />} />
+        <Route path="login" element={<LoginPage onLoginSuccess={handleLoginSuccess} />} />
 
         {/* Services Routes */}
         <Route path="services" element={<Services />} />
@@ -48,12 +55,10 @@ function App() {
         {/* Blog Routes */}
         <Route path="create-blog" element={<CreateBlog />} />
         <Route path="blogs" element={<BlogList />} />
-        {/* Corrected Route to open BlogDetail page */}
         <Route path="blogs/:blogId" element={<BlogDetail />} />
         <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
       <Footer />
-      {/* Uncomment to add the Chatbot component */}
       <Chatbot />
     </div>
   );
