@@ -1,12 +1,12 @@
 /* Main container for the Blog List */
 .blog-list {
-  background: var(--secondary-color); /* Background color from color.css */
+  background: var(--secondary-color);
   padding: 20px;
   border-radius: 8px;
   width: 100%;
   max-width: 99.9%;
   margin: 20px 0;
-  color: var(--text-primary); /* Text color from color.css */
+  color: var(--text-primary);
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -14,7 +14,7 @@
 /* Heading for Blogs Section */
 .blog-list h2 {
   font-size: 40px;
-  color: var(--text-primary); /* Primary text color from color.css */
+  color: var(--text-primary);
   margin-bottom: 20px;
   text-align: center;
   padding: 0 20px;
@@ -24,121 +24,122 @@
 /* Container holding all the categories */
 .categories-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of cards */
-  gap: 20px; /* Space between cards */
-  justify-content: flex-start;
-  width: 100%; /* Full screen width */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
   margin: 0;
-  padding: 0 20px; /* Add padding for spacing */
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
 /* Category card */
 .blog-category {
-  flex: 1 1 calc(33.33% - 20px); /* Three cards per row */
-  max-width: calc(33.33% - 20px);
-  box-sizing: border-box;
-}
-
-/* Container inside each category */
-.category-container {
-  background: var(--secondary-color); /* Background color from color.css */
-  padding: 20px;
+  width: 300px; /* Fixed width for consistent card size */
+  height: 220px; /* Fixed height for all cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
   border-radius: 8px;
+  box-shadow: 0 4px 8px var(--primary-color);
   text-align: center;
-  box-shadow: 0 4px 8px var(--primary-color); /* Primary color box-shadow */
+  padding: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 85%;
+  opacity: 0.9;
 }
 
-/* Hover effect for category container */
-.category-container:hover {
+/* Hover effect for category cards */
+.blog-category:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Title inside each category card */
-.category-container h3 {
-  font-size: 1.5rem;
-  color: var(--text-primary); /* Primary text color */
+.blog-category h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
-/* Category item list */
-.category-container ul {
-  list-style: none;
-  padding: 0;
+/* Blog cards inside categories */
+.blog-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.category-container ul li {
-  margin: 5px 0;
+.blog-card {
+  background-color: var(--background-light);
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.category-container ul li a {
-  text-decoration: none;
-  color: var(--primary-color); /* Primary color for links */
-  font-size: 14px;
-  transition: color 0.3s ease-in-out;
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.category-container ul li a:hover {
-  color: var(--secondary-hover-color); /* Hover color for links */
-  text-decoration: underline;
+/* Blog title inside cards */
+.blog-card h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0 0 4px;
 }
 
-/* Message for no data in category */
-.no-data {
-  font-size: 14px;
-  color: var(--text-muted); /* Muted text color */
-  text-align: center;
-  margin: 20px 0;
+/* Blog summary */
+.blog-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
-/* Error message */
-.error {
-  color: var(--error-color); /* Error color from color.css */
-  text-align: center;
-}
-
-/* Explore button */
+/* Explore button styling */
 .explore-button {
-  display: inline-block;
-  font-size: 14px;
-  padding: 10px 15px;
-  background-color: var(--primary-color); /* Primary color for button */
-  color: var(--text-light); /* Light text color */
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 8px 12px;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
+  font-size: 0.875rem;
   font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Button hover effect */
 .explore-button:hover {
-  background-color: var(--secondary-hover-color); /* Hover background color */
-  color: var(--text-light); /* Hover text color */
+  /* background-color: var(--secondary-hover-color); */
+  color: var(--text-light);
+}
+
+/* No data message styling */
+.no-data {
+  font-size: 0.875rem;
+  color: var(--text-muted);
 }
 
 /* Responsive layout for different screen sizes */
 @media (max-width: 1024px) {
   .blog-category {
-    flex: 1 1 calc(33.33% - 20px); /* Three cards per row on medium screens */
-    max-width: calc(33.33% - 20px);
+    width: 250px; /* Adjusted card size for medium screens */
+    height: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .blog-category {
-    flex: 1 1 calc(50% - 20px); /* Two cards per row on smaller screens */
-    max-width: calc(50% - 20px);
+    width: 200px; /* Adjusted card size for smaller screens */
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .blog-category {
-    flex: 1 1 100%; /* One card per row on very small screens */
-    max-width: 100%;
+    width: 100%; /* Full-width cards on small screens */
+    height: auto;
   }
 }

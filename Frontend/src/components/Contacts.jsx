@@ -145,7 +145,7 @@ const Contacts = () => {
 
       <div className="location">
         <div className="global-location-container">
-          <h3 className="global-location-heading">Our Global Location</h3>
+          <h2 className="global-location-heading">Our Global Location</h2>
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7960296849215!2d73.8567438146921!3d18.520430087400558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08993c17f97%3A0xf47e8cccb0de418!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1603130022210!5m2!1sen!2sus"

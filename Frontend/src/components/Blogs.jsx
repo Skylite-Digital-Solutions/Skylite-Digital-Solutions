@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 import '../styles/Blogs.css';
 import '../styles/color.css';
-import BlogList from './BlogCategories/Bloglist'; // Import the BlogList component
+import BlogList from './BlogCategories/BlogList'; // Import the BlogList component
 
 const Blogs = () => {
   const navigate = useNavigate(); // Hook to navigate programmatically

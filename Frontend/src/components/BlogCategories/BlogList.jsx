@@ -67,8 +67,8 @@ const BlogList = () => {
   }
 
   return (
-    <div className="blog-list">
-      <h2>Blogs by Category</h2>
+    <div>
+      {/* <h2>Blogs by Category</h2> */}
       <div className="categories-container">
         {predefinedCategories.map((category) => (
           <div key={category} className="blog-category">

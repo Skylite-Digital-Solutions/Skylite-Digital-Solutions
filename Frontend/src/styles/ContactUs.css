@@ -1,14 +1,14 @@
 /* General Styles */
 .Background-container {
-  background-color: var(--background-color);
+  background-color: none;
   padding: 20px;
   font-family: Arial, sans-serif;
   color: var(--text-primary);
   display: flex;
   flex-wrap: wrap;
-  width: 100%;  /* Ensure full width */
-  box-sizing: border-box;  /* Include padding in width calculation */
-  overflow: hidden;  /* Prevent overflow */
+  width: 100%; /* Ensure full width */
+  /* box-sizing: border-box; Include padding in width calculation */
+  overflow: hidden; /* Prevent overflow */
 }
 
 /* Top Section Container */
@@ -31,13 +31,9 @@
   border-radius: 8px;
   margin-top: 20px;
   box-sizing: border-box; /* Prevent overflow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.Partner-container-main:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 10px var(--hover-shadow-color);
-}
 
 .Partner-container {
   list-style: none; /* Remove bullet points */
@@ -75,12 +71,13 @@
   box-shadow: 0 4px 6px var(--primary-color);
   border-radius: 8px;
   margin-top: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-us-container:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 10px var(--primary-color);
+  background-color: var(--background-light); /* Updated hover background color */
 }
 
 .contact-us-heading {
@@ -128,7 +125,12 @@
   border-radius: 5px;
   font-size: 1rem;
   color: var(--primary-color);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  background-color: var(--background-light); /* Updated hover background color */
 }
 
 .contact-form input:focus,
@@ -162,8 +164,8 @@
 }
 
 .submit-button:hover {
-  background-color: var(--button-hover-color);
-  color: var(--muted-color);
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
 .submit-status {
@@ -180,6 +182,11 @@
   flex-direction: column;
   flex: 2;
   max-width: 100%; /* Prevent overflow */
+}
+
+.location h2 {
+  color: var(--text-primary);
+  font: 2em;
 }
 
 /* Responsive Design */

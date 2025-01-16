@@ -1,7 +1,7 @@
 /* Base Colors */
 :root {
   /* Primary Colors */
-  --primary-color: #0A74DA; /* Primary Blue */
+  --primary-color: #273355; /* Primary Blue */
   --primary-hover-color: #f4f4f9; /* Hover Blue */
   --secondary-color: #f4f4f9; /* Light Gray (for background) */
   --secondary-hover-color: #0A74DA; /* Hover Blue */
@@ -17,7 +17,7 @@
   --text-primary: #231f41; /* Dark Blue for primary text */
   --text-secondary: #2c2e30; /* Dark Gray for secondary text */
   --text-light: #ffffff; /* Light Text */
-  --text-muted: #666666; /* Muted Text */
+  --text-muted: #3E4739; /* Muted Text */
   --text-link: #1f62c7; /* Link Text */
 
   /* Border Colors */
@@ -43,8 +43,8 @@
   --dark-text-color: #444;
 
   /* Footer Colors */
-  --footer-bg-color: #0A74DA;
-  --footer-text-color: #000000;
+  --footer-bg-color: #273355;
+  --footer-text-color: #a6a6a6;
   --footer-heading-color: #cccccc;
   --footer-link-color: #ffffff;
   --footer-link-hover-color: #cccccc;

@@ -27,7 +27,7 @@
 }
 
 .service-card {
-    background-color: var(--background-light); /* Light background for cards */
+    background: var(--secondary-color); /* Light background for cards */
     border-radius: 8px;
     padding: 30px;
     margin: 15px;
@@ -61,15 +61,15 @@
 
 .service-card:hover {
     transform: scale(1.05);
-    background-color: var(--primary-color); /* Primary color for hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Primary color for hover */
 }
 
 .service-card:hover h2 {
-    color: var(--text-light); /* Light text color for heading on hover */
+    color: var(--text-primary); /* Light text color for heading on hover */
 }
 
 .service-card:hover p {
-    color: var(--text-light); /* Light text color for paragraph on hover */
+    color: var(--text-secondary); /* Light text color for paragraph on hover */
 }
 
 /* Button style within service card */
@@ -88,8 +88,8 @@
 }
 
 .service-card button:hover {
-    background-color: var(--text-light); /* Button background changes to light color on hover */
-    color: var(--primary-color); /* Button text changes to primary color on hover */
+    background-color: var(--primary-color); /* Button background changes to light color on hover */
+    color: var(--text-light); /* Button text changes to primary color on hover */
     transform: scale(1.05);
 }
 

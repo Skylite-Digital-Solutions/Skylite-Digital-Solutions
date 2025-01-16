@@ -36,23 +36,112 @@
   margin-top: 20px;
 }
 
+/* Back to Category Button */
+.back-to-category {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: var(--primary-color); /* Primary button color */
+  color: var(--text-light); /* Light text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-category:hover {
+  background-color: var(--primary-hover-color); /* Hover color for button */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Blog Categories Sidebar */
+.blog-categories {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background: var(--secondary-color); /* Sidebar background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-categories h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.category-item {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: var(--primary-hover-color);
+  color: var(--text-light);
+}
+
+.dropdown {
+  margin-top: 10px;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.dropdown-item {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--hover-color); /* Light hover background for dropdown items */
+  color: var(--text-dark); /* Dark text color for hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .blog-detail {
-      margin: 20px;
-      padding: 15px;
+    margin: 20px;
+    padding: 15px;
   }
 
   .blog-detail h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .blog-body {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .blog-categories {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .blog-categories h3 {
+    font-size: 1.2rem;
+  }
+
+  .category-item {
+    padding: 8px;
+  }
+
+  .dropdown-item {
+    padding: 5px 8px;
   }
 }
 
-Hover effect for blog detail
+/* Hover effect for blog detail */
 .blog-detail:hover {
   background-color: var(--hover-color); /* Light background color on hover */
   border-color: var(--primary-color); /* Change border to primary color on hover */

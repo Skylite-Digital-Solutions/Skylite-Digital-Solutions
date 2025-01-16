@@ -3,7 +3,7 @@
   color: var(--footer-text-color);
   padding: 40px 20px;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--footer-bg-color);
   border: none;
   border-radius: 0;
 }

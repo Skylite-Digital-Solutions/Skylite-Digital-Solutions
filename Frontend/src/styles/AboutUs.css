@@ -13,7 +13,6 @@
   max-width: 98.5%;
   padding: 20px;
   border-radius: 8px;
-  background: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,11 +26,11 @@
   max-width: 98.5%;
   padding: 20px;
   border-radius: 8px;
-  background: var(--secondary-color);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 /* Hover effect for the aboutus-container */
@@ -40,32 +39,15 @@
   box-shadow: 0 6px 12px var(--primary-color); /* Enhanced shadow on hover */
 }
 
-.vision-mission-container {
-  display: flex;
-  justify-content: space-around;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: var(--secondary-color);
-  gap: 10px;
-}
-
 .vision, .mission {
   flex: 1;
   padding: 16px;
-  box-shadow: var(--primary-color);
   border-radius: 8px;
   box-shadow: 0px 4px 8px var(--primary-color);
   transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
-.aboutus-container:hover {
-  background-color: var(--primary-color);
-  transform: scale(1.03); /* Slight scaling effect */
-  box-shadow: 0px 6px 12px var(--primary-color); /* Deeper shadow on hover */
-}
-
 .vision:hover, .mission:hover {
-  background-color: var(--primary-color);
   transform: scale(1.03); /* Slight scaling effect */
   box-shadow: 0px 6px 12px var(--primary-color); /* Deeper shadow on hover */
 }
@@ -99,7 +81,7 @@
 }
 
 .aboutus-button {
-  background-color: var(--secondary-color);
+  background-color: transparent; /* Inherits the parent container's background */
   color: var(--text-light);
   border: none;
   font-weight: bold;

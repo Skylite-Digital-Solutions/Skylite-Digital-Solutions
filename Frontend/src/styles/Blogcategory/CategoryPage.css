@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: var(--secondary-color); /* Background color from color.css */
   border-radius: 8px;
+  text-align: center;
 }
 
 /* Heading for Category Page */
@@ -35,7 +36,7 @@ h2 {
 
 /* Table row hover effect */
 .blogs-table tr:hover {
-  background-color: var(--secondary-hover-color); /* Hover effect using secondary hover color */
+  /* background-color: var(--secondary-hover-color); Hover effect using secondary hover color */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 

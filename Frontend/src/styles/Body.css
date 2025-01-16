@@ -36,7 +36,7 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--footer-text-color);
   padding: 20px;
   border-radius: 8px;
   max-width: 80%;
@@ -71,7 +71,7 @@
 }
 
 .know-more-button:hover {
-  background-color: var(--secondary-hover);
+  /* background-color: var(--secondary-hover); */
   transform: scale(1.05);
 }
 
@@ -81,31 +81,32 @@
 }
 
 .schedule-call-button:hover {
-  background-color: var(--primary-hover);
+  /* background-color: var(--primary-hover); */
   transform: scale(1.05);
 }
 
 .slide-indicators {
   position: absolute;
-  bottom: 5%;
+  bottom: 1%;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
 .indicator-dot {
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: var(--border-light);
+  width: 40px; /* Fixed width for each segment */
+  /* height: 3px; Thin line appearance */
+  margin: 0 10px; /* Adds slight spacing between segments */
+  background-color: var(--border-light); /* Default background color */
   cursor: pointer;
-  transition: background-color var(--transition-fast);
+  transition: background-color var(--transition-fast), transform 0.3s ease;
 }
 
 .indicator-dot.active {
-  background-color: var(--indicator-active);
+  background-color: var(--indicator-active); /* Highlight active indicator */
+  transform: scaleY(1.5); /* Slightly enlarge active line for emphasis */
 }
+
 
 /* About Us Section */
 section {
