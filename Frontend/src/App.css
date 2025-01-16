@@ -1,13 +1,12 @@
-
-
 /* General Body Styles */
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background color for contrast */
-    color: #333; /* Dark text color for readability */
+    background-color: var(--background-color); /* Background color from color.css */
+    color: var(--text-primary); /* Primary text color for readability */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
 }
 
 /* App Container */
@@ -15,5 +14,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height */
-    color: #f4f4f4;
+    color: var(--text-primary); /* Ensure text color matches the primary text color */
+    background-color: var(--background-color); /* Ensure app background matches body background */
+    transition: background-color 0.3s ease; /* Smooth transition for app background */
+}
+
+/* App container hover effect */
+.App:hover {
+    background-color: var(--primary-hover-color); /* Change background color on hover */
 }

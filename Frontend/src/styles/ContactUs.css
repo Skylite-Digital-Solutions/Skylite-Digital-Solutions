@@ -3,7 +3,7 @@
   background-color: var(--background-color);
   padding: 20px;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: var(--text-primary);
   display: flex;
   flex-wrap: wrap;
   width: 100%;  /* Ensure full width */
@@ -31,12 +31,12 @@
   border-radius: 8px;
   margin-top: 20px;
   box-sizing: border-box; /* Prevent overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Partner-container-main:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 10px var(--hover-shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Partner-container {
@@ -49,7 +49,7 @@
 .Partner-container h2 {
   margin-bottom: 20px;
   font-size: 1.8rem;
-  color: var(--primary-color); /* Example color variable */
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -57,15 +57,14 @@
   margin-bottom: 20px; /* Add spacing between list items */
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--text-primary); /* Example color variable */
+  color: var(--text-primary);
   text-align: left;
 }
 
 .Partner-container li strong {
   font-weight: bold;
-  color: var(--secondary-color); /* Example color variable */
+  color: var(--secondary-color);
 }
-
 
 /* Contact Us Section */
 .contact-us-container {
@@ -73,15 +72,15 @@
   max-width: 600px;
   padding: 20px;
   background: var(--secondary-color);
-  box-shadow: 0 4px 6px var(--primary-color); /* Updated shadow to primary color */
+  box-shadow: 0 4px 6px var(--primary-color);
   border-radius: 8px;
   margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-us-container:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 10px var(--primary-color); /* Updated shadow to primary color */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 10px var(--primary-color);
 }
 
 .contact-us-heading {
@@ -129,15 +128,7 @@
   border-radius: 5px;
   font-size: 1rem;
   color: var(--primary-color);
-}
-
-.contact-form input,
-.contact-form textarea {
-  border-color: black; /* Updated border color to black for both input and textarea */
-}
-
-.contact-form textarea {
-  resize: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input:focus,
@@ -148,18 +139,11 @@
 }
 
 .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--text-primary); /* Updated border color to black */
-  border-radius: 5px;
-  font-size: 1rem;
-  color: var(--primary-color);
   height: 170px;
   resize: vertical;
 }
 
 .contact-form textarea:focus {
-  outline: none;
   border-color: var(--blue-focus);
   box-shadow: 0 0 5px var(--secondary-color);
 }
@@ -174,7 +158,7 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .submit-button:hover {

@@ -1,25 +1,28 @@
 /* Container style for the Software Development component */
 .DigitalSEO {
-  background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
-  background-color: #cccccc;
+  background: linear-gradient(to top, var(--secondary-color-light) 20%, var(--secondary-color) 65%);
+  background-color: var(--background-color);
   padding: 20px;
   border-radius: 8px;
   width: 99.9%;
   margin: 20px 0;
-  color: white; /* White text color */
+  color: var(--text-light);
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   display: flex;
   flex-direction: column;
 }
+
+/* Heading styling */
 .DigitalSEO h2 {
-  color: #231f41;
+  color: var(--primary-color);
   text-align: center;
   font-size: 2.5rem;
 }
 
+/* Paragraph styling */
 .DigitalSEO p {
-  color: black;
+  color: var(--text-primary);
   text-align: left;
   font-size: 0.9rem;
 }
@@ -27,30 +30,29 @@
 /* List styling */
 .keyfeature-list {
   list-style-type: none;
-  padding: 20;
+  padding: 20px;
   margin: 20px 0;
   text-align: left;
-  color: black; /* White color for list items */
+  color: var(--text-primary); /* Updated to use primary text color */
   font-size: 1.1rem;
 }
 
 /* Keyfeature styling */
 .keyfeature-list h3 {
   text-align: center;
-  color: #231f41;
+  color: var(--primary-color);
   font-size: 1.5rem;
 }
 
 /* List item styling */
 .keyfeature-list li {
   margin-bottom: 15px;
-  font-size: 16px;
   font-size: 1rem;
 }
 
 /* Emphasize strong text within list items */
 .keyfeature-list li strong {
-  color: #231f41; /* White color for strong emphasis */
+  color: var(--primary-color); /* Updated to primary color */
   font-size: 1.2rem;
 }
 
@@ -63,26 +65,25 @@
 
 /* Button styles */
 .get-in-touch-button {
-  background-color: #23144d;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   border: none;
   font-weight: bold;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .get-in-touch-button:hover {
-  background-color: #4b4774;
-  color: #cccccc; /* Accent color on hover */
+  background-color: var(--hover-color);
+  color: var(--muted-color); /* Accent color on hover */
   transform: scale(1.05);
 }
 
 .get-in-touch-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 3px var(--focus-box-shadow-color);
 }

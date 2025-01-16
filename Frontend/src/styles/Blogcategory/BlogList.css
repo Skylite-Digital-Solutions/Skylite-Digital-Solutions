@@ -1,12 +1,12 @@
 /* Main container for the Blog List */
 .blog-list {
-  background: var(--secondary-color);
+  background: var(--secondary-color); /* Background color from color.css */
   padding: 20px;
   border-radius: 8px;
   width: 100%;
   max-width: 99.9%;
   margin: 20px 0;
-  color: var(--text-primary);
+  color: var(--text-primary); /* Text color from color.css */
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -14,7 +14,7 @@
 /* Heading for Blogs Section */
 .blog-list h2 {
   font-size: 40px;
-  color: var(--text-primary);
+  color: var(--text-primary); /* Primary text color from color.css */
   margin-bottom: 20px;
   text-align: center;
   padding: 0 20px;
@@ -42,11 +42,11 @@
 
 /* Container inside each category */
 .category-container {
-  background: var(--secondary-color);
+  background: var(--secondary-color); /* Background color from color.css */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 8px var(--primary-color);
+  box-shadow: 0 4px 8px var(--primary-color); /* Primary color box-shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 85%;
 }
@@ -60,7 +60,7 @@
 /* Title inside each category card */
 .category-container h3 {
   font-size: 1.5rem;
-  color: var(--text-primary);
+  color: var(--text-primary); /* Primary text color */
   margin-bottom: 10px;
 }
 
@@ -76,48 +76,50 @@
 
 .category-container ul li a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Primary color for links */
   font-size: 14px;
   transition: color 0.3s ease-in-out;
 }
 
 .category-container ul li a:hover {
-  color: var(--secondary-hover-color);
+  color: var(--secondary-hover-color); /* Hover color for links */
   text-decoration: underline;
 }
 
 /* Message for no data in category */
 .no-data {
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--text-muted); /* Muted text color */
   text-align: center;
   margin: 20px 0;
 }
 
 /* Error message */
 .error {
-  color: red;
+  color: var(--error-color); /* Error color from color.css */
   text-align: center;
 }
 
+/* Explore button */
 .explore-button {
   display: inline-block;
   font-size: 14px;
   padding: 10px 15px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var(--primary-color); /* Primary color for button */
+  color: var(--text-light); /* Light text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Button hover effect */
 .explore-button:hover {
-  background-color: var(--secondary-hover-color);
-  color: var(--text-light);
+  background-color: var(--secondary-hover-color); /* Hover background color */
+  color: var(--text-light); /* Hover text color */
 }
-
 
 /* Responsive layout for different screen sizes */
 @media (max-width: 1024px) {

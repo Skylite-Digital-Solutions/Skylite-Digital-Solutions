@@ -1,6 +1,6 @@
 /* About Us Page Styles */
 .aboutus-page {
-  background: var(--background-color);
+  background: var(--background-light);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
   box-shadow: 0px 4px 8px var(--primary-color);
 }
 
@@ -34,11 +34,10 @@
   align-items: center;
 }
 
-
 /* Hover effect for the aboutus-container */
 .aboutus-container:hover {
   transform: scale(1.02); /* Slight scaling effect */
-  box-shadow: 0 6px 12px var(primary-color); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px var(--primary-color); /* Enhanced shadow on hover */
 }
 
 .vision-mission-container {
@@ -56,7 +55,7 @@
   box-shadow: var(--primary-color);
   border-radius: 8px;
   box-shadow: 0px 4px 8px var(--primary-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
 .aboutus-container:hover {
@@ -105,16 +104,15 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
   margin-top: 20px;
   padding: 10px 15px;
   border-radius: 5px;
-  font-weight: bold;
 }
 
 .aboutus-button:hover {
-  background: var(--muted-color);
-  color: var(--background-color);
+  background: var(--primary-color);
+  color: var(--text-light);
 }
 
 .our-vision-heading,

@@ -1,44 +1,67 @@
 /* Container style for the Software Development component */
 .QualityAssurance {
-background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
-  background-color: #cccccc;
+  background: linear-gradient(to bottom, var(--primary-color) 20%, var(--secondary-color) 65%); /* Using color variables */
+  background-color: var(--background-light); /* Light background */
   padding: 20px;
   border-radius: 8px;
   width: 99.9%;
   margin: 20px 0;
-  color: white; /* White text color */
+  color: var(--text-light); /* Light text color */
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-light); /* Using shadow variable */
   display: flex;
   flex-direction: column;
-}
-.QualityAssurance h2 {
-  color: #231f41;
-  text-align: center;
-  font-size: 2.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
+.QualityAssurance:hover {
+  box-shadow: 0 6px 12px var(--shadow-dark); /* Darker shadow on hover */
+}
+
+/* Heading style */
+.QualityAssurance h2 {
+  color: var(--accent-color); /* Accent color for heading */
+  text-align: center;
+  font-size: 2.5rem;
+  transition: color 0.3s ease; /* Smooth transition for heading color */
+}
+
+.QualityAssurance h2:hover {
+  color: var(--accent-hover-color); /* Hover effect for heading */
+}
+
+/* Paragraph style */
 .QualityAssurance p {
-  color: black;
+  color: var(--text-primary); /* Primary text color */
   text-align: left;
   font-size: 1rem;
+  transition: color 0.3s ease; /* Transition for paragraph color */
+}
+
+.QualityAssurance p:hover {
+  color: var(--text-muted); /* Hover effect for paragraph */
 }
 
 /* List styling */
 .keyfeature-list {
   list-style-type: none;
-  padding: 20;
+  padding: 20px;
   margin: 20px 0;
   text-align: left;
-  color: #231f41; /* White color for list items */
+  color: var(--text-primary); /* Primary text color for list */
   font-size: 1rem;
 }
 
 /* List item styling */
 .keyfeature-list li {
   margin-bottom: 15px;
-  font-size: 16px;
   font-size: 0.9rem;
+  color: var(--text-muted); /* Muted text color for list items */
+  transition: color 0.3s ease; /* Smooth transition for list item color */
+}
+
+.keyfeature-list li:hover {
+  color: var(--text-primary); /* Hover effect for list items */
 }
 
 /* Button container for centering */
@@ -48,27 +71,27 @@ background: linear-gradient(to top, #9593ac 20%, #9bb7c4 65%);
   margin-top: 20px;
 }
 
+/* Button style */
 .get-in-touch-button {
-  background-color: #23144d;
-  color: #ffffff;
+  background-color: var(--primary-color); /* Using primary color */
+  color: var(--text-light); /* Light text color */
   border: none;
   font-weight: bold;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
 }
 
 .get-in-touch-button:hover {
-  background-color: #4b4774;
-  color: #cccccc;
-  transform: scale(1.05);
+  background-color: var(--primary-hover-color); /* Hover effect with primary hover color */
+  color: var(--text-light);
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
 .get-in-touch-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus effect */
 }

@@ -1,40 +1,47 @@
+/* Category Page */
 .category-page {
-    padding: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--text-primary);
-  }
-  
-  .blogs-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .blogs-table th, .blogs-table td {
-    padding: 10px;
-    text-align: left;
-    color: var(--text-primary);
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .blogs-table th {
-    background-color: var(--primary-color);
-    color: white;
-  }
-  
-  .blogs-table tr:hover {
-    background-color: var(--secondary-hover-color);
-  }
-  
-  .error {
-    color: red;
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  
+  padding: 20px;
+  background-color: var(--secondary-color); /* Background color from color.css */
+  border-radius: 8px;
+}
+
+/* Heading for Category Page */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-primary); /* Text color from color.css */
+}
+
+/* Table for displaying blogs */
+.blogs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table header and data cell styles */
+.blogs-table th, .blogs-table td {
+  padding: 10px;
+  text-align: left;
+  color: var(--text-primary); /* Text color from color.css */
+  border-bottom: 1px solid var(--primary-color); /* Primary color for border */
+}
+
+/* Table header background */
+.blogs-table th {
+  background-color: var(--primary-color); /* Primary color from color.css */
+  color: var(--text-light); /* Light text color */
+}
+
+/* Table row hover effect */
+.blogs-table tr:hover {
+  background-color: var(--secondary-hover-color); /* Hover effect using secondary hover color */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Error message */
+.error {
+  color: var(--error-color); /* Error color from color.css */
+  font-size: 1.2rem;
+  margin-top: 20px;
+}

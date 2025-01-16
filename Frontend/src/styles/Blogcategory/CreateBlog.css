@@ -1,5 +1,4 @@
-/* Ensure to use the colors from the shared color scheme */
-
+/* Create Blog Page */
 .create-blog {
   width: 800px;
   margin: 0 auto;
@@ -9,36 +8,41 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading for Create Blog */
 .create-blog h2 {
   text-align: center;
   font-size: 24px;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Primary color for heading */
   margin-bottom: 20px;
 }
 
+/* Form container */
 .create-blog form {
   display: flex;
   flex-direction: column;
 }
 
+/* Label styling */
 .create-blog label {
   font-size: 16px;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Primary color for labels */
   margin-bottom: 5px;
 }
 
+/* Input, select, and textarea styling */
 .create-blog input,
 .create-blog select,
 .create-blog textarea {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--border-dark); /* Border color for inputs */
   border-radius: 5px;
   font-size: 14px;
-  color: var(--text-primary);
-  background-color: var(--background-light);
+  color: var(--text-primary); /* Text color */
+  background-color: var(--background-light); /* Light background color */
 }
 
+/* Input and textarea adjustments */
 .create-blog input[type="text"],
 .create-blog textarea {
   width: 100%;
@@ -48,6 +52,7 @@
   resize: vertical;
 }
 
+/* Blog body section (flex layout) */
 .create-blog .blog-body-section {
   display: flex;
   align-items: center;
@@ -55,58 +60,66 @@
   margin-bottom: 15px;
 }
 
+/* Buttons for add/remove actions */
 .create-blog .add-remove-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
+/* Button styling in blog body section */
 .create-blog .blog-body-section button {
   padding: 5px 10px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var(--primary-color); /* Primary button color */
+  color: var(--text-light); /* Text color on button */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Button hover effect */
 .create-blog .blog-body-section button:hover {
-  background-color: var(--primary-hover-color);
+  background-color: var(--primary-hover-color); /* Change to hover color */
 }
 
+/* Disabled button styling */
 .create-blog .blog-body-section button:disabled {
-  background-color: var(--disabled-color);
+  background-color: var(--disabled-color); /* Disabled state color */
   cursor: not-allowed;
 }
 
+/* Error message styling */
 .create-blog .error {
-  color: var(--error-color);
+  color: var(--error-color); /* Error color */
   font-size: 14px;
   margin-bottom: 15px;
 }
 
+/* Submit button styling */
 .create-blog button[type="submit"] {
   padding: 12px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var(--primary-color); /* Primary color for submit button */
+  color: var(--text-light); /* Text color on submit button */
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Submit button hover effect */
 .create-blog button[type="submit"]:hover {
-  background-color: var(--primary-hover-color);
+  background-color: var(--primary-hover-color); /* Change to hover color */
 }
 
+/* Disabled submit button styling */
 .create-blog button[type="submit"]:disabled {
-  background-color: var(--disabled-color);
+  background-color: var(--disabled-color); /* Disabled state color */
   cursor: not-allowed;
 }
 
-/* Add space between category heading and table */
+/* Category table styling */
 .category-heading {
   margin-bottom: 10px; /* Adjust space below the category heading */
 }
@@ -120,21 +133,25 @@
   overflow: hidden;
 }
 
+/* Table headers and cells */
 .category-table th,
 .category-table td {
   padding: 12px;
   text-align: left;
-  color: var(--text-primary);
+  color: var(--text-primary); /* Primary color for text */
 }
 
+/* Header row styling */
 .category-table th {
   background-color: var(--primary-dark); /* Slightly darker shade of primary for header */
 }
 
+/* Alternating row background color */
 .category-table tr:nth-child(even) {
   background-color: var(--background-light-dark); /* Alternative row background */
 }
 
+/* Hover effect for rows */
 .category-table tr:hover {
-  background-color: var(--hover-background-color); /* Highlight row on hover */
+  background-color: #ffffff; /* White background on hover */
 }

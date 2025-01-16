@@ -1,84 +1,174 @@
 /* Base Colors */
 :root {
-    /* Primary Colors */
-    --primary-color: #0A74DA; /* Primary Blue */
-    --primary-hover-color: #0A74DA; /* Hover Blue (same as primary) */
-    --secondary-color: #f4f4f9; /* Light Gray (for background) */
-    --secondary-hover-color: #0056b3; /* Hover Blue (same as primary hover) */
-  
-    /* Background Colors */
-    --background-light: #f4f4f9; /* Light Background */
-    --background-dark: #1a1a1a; /* Dark Background */
-    --overlay-dark: rgba(0, 0, 0, 0.6); /* Dark Overlay */
-    --card-background: #f4f4f9; /* Light Background for cards */
-    --slider-background: #1a1a1a; /* Slider Background */
-  
-    /* Text Colors */
-    --text-primary: #231f41; /* Dark Blue for primary text */
-    --text-secondary: #2c2e30; /* Dark Gray for secondary text */
-    --text-light: #ffffff; /* Light Text */
-    --text-muted: #666666; /* Muted Text */
-    --text-link: #1f62c7; /* Link Text (same as active indicator) */
-  
-    /* Border Colors */
-    --border-light: #ccc; /* Light Border */
-    --border-dark: #555555; /* Dark Border */
-  
-    /* Button Colors */
-    --button-know-more: #0A74DA; /* Button Background Blue */
-    --button-know-more-hover: #ffffff; /* Button Hover White */
-    --button-schedule-call: #0A74DA; /* Button Schedule Call Blue */
-    --button-schedule-call-hover: #ffffff; /* Button Hover White */
-  
-    /* Indicator Colors */
-    --indicator-default: #ccc; /* Default Indicator */
-    --indicator-active: #0A74DA; /* Active Indicator (Blue) */
-  
-    /* Shadow Colors */
-    --shadow-light: rgba(0, 0, 0, 0.1); /* Light Shadow */
-    --shadow-medium: rgba(0, 0, 0, 0.2); /* Medium Shadow */
-    --submit-status-color: green;
-    --light-text-color: #555;
-    --dark-text-color: #444;
+  /* Primary Colors */
+  --primary-color: #0A74DA; /* Primary Blue */
+  --primary-hover-color: #f4f4f9; /* Hover Blue */
+  --secondary-color: #f4f4f9; /* Light Gray (for background) */
+  --secondary-hover-color: #0A74DA; /* Hover Blue */
 
-    /* Footer Colors */
-    --footer-bg-color: #231f41;
+  /* Background Colors */
+  --background-light: #f4f4f9; /* Light Background */
+  --background-dark: #1a1a1a; /* Dark Background */
+  --overlay-dark: rgba(0, 0, 0, 0.6); /* Dark Overlay */
+  --card-background: #f4f4f9; /* Light Background for cards */
+  --slider-background: #1a1a1a; /* Slider Background */
+
+  /* Text Colors */
+  --text-primary: #231f41; /* Dark Blue for primary text */
+  --text-secondary: #2c2e30; /* Dark Gray for secondary text */
+  --text-light: #ffffff; /* Light Text */
+  --text-muted: #666666; /* Muted Text */
+  --text-link: #1f62c7; /* Link Text */
+
+  /* Border Colors */
+  --border-light: #ccc; /* Light Border */
+  --border-dark: #555555; /* Dark Border */
+  --border-hover: #0A74DA;
+
+  /* Button Colors */
+  --button-know-more: #0A74DA; /* Button Background Blue */
+  --button-know-more-hover: #ffffff; /* Button Hover White */
+  --button-schedule-call: #ffffff; /* Button Schedule Call Blue */
+  --button-schedule-call-hover: #0A74DA; /* Button Hover White */
+
+  /* Indicator Colors */
+  --indicator-default: #ccc; /* Default Indicator */
+  --indicator-active: #0A74DA; /* Active Indicator (Blue) */
+
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Light Shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.2); /* Medium Shadow */
+  --submit-status-color: green;
+  --light-text-color: #555;
+  --dark-text-color: #444;
+
+  /* Footer Colors */
+  --footer-bg-color: #0A74DA;
   --footer-text-color: #000000;
   --footer-heading-color: #cccccc;
   --footer-link-color: #ffffff;
   --footer-link-hover-color: #cccccc;
   --footer-border-color: #333333;
-/* error-color */
-  --error-color:red;
-  
-  }
-  
-  /* Utility Classes */
-  .bg-primary {
-    background-color: var(--primary-color);
-  }
-  
-  .bg-secondary {
-    background-color: var(--secondary-color);
-  }
-  
-  .text-primary {
-    color: var(--text-primary);
-  }
-  
-  .text-secondary {
-    color: var(--text-secondary);
-  }
-  
-  .text-light {
-    color: var(--text-light);
-  }
-  
-  .shadow-light {
-    box-shadow: 0 2px 6px var(--shadow-light);
-  }
-  
-  .shadow-medium {
-    box-shadow: 0 4px 10px var(--shadow-medium);
-  }
-  
+
+  /* Error Color */
+  --error-color: red;
+
+  /* Transition Effects */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-slow: 0.6s ease-in-out;
+}
+
+/* Utility Classes */
+.bg-primary {
+  background-color: var(--primary-color);
+  transition: background-color var(--transition-medium);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+  transition: background-color var(--transition-medium);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-link {
+  color: var(--text-link);
+  transition: color var(--transition-fast);
+}
+
+.text-link:hover {
+  color: var(--primary-hover-color);
+}
+
+.shadow-light {
+  box-shadow: 0 2px 6px var(--shadow-light);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+/* Button Styles with Transitions */
+button {
+  background-color: var(--button-know-more);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+button:hover {
+  background-color: var(--button-know-more-hover);
+  color: var(--button-know-more);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Footer Styles with Transition */
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 20px;
+  transition: background-color var(--transition-medium);
+}
+
+footer a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+footer a:hover {
+  color: var(--footer-link-hover-color);
+}
+
+/* Error and Success States */
+.error {
+  color: var(--error-color);
+  transition: color var(--transition-fast);
+}
+
+.success {
+  color: var(--submit-status-color);
+  transition: color var(--transition-fast);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-background);
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-medium), transform var(--transition-medium);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: scale(1.05);
+}
+
+/* Form Inputs */
+input, select, textarea {
+  border: 1px solid var(--border-light);
+  padding: 10px;
+  border-radius: 4px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}

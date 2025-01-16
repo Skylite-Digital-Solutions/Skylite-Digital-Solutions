@@ -62,7 +62,7 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
+  transition: transform var(--transition-fast), background-color var(--transition-medium);
 }
 
 .know-more-button {
@@ -98,13 +98,13 @@
   height: 12px;
   margin: 0 5px;
   border-radius: 50%;
-  background-color: var(--border-color);
+  background-color: var(--border-light);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-fast);
 }
 
 .indicator-dot.active {
-  background-color: var(--accent-color);
+  background-color: var(--indicator-active);
 }
 
 /* About Us Section */
@@ -117,11 +117,12 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 15px;
+  color: var(--text-primary);
 }
 
 section p {
   font-size: 1.2rem;
-  color: var(--leadership-subtext);
+  color: var(--text-secondary);
 }
 
 /* Responsive Design */

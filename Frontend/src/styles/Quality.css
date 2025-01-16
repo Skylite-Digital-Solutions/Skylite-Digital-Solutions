@@ -3,10 +3,10 @@
 /* Quality container */
 .Quality-container {
   max-width: 100%;
-  background: linear-gradient(to top, var(--primary-color) 20%, var(--secondary-color) 85%); /* Light background for contrast */
   border-radius: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-light); /* Updated to use variable shadow color */
   display: flex;
+  transition: background 0.3s ease; /* Smooth transition for background change */
 }
 
 /* Container styling */
@@ -14,12 +14,17 @@
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
-  background: linear-gradient(to bottom, var(--primary-color) 20%, var(--secondary-color) 85%); /* Light background for contrast */
+  background: linear-gradient(to bottom, var(--primary-color) 20%, var(--secondary-color) 85%); /* Light gradient background */
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-light); /* Updated to use variable shadow color */
   text-align: center;
   color: var(--text-primary); /* Primary text color */
   font-family: Arial, sans-serif;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition for background and shadow */
+}
+
+.Quality-container:hover {
+  box-shadow: 0 6px 18px var(--shadow-dark); /* Darker shadow on hover */
 }
 
 /* Main title styling */
@@ -27,6 +32,11 @@
   font-size: 2.5rem;
   color: var(--accent-color); /* Accent color for title */
   margin-bottom: 20px;
+  transition: color 0.3s ease; /* Smooth transition for title color */
+}
+
+.Quality-container h2:hover {
+  color: var(--accent-hover-color); /* Hover effect for title */
 }
 
 /* Subtitle styling */
@@ -35,6 +45,11 @@
   color: var(--accent-color); /* Accent color */
   margin-top: 30px;
   margin-bottom: 15px;
+  transition: color 0.3s ease; /* Transition for subtitle color */
+}
+
+.Quality-container h3:hover {
+  color: var(--accent-hover-color); /* Hover effect for subtitle */
 }
 
 /* Paragraph styling */
@@ -43,6 +58,7 @@
   line-height: 1.6;
   margin-bottom: 20px;
   color: var(--text-light); /* Light text color */
+  transition: color 0.3s ease; /* Transition for paragraph color */
 }
 
 /* List styling */
@@ -56,6 +72,11 @@
   font-size: 1.1rem;
   color: var(--text-muted); /* Muted text color for list items */
   margin-bottom: 10px;
+  transition: color 0.3s ease; /* Transition for list item color */
+}
+
+.Quality-container li:hover {
+  color: var(--text-primary); /* Hover effect for list items */
 }
 
 /* Responsive adjustments */
