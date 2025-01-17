@@ -91,22 +91,64 @@
   gap: 15px;
 }
 
-.social-icons a {
-  color: var(--footer-link-color);
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+.social-icons img {
+  width: 40px; /* Fixed width for social icons */
+  height: 40px; /* Fixed height for consistent sizing */
+  border-radius: 50%; /* Optional: Makes them circular */
+  object-fit: cover; /* Ensures icons are properly displayed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: var(--footer-link-hover-color);
+.social-icons img:hover {
+  transform: scale(1.1); /* Hover animation for interactivity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle hover effect */
 }
 
 /* Logo Image */
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap for compact alignment */
+}
+
+.logo-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Ensure logo image fits the header height */
 .logo-image {
-  max-width: 150px; /* Adjust size as needed */
-  height: auto;
-  align-items: flex-end;
+  height: 100%; /* Matches the header height */
+  max-height: 40px; /* Ensures it stays within the header height */
+  width: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image doesn't get cropped */
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Slight hover effect for better interactivity */
+}
+
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--footer-text-color);
+}
+
+.footer-title {
+  font-size: 1.2rem; /* Reduced font size for compact height */
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-slogan {
+  font-size: 1rem; /* Reduced font size for compact height */
+  margin: 0;
+  color: var(--text-light);
+  font-style: italic;
+  text-decoration: none;
 }
 
 /* Footer Bottom Section */
@@ -137,4 +179,21 @@
   .footer-links li {
       margin: 6px 0;
   }
+
+  .logo-image {
+      max-width: 100px; /* Slightly smaller logo for smaller screens */
+  }
+
+  .social-icons img {
+      width: 30px; /* Adjusted size for smaller screens */
+      height: 30px;
+  }
+}
+
+/* General Image Styles for Footer */
+.footer img {
+  max-width: 100%; /* Ensures all footer images scale properly */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents inline image gaps */
+  margin: 0 auto; /* Centers any image within its container */
 }

@@ -7,14 +7,14 @@ const Leadership = () => {
     {
       name: 'Shalini Saurabh',
       title: 'CEO',
-      image: 'https://via.placeholder.com/150',
+      image: "/CEO.png",
       description:
         'Shalini Saurabh is the visionary leader of Skylite Digital, ensuring that the company stays ahead of industry trends and always strives for excellence.',
     },
     {
       name: 'A D Saurabh',
       title: 'CTO',
-      image: 'https://via.placeholder.com/150',
+      image: '/CTO.png',
       description:
         'A D Saurabh leads our tech team, driving innovation and ensuring that we always deliver cutting-edge technology solutions to our clients.',
     },
@@ -26,11 +26,11 @@ const Leadership = () => {
         'Rahul is responsible for managing Skylite Digital’s day-to-day operations, ensuring smooth execution across all departments.',
     },
     {
-      name: 'Nikhlesh Singh',
+      name: 'Richika Singh',
       title: 'Technical Lead',
       image: 'https://via.placeholder.com/150',
       description:
-        'Nikhlesh is responsible for managing Skylite Digital’s day-to-day operations, ensuring smooth execution across all departments.',
+        'Richika is responsible for managing Skylite Digital’s day-to-day operations, ensuring smooth execution across all departments.',
     },
   ];
 

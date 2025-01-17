@@ -53,7 +53,7 @@ const ContactUs = () => {
 
 
 return (
-    <div className="Background-container">
+    <div className="Background-container-contactus">
       <div className="background-container-top">
       <div className="Partner-container-main">
         <ul className="Partner-container">

@@ -1,5 +1,5 @@
 /* Background container */
-.Background-container {
+.Background-container-success {
     background: var(--secondary-color);
     max-width: 100%;
     border-radius: 0.5px;
@@ -13,7 +13,7 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Background-container:hover {
+.Background-container-success:hover {
     background: var(--primary-hover-color); /* Hover effect with primary hover color */
     box-shadow: 0 6px 15px var(--primary-color); /* Darker shadow on hover */
 }
@@ -54,15 +54,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.Partner-container-main:hover {
-    background: var(--primary-color); /* Change to primary color on hover */
-    color: var(--text-light); /* Change text color to light */
-}
 
-/* Change color of li strong when hovering over Partner container */
-.Partner-container-main:hover li strong {
-    color: var(--text-light); /* Change color to light */
-}
 
 /* Main title styling */
 .success-container h1 {

@@ -5,7 +5,7 @@ import '../styles/color.css';
 
 const Ourservices = () => {
   return (
-    <div className='Background-container'>
+    <div className='Background-container-services'>
         <div className="Our-services-container">
           <h2>Know More About Our Services</h2>
           <p>

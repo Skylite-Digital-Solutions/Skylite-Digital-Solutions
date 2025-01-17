@@ -8,7 +8,7 @@
           <linearGradient id="fill-color-gradient-render-2274-0" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="">
             <stop offset="0" stop-color="#0d0d7b" stop-opacity="1">
             </stop>
-            <stop offset="1" stop-color="#003fff" stop-opacity="0">
+            <stop offset="1" stop-color="#dadde6" stop-opacity="0">
             </stop>
           </linearGradient>
           <pattern patternUnits="userSpaceOnUse" x="-24.178328211765347" y="1440" width="72.17791633484524" height="29.344664775996307" patternTransform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" id="fill-0-render-2274">

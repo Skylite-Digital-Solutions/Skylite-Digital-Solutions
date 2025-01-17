@@ -83,8 +83,8 @@ const Body = () => {
       </section>
 
       <section>
-        <h2>Our Leader</h2>
-        <p>We proudly serve a diverse range of clients across various industries.</p>
+        {/* <h2>Our Leader</h2>
+        <p>We proudly serve a diverse range of clients across various industries.</p> */}
         <Leadership />
       </section>
 
@@ -93,15 +93,15 @@ const Body = () => {
       </section>
 
       <section>
-        <h2>Our Clients</h2>
-        <p>We collaborate with leading partners to deliver exceptional value to our clients.</p>
+        {/* <h2>Our Clients</h2>
+        <p>We collaborate with leading partners to deliver exceptional value to our clients.</p> */}
         <OurClient />
       </section>
 
-      <section>
+      {/* <section>
         <h2>And Our Clients Absolutely Love Us!</h2>
         <p>Don't just take our word for it—hear what our clients have to say about us!</p>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Success = () => { // Correct component name to PascalCase
   };
 
   return (
-    <div className="Background-container">
+    <div className="Background-container-success">
       <div className="success-container">
         <h1>Your Success is Our Priority</h1>
         <p>

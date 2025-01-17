@@ -1,31 +1,13 @@
 import React from 'react';
-import '../styles/OurClients.css' // Ensure you have appropriate CSS for styling
+import '../styles/OurClients.css'; // Ensure you have appropriate CSS for styling
 
 const partners = [
-  {
-    name: 'Google',
-    image: 'google.png', // Local image path
-  },
-  {
-    name: 'Databricks',
-    image: 'databricks.png', // Local image path
-  },
-  {
-    name: 'Salesforce',
-    image: 'Salesforce.png', // Local image path
-  },
-  {
-    name: 'Tech Mahindra',
-    image: 'logo-techMahindra.png', // Local image path
-  },
-  {
-    name: 'AWS',
-    image: 'aws.png', // Local image path
-  },
-  {
-    name: 'Microsoft',
-    image: 'microsoft.png', // Local image path
-  },
+  { name: 'Google', image: '/google.png' }, // Local image paths
+  { name: 'Databricks', image: '/Databricks_Logo.png' },
+  { name: 'Salesforce', image: '/Salesforce.png' },
+  { name: 'Simplilearn', image: '/Simplilearn_Logo-1.jpg' },
+  { name: 'AWS', image: '/AWS.png' },
+  { name: 'Microsoft', image: '/Microsoft.png' },
 ];
 
 const OurClient = () => {
@@ -40,7 +22,11 @@ const OurClient = () => {
       <div className="partners-container">
         {partners.map((partner, index) => (
           <div key={index} className="partners-card">
-            <img src={partner.image} alt={partner.name} className="partners-image" />
+            <img
+              src={partner.image}
+              alt={partner.name}
+              className="partners-image"
+            />
             <h2 className="partners-name">{partner.name}</h2>
           </div>
         ))}

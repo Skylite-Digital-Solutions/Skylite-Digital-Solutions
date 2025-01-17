@@ -1,12 +1,12 @@
 /* General Styles */
-.Background-container {
+.Background-container-contacts {
   background-color: none;
   padding: 20px;
   font-family: Arial, sans-serif;
   color: var(--text-primary);
   display: flex;
   flex-wrap: wrap;
-  width: 100%; /* Ensure full width */
+  width: 98.5%; /* Ensure full width */
   /* box-sizing: border-box; Include padding in width calculation */
   overflow: hidden; /* Prevent overflow */
 }
@@ -31,7 +31,7 @@
   border-radius: 8px;
   margin-top: 20px;
   box-sizing: border-box; /* Prevent overflow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; */
 }
 
 
@@ -74,11 +74,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.contact-us-container:hover {
+/* .contact-us-container:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 10px var(--primary-color);
   background-color: var(--background-light); /* Updated hover background color */
-}
+/*} */
 
 .contact-us-heading {
   font-size: 1.8rem;
@@ -127,11 +127,11 @@
   color: var(--primary-color);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
+/* 
 .contact-form input:hover,
 .contact-form textarea:hover {
   background-color: var(--background-light); /* Updated hover background color */
-}
+/*} */
 
 .contact-form input:focus,
 .contact-form textarea:focus {

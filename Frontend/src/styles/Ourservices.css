@@ -1,7 +1,7 @@
 /* KnowMore.css */
 
 /* Background container */
-.Background-container {
+.Background-container-services {
   max-width: 100%;
   background: var(--secondary-color); /* Secondary background color for contrast */
   border-radius: 0.5px;

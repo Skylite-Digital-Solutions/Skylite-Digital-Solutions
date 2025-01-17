@@ -59,7 +59,7 @@ function App() {
         <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
       <Footer />
-      <Chatbot />
+      {/* <Chatbot /> */}
     </div>
   );
 }

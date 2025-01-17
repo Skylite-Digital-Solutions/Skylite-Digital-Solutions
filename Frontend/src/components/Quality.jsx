@@ -4,7 +4,7 @@ import '../styles/color.css';
 
 const Quality = () => {
   return (
-    <div className='Background-container'>
+    <div className='Background-container-quality'>
         <div className="Quality-container">
             <h1>Quality Assurance Guaranteed</h1>
             <p>

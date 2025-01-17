@@ -1,11 +1,9 @@
-/* styles/Header.css */
-
 .header {
   background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 5px;
+  padding: 5px 20px; /* Adjusted padding for reduced height */
   color: var(--text-light);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
   border: 1px solid var(--primary-hover-color);
@@ -13,55 +11,68 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  width: 98.75vw;
-  height: 38px;
+  width: 98%; /* Full width */
+  height: 40px; /* Updated header height */
 }
 
-.logo {
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--text-light);
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  margin: 10px;
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap for compact alignment */
+}
+
+.logo-container {
   display: inline-block;
-}
-
-.logo-title {
-  justify-content: left;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--text-light);
-  text-transform: uppercase;
   cursor: pointer;
+}
+
+/* Ensure logo image fits the header height */
+.logo-image {
+  height: 100%; /* Matches the header height */
+  max-height: 40px; /* Ensures it stays within the header height */
+  width: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image doesn't get cropped */
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Slight hover effect for better interactivity */
+}
+
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.header-title {
+  font-size: 1.2rem; /* Reduced font size for compact height */
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-slogan {
+  font-size: 1rem; /* Reduced font size for compact height */
+  margin: 0;
+  color: var(--text-light);
+  font-style: italic;
   text-decoration: none;
-  margin: 0px;
-  display: inline-block;
-}
-
-.logo img {
-  max-width: 70px;
-  height: 30px;
-  transition: transform 0.3s ease, max-width 0.2s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.1);
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap to align with compact layout */
 }
 
 .nav-item, .nav-item-blog {
   position: relative;
   color: var(--text-light);
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 10px;
+  font-size: 1rem; /* Adjusted size for compact design */
+  padding: 8px; /* Reduced padding */
   border-radius: 1px;
   transition: color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
@@ -93,14 +104,14 @@
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 10px 15px; /* Adds full clickable area */
+  padding: 8px 12px; /* Adjusted padding */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-item:hover {
   color: var(--text-light);
-  background: var(--primary-color);
-  border-radius: 4px; /* Optional: Adds subtle rounding */
+  background-color: var(--primary-color);
+  border-radius: 4px;
 }
 
 .profile-container {
@@ -110,8 +121,8 @@
 }
 
 .profile-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px; /* Adjusted for smaller header */
+  height: 25px;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -127,6 +138,12 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 20px;
+    height: auto; /* Adjust for stacking */
+  }
+
+  .header-logo-container {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .nav {
@@ -138,7 +155,7 @@
 
   .nav-item, .nav-item-blog {
     width: 100%;
-    padding: 12px 0;
+    padding: 10px 0;
     text-align: left;
   }
 

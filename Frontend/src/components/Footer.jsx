@@ -41,11 +41,15 @@ const Footer = () => {
           </div>
 
           {/* Logo */}
-          <div className="social-column">
-            <Link to="/" className="footer-logo">
-              <img src="/footerlogo.svg" alt="Company Logo" className="logo-image" />
-            </Link>
-          </div>
+          <div className="footer-logo-container">
+                  <Link to="/" className="footer-logo-container">
+                    <img src="/logo.svg" alt="Company Logo" className="logo-image" />
+                  </Link>
+                  <div className="footer-text">
+                    <h3 className="footer-title">Skylite Digital Solutions</h3>
+                    <h5 className="footer-slogan">INSPIRED BY YOU, CRAFTING BY US</h5>
+                  </div>
+                </div>
         </div>
       </div>
 

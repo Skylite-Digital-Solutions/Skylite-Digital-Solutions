@@ -22,7 +22,7 @@ const AboutUs = () => {
           IT consultancy, and digital marketing. Our team of experts is dedicated to helping your business thrive in the digital
           landscape, with solutions tailored to your unique needs.
         </p>
-        <button className="aboutus-button" onClick={handleLearnMoreClick}>Get In Touch</button>
+        {/* <button className="aboutus-button" onClick={handleLearnMoreClick}>Get In Touch</button> */}
       </div>
       
       <div className="vision-mission-container">
