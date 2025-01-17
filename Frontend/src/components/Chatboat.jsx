@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getChatbotMessage } from '../Firebase/chatbotService'; // Import the helper function
 import { FaComments } from 'react-icons/fa';
-import '../styles/Chatboat.css';
+import "../styles/Chatboat.css";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,12 +30,21 @@ const Chatbot = () => {
 
     // Get bot's response based on user message
     let botResponse;
-    if (message.toLowerCase().includes('hi')) {
-      console.log("User said 'Hi'. Fetching welcome message...");
-      botResponse = await getChatbotMessage("welcome-message"); // Return welcome message for 'hi'
+
+    // Handle different responses based on user input
+    if (message.toLowerCase() === 'query') {
+      botResponse = await getChatbotMessage("query-message"); // Show services options
+    } else if (message.toLowerCase() === 'contact us') {
+      botResponse = await getChatbotMessage("contact-us-message"); // Show contact form option
+    } else if (message.toLowerCase() === 'our services') {
+      botResponse = await getChatbotMessage("our-services-message"); // Show list of services
+    } else if (message.toLowerCase() === 'web development') {
+      botResponse = await getChatbotMessage("web-development-service");
+    } else if (message.toLowerCase() === 'digital marketing') {
+      botResponse = await getChatbotMessage("digital-marketing-service");
     } else {
-      console.log("User said something else. Fetching services overview...");
-      botResponse = await getChatbotMessage("services-overview"); // Default response
+      console.log("Message not recognized. Fetching default response...");
+      botResponse = await getChatbotMessage("services-overview");
     }
 
     if (botResponse) {

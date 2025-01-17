@@ -9,6 +9,7 @@ const Services = () => {
     return (
         <div className="services">
             <h1>Empowering Your Vision with Our Services</h1>
+            <p>Skylite Digital Solutions empowers digital transformation and streamlines business operations with cutting-edge AI and Data Engineering solutions, delivered effortlessly through a seamless "as a service" model.</p>
             <p>Explore our range of services designed to help your business succeed in the digital world. Our expert team is dedicated to providing high-quality solutions tailored to your needs.</p>
             <div className="service-cards">
                 <div className="service-card">
@@ -34,7 +35,7 @@ const Services = () => {
                 <div className="service-card">
                     <h2>Blogs</h2>
                     <p>Explore our insights and expertise through our blog. From tech trends to practical tips, we share knowledge to help you stay informed and make strategic technology decisions.</p>
-                    <button onClick={() => navigate('/blogs/all-categories')}>Explore</button>
+                    <button onClick={() => navigate('/blogs')}>Explore</button>
                 </div>
             </div>
         </div>
