@@ -31,7 +31,7 @@
 .leadership-member:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 10px var(--shadow-dark); /* Darker shadow on hover */
-  background-color: var(--secondary-hover-color); /* Hover background */
+  background-color: var(--primary-color); /* Hover background */
   color: var(--text-light); /* Text color on hover */
 }
 
