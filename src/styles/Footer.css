@@ -1,0 +1,339 @@
+/* Footer Styles */
+.footer {
+  color: var(--footer-text-color);
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--footer-bg-color);
+  border: none;
+  border-radius: 0;
+  width: 97%;
+}
+
+/* Footer content flex container */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Footer section styling */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section p {
+  color: var(--footer-link-color);
+}
+
+/* Section headings */
+.footer-heading {
+  font-size: 1.5rem;
+  color: var(--footer-heading-color);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Contact links (phone and email) */
+.contact-link {
+  color: var(--footer-link-visible-color); /* Visible color for links */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--footer-link-hover-color); /* Hover effect */
+  text-decoration: none;
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: beige;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-link-hover-color);
+}
+
+/* Social and Logo Section */
+.social-logo {
+  display: flex;
+  flex-direction: column; /* Arranges social and logo containers in rows */
+  align-items: center;
+  margin: 30px 0;
+  gap: 15px;
+}
+
+/* Social Column */
+.social-column {
+  text-align: center;
+  width: 100%; /* Ensures full width for both rows */
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px; /* Fixed width for social icons */
+  height: 40px; /* Fixed height for consistent sizing */
+  border-radius: 50%; /* Optional: Makes them circular */
+  object-fit: cover; /* Ensures icons are properly displayed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Hover animation for interactivity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle hover effect */
+}
+
+/* Logo Image */
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap for compact alignment */
+}
+
+.logo-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Ensure logo image fits the header height */
+.logo-image {
+  height: 100%; /* Matches the header height */
+  max-height: 40px; /* Ensures it stays within the header height */
+  width: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image doesn't get cropped */
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Slight hover effect for better interactivity */
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--footer-text-color);
+}
+
+.footer-title {
+  font-size: 1.2rem; /* Reduced font size for compact height */
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-slogan {
+  font-size: 1rem; /* Reduced font size for compact height */
+  margin: 0;
+  color: var(--text-light);
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  border-top: 1px solid var(--footer-border-color);
+  padding-top: 15px;
+  color: var(--footer-link-color);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+
+/* Tablet and smaller screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .footer-content {
+      justify-content: space-between;
+  }
+
+  .footer-section {
+      min-width: 150px;
+      margin: 15px;
+  }
+
+  .footer-heading {
+      font-size: 1.3rem;
+  }
+
+  .footer-links li {
+      margin: 6px 0;
+  }
+
+  .logo-image {
+      max-width: 100px; /* Slightly smaller logo for smaller screens */
+  }
+
+  .social-icons img {
+      width: 30px; /* Adjusted size for smaller screens */
+      height: 30px;
+  }
+}
+
+/* General Image Styles for Footer */
+.footer img {
+  max-width: 100%; /* Ensures all footer images scale properly */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents inline image gaps */
+  margin: 0 auto; /* Centers any image within its container */
+}
+
+/* Header Styles */
+.header {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--primary-hover-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 98%;
+  height: 50px;
+}
+
+/* Logo and Header Text */
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container {
+  cursor: pointer;
+}
+
+.logo-image {
+  max-height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+.header-text {
+  color: var(--text-light);
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-slogan {
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  position: relative;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background-color: var(--primary-hover-color);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  min-width: 200px;
+  z-index: 10;
+  padding: 10px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-items {
+  padding: 0;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: var(--text-primary);
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  color: var(--text-light); /* Ensure readable text color */
+  background-color: var(--primary-color); /* Matches primary color */
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-item {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: relative;
+    left: 0;
+    width: 100%;
+    max-height: none;
+  }
+}

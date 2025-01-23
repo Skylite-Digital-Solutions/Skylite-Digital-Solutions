@@ -1,0 +1,90 @@
+/* Container style for the Quality Assurance component */
+.QualityAssurance {
+  background-color: var(--background-light);
+  padding: 10px;
+  border-radius: 8px;
+  width: 97%;
+  margin: 20px;
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Heading style */
+.QualityAssurance h2 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Paragraph style */
+.QualityAssurance p {
+  color: var(--text-primary);
+  text-align: left;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* List styling */
+.keyfeature-list {
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+/* List item styling */
+.keyfeature-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Icon styling */
+.feature-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Button container for centering */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button style */
+.get-in-touch-button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.get-in-touch-button:hover {
+  background-color: var(--primary-hover-color);
+  color: var(--text-light);
+  transform: scale(1.05);
+}
+
+.get-in-touch-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

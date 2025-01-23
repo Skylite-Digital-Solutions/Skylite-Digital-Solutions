@@ -1,0 +1,87 @@
+/* Overall page container */
+.our-partners-page {
+  padding: 40px 20px;
+  background-color: var(--background-light);
+  text-align: center;
+  width: 97%;
+}
+
+/* Heading styles */
+.partners-heading {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* Accent line under the heading */
+.accent-line {
+  width: 60px;
+  height: 5px;
+  background-color: var(--primary-color);
+  margin: 0 auto 20px;
+  border-radius: 3px;
+}
+
+/* Introductory text */
+.partners-intro {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Partners container */
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+}
+
+/* Individual partner card */
+.partners-card {
+  background-color: var(--card-background);
+  box-shadow: var(--shadow-light);
+  border-radius: 8px;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partners-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Partner image */
+.partners-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* Partner name */
+.partners-name {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .partners-card {
+    width: 120px;
+    padding: 15px;
+  }
+
+  .partners-image {
+    width: 80px;
+  }
+
+  .partners-name {
+    font-size: 0.9rem;
+  }
+}
