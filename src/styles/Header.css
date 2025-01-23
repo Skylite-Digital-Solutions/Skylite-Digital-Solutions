@@ -1,0 +1,146 @@
+/* Header Styles */
+.header {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--primary-hover-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 97%;
+  height: 50px;
+}
+
+/* Logo and Header Text */
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container {
+  cursor: pointer;
+}
+
+.logo-image {
+  max-height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+.header-text {
+  color: var(--text-light);
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-slogan {
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  position: relative;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background-color: var(--primary-hover-color);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  min-width: 200px;
+  z-index: 10;
+  padding: 10px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-items {
+  padding: 0;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: var(--text-primary);
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General Hover Style */
+.dropdown-item:hover {
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* Specific Dropdown Item Hover Style */
+.dropdown-item-special:hover {
+  background-color: var(--secondary-color); /* Unique hover background color */
+  color: var(--text-dark); /* Ensure readability */
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-item {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: relative;
+    left: 0;
+    width: 100%;
+    max-height: none;
+  }
+}
