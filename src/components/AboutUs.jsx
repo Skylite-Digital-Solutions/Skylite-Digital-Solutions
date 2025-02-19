@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ContactUs from './ContactUs';
+import Contacts from './Contacts';
 import { ArrowRight, Eye, Target, Users } from 'lucide-react';
 
 const AboutUs = () => {
   const navigate = useNavigate();
   
   const handleLearnMoreClick = () => {
-    navigate('/contact-us');
+    navigate('/contacts');
   };
 
   return (
@@ -137,7 +137,7 @@ const AboutUs = () => {
               Have questions or ready to start your project? We're here to help.
             </p>
           </div>
-          <ContactUs />
+          <Contacts />
         </div>
       </section>
     </div>

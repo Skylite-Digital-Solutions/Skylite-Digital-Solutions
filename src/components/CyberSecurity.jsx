@@ -6,7 +6,7 @@ const CyberSecurity = () => {
   const navigate = useNavigate();
 
   const handleGetInTouch = () => {
-    navigate('/contact-us');
+    navigate('/contacts');
   };
 
   return (
