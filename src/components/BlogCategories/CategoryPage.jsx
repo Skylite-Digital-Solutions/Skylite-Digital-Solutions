@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom"; // Import Link for navigation
+import { useParams, Link } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 import { app } from "../../Firebase/firebaseConfig";
-import "../../styles/Blogcategory/CategoryPage.css";
 
 const CategoryPage = () => {
   const { category } = useParams(); // Fetch the category from the URL
@@ -40,34 +39,35 @@ const CategoryPage = () => {
   }
 
   if (error) {
-    return <p className="error">{error}</p>;
+    return <p className="text-red-500 text-xl mt-4">{error}</p>;
   }
 
   return (
-    <div className="category-page">
-      <h2>Blogs in "{category}"</h2>
+    <div className="p-8 bg-gray-100 rounded-lg text-center">
+      <h2 className="text-3xl font-semibold text-gray-800 mb-6">Blogs in "{category}"</h2>
       {blogs.length > 0 ? (
-        <table className="blogs-table">
+        <table className="w-full border-collapse mt-6">
           <thead>
-            <tr>
-              <th>Title</th>
-              <th>Author</th>
+            <tr className="bg-blue-500 text-white">
+              <th className="px-4 py-2 text-left">Title</th>
+              <th className="px-4 py-2 text-left">Author</th>
             </tr>
           </thead>
           <tbody>
             {blogs.map((blog) => (
-              <tr key={blog.id}>
-                <td>
-                  {/* Corrected Link to point to the correct blog details page */}
-                  <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
+              <tr key={blog.id} className="hover:bg-gray-200 transition-colors duration-300">
+                <td className="px-4 py-2">
+                  <Link to={`/blogs/${blog.id}`} className="text-blue-600 hover:text-blue-800">
+                    {blog.title}
+                  </Link>
                 </td>
-                <td>{blog.author || "Unknown Author"}</td> {/* Handle undefined author field */}
+                <td className="px-4 py-2">{blog.author || "Unknown Author"}</td>
               </tr>
             ))}
           </tbody>
         </table>
       ) : (
-        <p>No blogs available for this category.</p>
+        <p className="text-gray-500">No blogs available for this category.</p>
       )}
     </div>
   );

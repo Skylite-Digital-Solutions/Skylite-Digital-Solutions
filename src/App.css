@@ -1,5 +1,5 @@
 /* General Body Styles */
-
+@import "tailwindcss";
 body {
     margin: 0;
     padding: 0;

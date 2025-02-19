@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "../../styles/Color.css";
-import "../../styles/Blogcategory/CreateBlog.css";
 import { getFirestore, collection, addDoc, query, where, getDocs } from "firebase/firestore";
 import { app } from "../../Firebase/firebaseConfig";
 
@@ -88,33 +86,39 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="create-blog">
-      <h2>Create Blog</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Create Blog</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Blog Title */}
         <div>
-          <label>Blog Title</label>
+          <label htmlFor="blogTitle" className="block text-lg font-medium text-gray-700">Blog Title</label>
           <input
+            id="blogTitle"
             type="text"
             value={blogTitle}
             onChange={(e) => setBlogTitle(e.target.value)}
             required
+            className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
+        {/* Blog Body Sections */}
         <div>
-          <label>Blog Body</label>
+          <label htmlFor="blogBody" className="block text-lg font-medium text-gray-700">Blog Body</label>
           {blogBodySections.map((section, index) => (
-            <div key={index} className="blog-body-section">
+            <div key={index} className="mt-4 flex items-center space-x-2">
               <textarea
                 value={section}
                 onChange={(e) => handleBodyChange(index, e.target.value)}
                 rows="5"
                 required
+                className="p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <button
                 type="button"
                 onClick={() => removeBodySection(index)}
                 disabled={blogBodySections.length <= 1}
+                className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 disabled:bg-gray-400"
               >
                 -
               </button>
@@ -123,6 +127,7 @@ const CreateBlog = () => {
                   type="button"
                   onClick={addBodySection}
                   disabled={blogBodySections.length >= 3}
+                  className="bg-green-500 text-white px-3 py-2 rounded-md hover:bg-green-600 disabled:bg-gray-400"
                 >
                   +
                 </button>
@@ -131,12 +136,15 @@ const CreateBlog = () => {
           ))}
         </div>
 
+        {/* Category */}
         <div>
-          <label>Category</label>
+          <label htmlFor="category" className="block text-lg font-medium text-gray-700">Category</label>
           <select
+            id="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
+            className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="">Select Category</option>
             {sortedCategories.map((cat, index) => (
@@ -147,19 +155,28 @@ const CreateBlog = () => {
           </select>
         </div>
 
+        {/* Author */}
         <div>
-          <label>Author</label>
+          <label htmlFor="author" className="block text-lg font-medium text-gray-700">Author</label>
           <input
+            id="author"
             type="text"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             required
+            className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
-        {error && <p className="error">{error}</p>}
+        {/* Error Message */}
+        {error && <p className="text-red-500 text-sm">{error}</p>}
 
-        <button type="submit" disabled={loading}>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className={`w-full p-3 text-white rounded-md ${loading ? 'bg-gray-400' : 'bg-indigo-600 hover:bg-indigo-700'}`}
+        >
           {loading ? "Creating Blog..." : "Create Blog"}
         </button>
       </form>

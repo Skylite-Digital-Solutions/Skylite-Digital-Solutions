@@ -7,7 +7,6 @@ import {
   getRedirectResult,
   signInWithEmailAndPassword,
 } from "../Firebase/firebaseConfig";
-import "../styles/Login.css";
 
 const LoginPage = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState("");
@@ -71,54 +70,72 @@ const LoginPage = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div className="login-container">
-      {user ? (
-        <div className="user-info">
-          <p>Welcome, {user.displayName || user.email}</p>
-          <button onClick={handleLogout} className="logout-button">
-            Logout
-          </button>
-        </div>
-      ) : (
-        <>
-          <form className="login-form" onSubmit={handleEmailLogin}>
-            <h2 className="login-title">Login</h2>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-            <button type="submit" className="login-button">
-              Login
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        {user ? (
+          <div className="text-center">
+            <p className="text-lg font-semibold mb-4">Welcome, {user.displayName || user.email}</p>
+            <button
+              onClick={handleLogout}
+              className="w-full py-2 px-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-200"
+            >
+              Logout
             </button>
-          </form>
+          </div>
+        ) : (
+          <>
+            <form className="space-y-4" onSubmit={handleEmailLogin}>
+              <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Login</h2>
 
-          <div className="divider">OR</div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-gray-700">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-          <button onClick={handleGoogleLogin} className="google-login-button">
-            Login with Google
-          </button>
+              <div className="space-y-2">
+                <label htmlFor="password" className="text-gray-700">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-          {error && <p className="error-message">{error}</p>}
-        </>
-      )}
+              <button
+                type="submit"
+                className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
+              >
+                Login
+              </button>
+            </form>
+
+            <div className="my-4 text-center">
+              <div className="text-gray-500">OR</div>
+            </div>
+
+            <button
+              onClick={handleGoogleLogin}
+              className="w-full py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-200"
+            >
+              Login with Google
+            </button>
+
+            {error && <p className="mt-4 text-red-500 text-center">{error}</p>}
+          </>
+        )}
+      </div>
     </div>
   );
 };

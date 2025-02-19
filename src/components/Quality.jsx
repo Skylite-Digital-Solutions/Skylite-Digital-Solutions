@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Quality.css';
-import '../styles/color.css';
 import { 
   FaBusinessTime, FaCogs, FaMobileAlt, FaCloud, FaDatabase, FaMicrochip, 
   FaChartBar, FaRobot, FaCheckCircle, FaShieldAlt, FaUniversalAccess 
-} from 'react-icons/fa'; // Example icons
+} from 'react-icons/fa';
 
 const Quality = () => {
   const testingStrategies = [
@@ -72,38 +70,41 @@ const Quality = () => {
   ];
 
   return (
-    <div>
-    <div className="quality-page">
-      <div className="testing-strategies">
-        <h1>Latest Testing Strategies</h1>
-        <ul>
-          {testingStrategies.map((strategy, index) => (
-            <li key={index}>{strategy}</li>
-          ))}
-        </ul>
-      </div>
-      {sections.map((section, index) => (
-        <div key={index} className="quality-section">
-          <h2>{section.title}</h2>
-          <p>{section.description}</p>
-          <ul className="quality-list">
-            {section.items.map((item, idx) => (
-              <li key={idx} className="quality-item">
-                <span className="quality-icon">{item.icon}</span>
-                {item.label}
-              </li>
+    <div className="bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="testing-strategies mb-8">
+          <h1 className="text-3xl font-semibold text-center text-blue-600 mb-4">Latest Testing Strategies</h1>
+          <ul className="list-disc list-inside text-lg text-gray-700">
+            {testingStrategies.map((strategy, index) => (
+              <li key={index} className="mb-2">{strategy}</li>
             ))}
           </ul>
         </div>
-      ))}
+
+        {sections.map((section, index) => (
+          <div key={index} className="quality-section mb-12">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">{section.title}</h2>
+            <p className="text-lg text-gray-600 mb-4">{section.description}</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {section.items.map((item, idx) => (
+                <li key={idx} className="flex items-center text-gray-700">
+                  <span className="mr-3 text-blue-600 text-xl">{item.icon}</span>
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <p className="text-center text-lg text-gray-700 mt-8">
+          Partner with us to transform your business and achieve your goals.{' '}
+          <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-semibold">
+            Contact Us
+          </Link>{' '}
+          today for more information!
+        </p>
+      </div>
     </div>
-    <p>
-              Partner with us to transform your business and achieve your goals.{' '}
-              <Link to="/contact-us">Contact Us</Link>
-              {' '}
-              today for more information!
-            </p>
-            </div>
   );
 };
 

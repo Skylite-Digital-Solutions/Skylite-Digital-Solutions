@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Body.css';
 import AboutUs from './AboutUs';
-import Services from './Services'; // Corrected to uppercase for React component
-import '../styles/color.css';
+import Services from './Services';
 import Leadership from './Leadership';
 import OurClient from './OurClients';
 
@@ -50,27 +48,41 @@ const Body = () => {
   };
 
   return (
-    <div className="body-container">
-      <div className="slider-container">
-        <div className="slide">
+    <div className="bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
+      {/* Slider Section */}
+      <div className="relative w-full h-[90vh] overflow-hidden bg-gray-800">
+        <div className="w-full h-full relative">
           <img
             src={images[currentSlide].url}
             alt={`Slide ${currentSlide + 1}`}
-            className="slide-image"
+            className="w-full h-full object-cover opacity-85"
           />
-          <div className="slide-text">
-            <h2>{images[currentSlide].text}</h2>
-            <div className="slider-buttons">
-              <button className="know-more-button" onClick={handleKnowMoreClick}>Know More</button>
-              <button className="schedule-call-button" onClick={handleScheduleCallClick}>Schedule Call</button>
+          <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 text-center bg-black bg-opacity-50 p-6 rounded-lg max-w-[80%] text-white">
+            <h2 className="text-2xl mb-4">{images[currentSlide].text}</h2>
+            <div className="flex justify-center gap-8">
+              <button
+                className="py-2 px-4 bg-yellow-400 text-gray-800 font-semibold rounded-md hover:scale-105 transition-all duration-300"
+                onClick={handleKnowMoreClick}
+              >
+                Know More
+              </button>
+              <button
+                className="py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:scale-105 transition-all duration-300"
+                onClick={handleScheduleCallClick}
+              >
+                Schedule Call
+              </button>
             </div>
           </div>
         </div>
-        <div className="slide-indicators">
+        {/* Slide Indicators */}
+        <div className="absolute bottom-2 w-full flex justify-center">
           {images.map((_, index) => (
             <button
               key={index}
-              className={`indicator-dot ${index === currentSlide ? 'active' : ''}`}
+              className={`w-10 h-1 mx-2 bg-gray-400 cursor-pointer transition-all duration-300 ${
+                index === currentSlide ? 'bg-yellow-500 scale-y-150' : ''
+              }`}
               onClick={() => goToSlide(index)}
             ></button>
           ))}
@@ -78,30 +90,24 @@ const Body = () => {
       </div>
 
       {/* About Us Section */}
-      <section>
+      <section className="my-10 px-5 text-center">
         <AboutUs />
       </section>
 
-      <section>
-        {/* <h2>Our Leader</h2>
-        <p>We proudly serve a diverse range of clients across various industries.</p> */}
+      {/* Leadership Section */}
+      <section className="my-10 px-5 text-center">
         <Leadership />
       </section>
 
-      <section>
-        <Services /> {/* Corrected component usage */}
+      {/* Services Section */}
+      <section className="my-10 px-5 text-center">
+        <Services />
       </section>
 
-      <section>
-        {/* <h2>Our Clients</h2>
-        <p>We collaborate with leading partners to deliver exceptional value to our clients.</p> */}
+      {/* Our Clients Section */}
+      <section className="my-10 px-5 text-center">
         <OurClient />
       </section>
-
-      {/* <section>
-        <h2>And Our Clients Absolutely Love Us!</h2>
-        <p>Don't just take our word for it—hear what our clients have to say about us!</p>
-      </section> */}
     </div>
   );
 };

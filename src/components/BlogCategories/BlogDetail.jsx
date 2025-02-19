@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom"; // Added Link for navigation
-import "../../styles/Blogcategory/BlogDetail.css"; // CSS for Blog Detail
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { getFirestore, doc, getDoc, collection, query, where, getDocs, limit } from "firebase/firestore";
 import { app } from "../../Firebase/firebaseConfig"; // Firebase configuration
 
@@ -82,48 +81,60 @@ const BlogDetail = () => {
   }
 
   if (error) {
-    return <p className="error">{error}</p>;
+    return <p className="text-red-500 text-center text-lg">{error}</p>;
   }
 
   return (
-    <div className="blog-detail-container">
-      <div className="blog-detail">
-        <h2>{blog?.title || "Untitled Blog"}</h2>
-        <div className="blog-body">
+    <div className="max-w-4xl mx-auto p-6">
+      <div className="bg-white border border-gray-300 rounded-lg shadow-lg p-6">
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">{blog?.title || "Untitled Blog"}</h2>
+        <div className="blog-body text-gray-700 text-base leading-relaxed">
           {Array.isArray(blog?.body) ? (
-            blog.body.map((section, index) => <p key={index}>{section}</p>)
+            blog.body.map((section, index) => <p key={index} className="mb-4 text-justify">{section}</p>)
           ) : (
-            <p>{blog?.body || "No content available."}</p>
+            <p className="text-justify">{blog?.body || "No content available."}</p>
           )}
         </div>
-        <Link to={`/category/${blog?.category || ""}`} className="back-to-category">
+        <Link
+          to={`/category/${blog?.category || ""}`}
+          className="inline-block mt-6 py-2 px-6 bg-blue-600 text-white rounded-md transition-all duration-200 hover:bg-blue-700 transform hover:scale-105"
+        >
           Back to {blog?.category || "Category"}
         </Link>
       </div>
-      <div className="blog-categories">
-        <h3>Blog Categories</h3>
-        <ul>
+
+      <div className="bg-gray-100 rounded-lg shadow-lg mt-8 p-6">
+        <h3 className="text-2xl font-semibold text-gray-800 text-center mb-4">Blog Categories</h3>
+        <ul className="space-y-4">
           {categories.length > 0 ? (
             categories.map((category) => (
-              <li key={category.id} className="category-item">
-                <Link to={`/category/${category.name}`}>
+              <li key={category.id} className="space-y-2">
+                <Link
+                  to={`/category/${category.name}`}
+                  className="block text-xl text-blue-600 hover:text-blue-700"
+                >
                   {category.name}
                 </Link>
                 {category.blogs && category.blogs.length > 0 ? (
-                  <ul className="dropdown">
+                  <ul className="ml-4 space-y-2">
                     {category.blogs.map((blog) => (
-                      <li key={blog.id} className="dropdown-item">
-                        <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
+                      <li key={blog.id}>
+                        <Link
+                          to={`/blogs/${blog.id}`}
+                          className="text-gray-600 hover:text-blue-600"
+                        >
+                          {blog.title}
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p>No blogs available in this category.</p>
+                  <p className="text-gray-500">No blogs available in this category.</p>
                 )}
               </li>
             ))
           ) : (
-            <p>No categories available.</p>
+            <p className="text-gray-500">No categories available.</p>
           )}
         </ul>
       </div>

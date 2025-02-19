@@ -22,42 +22,42 @@ import Contacts from './components/Contacts';
 import CyberSecurity from './components/CyberSecurity';
 
 function App() {
-  // Define the handleLoginSuccess function
   const handleLoginSuccess = (user) => {
     console.log('User logged in:', user);
-    // Perform any additional actions upon successful login
   };
 
   return (
-    <div className="App">
+    <div className="App bg-gray-100 min-h-screen flex flex-col">
       <Header />
-      <Routes>
-        {/* Main Routes */}
-        <Route path="/" element={<Body />} />
-        <Route path="about-us" element={<AboutUs />} />
-        <Route path="contact-us" element={<Contacts />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="LoginPage" element={<LoginPage />} />
-        <Route path="login" element={<LoginPage onLoginSuccess={handleLoginSuccess} />} />
+      <main className="flex-grow container mx-auto px-4">
+        <Routes>
+          {/* Main Routes */}
+          <Route path="/" element={<Body />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="contact-us" element={<Contacts />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="LoginPage" element={<LoginPage />} />
+          <Route path="login" element={<LoginPage onLoginSuccess={handleLoginSuccess} />} />
 
-        {/* Services Routes */}
-        <Route path="services" element={<Services />} />
-        <Route path="web-development" element={<SoftwareDev />} />
-        <Route path="quality-assurance" element={<QualityAssurance />} />
-        <Route path="digital-seo" element={<DigitalSEO />} />
-        <Route path='cyber-security' element={<CyberSecurity />} />
+          {/* Services Routes */}
+          <Route path="services" element={<Services />} />
+          <Route path="web-development" element={<SoftwareDev />} />
+          <Route path="quality-assurance" element={<QualityAssurance />} />
+          <Route path="digital-seo" element={<DigitalSEO />} />
+          <Route path="cyber-security" element={<CyberSecurity />} />
 
-        {/* Know More Routes */}
-        <Route path="our-services" element={<Ourservices />} />
-        <Route path="quality" element={<Quality />} />
-        <Route path="success" element={<Success />} />
+          {/* Know More Routes */}
+          <Route path="our-services" element={<Ourservices />} />
+          <Route path="quality" element={<Quality />} />
+          <Route path="success" element={<Success />} />
 
-        {/* Blog Routes */}
-        <Route path="create-blog" element={<CreateBlog />} />
-        <Route path="blogs" element={<BlogList />} />
-        <Route path="blogs/:blogId" element={<BlogDetail />} />
-        <Route path="/category/:category" element={<CategoryPage />} />
-      </Routes>
+          {/* Blog Routes */}
+          <Route path="create-blog" element={<CreateBlog />} />
+          <Route path="blogs" element={<BlogList />} />
+          <Route path="blogs/:blogId" element={<BlogDetail />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
+        </Routes>
+      </main>
       <Footer />
       {/* <Chatbot /> */}
     </div>
