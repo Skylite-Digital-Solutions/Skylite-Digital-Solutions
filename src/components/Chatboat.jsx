@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { getChatbotMessage } from '../Firebase/chatbotService'; // Import the helper function
 import { FaComments } from 'react-icons/fa';
 
@@ -6,6 +6,8 @@ const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [isBotTyping, setIsBotTyping] = useState(false);
+  const messagesEndRef = useRef(null);
 
   useEffect(() => {
     const fetchWelcomeMessage = async () => {
@@ -20,6 +22,11 @@ const Chatbot = () => {
     fetchWelcomeMessage();
   }, []);
 
+  // Auto-scroll to the latest message
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   const sendMessage = async (message) => {
     if (!message) return;
 
@@ -27,10 +34,12 @@ const Chatbot = () => {
     const userMessage = { text: message, sender: "user" };
     setMessages((prev) => [...prev, userMessage]);
 
+    // Simulate bot typing
+    setIsBotTyping(true);
+
     // Get bot's response based on user message
     let botResponse;
 
-    // Handle different responses based on user input
     if (message.toLowerCase() === 'query') {
       botResponse = await getChatbotMessage("query-message"); // Show services options
     } else if (message.toLowerCase() === 'contact us') {
@@ -46,11 +55,13 @@ const Chatbot = () => {
       botResponse = await getChatbotMessage("services-overview");
     }
 
-    if (botResponse) {
-      setMessages((prev) => [...prev, { ...botResponse, sender: "bot" }]);
-    } else {
-      console.log("No response from bot.");
-    }
+    // Simulate bot typing time delay for UX
+    setTimeout(() => {
+      if (botResponse) {
+        setMessages((prev) => [...prev, { ...botResponse, sender: "bot" }]);
+        setIsBotTyping(false);
+      }
+    }, 1500); // Delay to simulate bot thinking/typing
   };
 
   return (
@@ -64,7 +75,7 @@ const Chatbot = () => {
 
       {isOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white w-full max-w-md p-6 rounded-lg shadow-lg">
+          <div className="bg-white w-full max-w-md p-6 rounded-lg shadow-lg transform transition duration-500 scale-100">
             <div className="flex justify-between items-center mb-4">
               <h4 className="text-xl font-semibold text-gray-800">Skylite Assistance</h4>
               <button
@@ -78,7 +89,12 @@ const Chatbot = () => {
             <div className="overflow-y-auto max-h-80 mb-4">
               <div className="space-y-4">
                 {messages.map((msg, index) => (
-                  <div key={index} className={`p-3 rounded-lg ${msg.sender === 'bot' ? 'bg-gray-100' : 'bg-blue-500 text-white'} max-w-xs`}>
+                  <div
+                    key={index}
+                    className={`p-3 rounded-lg ${
+                      msg.sender === 'bot' ? 'bg-gray-100' : 'bg-blue-500 text-white'
+                    } max-w-xs`}
+                  >
                     <p>{msg.text}</p>
                     {msg.sender === 'bot' && msg.options?.length > 0 && (
                       <div className="mt-2 space-x-2">
@@ -95,6 +111,15 @@ const Chatbot = () => {
                     )}
                   </div>
                 ))}
+
+                {/* Bot typing indicator */}
+                {isBotTyping && (
+                  <div className="flex items-center space-x-2 p-3">
+                    <div className="animate-pulse w-3 h-3 rounded-full bg-gray-500" />
+                    <div className="animate-pulse w-3 h-3 rounded-full bg-gray-500" />
+                    <div className="animate-pulse w-3 h-3 rounded-full bg-gray-500" />
+                  </div>
+                )}
               </div>
             </div>
 
