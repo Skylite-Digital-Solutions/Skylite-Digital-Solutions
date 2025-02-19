@@ -9,7 +9,7 @@ const QualityAssurance = () => {
   const navigate = useNavigate();
 
   const handleGetInTouchClick = () => {
-    navigate('/contacts');
+    navigate('/contact-us');
   };
 
   const features = [

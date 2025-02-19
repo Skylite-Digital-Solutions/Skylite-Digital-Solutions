@@ -15,6 +15,7 @@ function Header() {
     { id: 3, name: 'Quality Assurance', url: '/quality-assurance' },
     { id: 4, name: 'Digital Marketing & SEO', url: '/digital-seo' },
     { id: 5, name: 'Cyber Security', url: '/cyber-security' },
+    { id: 6, name: 'Consultancy', url: '/it-consulting' }
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -67,8 +68,8 @@ function Header() {
   };
 
   return (
-    <header className="bg-[#0d98ba] text-white sticky top-0 z-50 shadow-lg border-b border-[#0b86a5] transition-all">
-      <div className="container mx-auto px-4">
+    <header className="relative bg-gradient-to-r from-[#4c6eb1] via-[#2b4c88] to-[#0a2a48] text-white sticky top-0 z-50 shadow-lg border-b border-[#0b86a5] transition-all">
+    <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3">
           {/* Logo Section */}
           <div className="flex items-center gap-3 md:gap-4">

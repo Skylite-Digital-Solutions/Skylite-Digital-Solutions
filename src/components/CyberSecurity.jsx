@@ -5,8 +5,8 @@ import { FaShieldAlt, FaLock, FaDatabase, FaNetworkWired, FaVirus, FaExclamation
 const CyberSecurity = () => {
   const navigate = useNavigate();
 
-  const handleGetInTouch = () => {
-    navigate('/contacts');
+  const handleGetInTouchClick = () => {
+    navigate('/contact-us');
   };
 
   return (
@@ -87,7 +87,7 @@ const CyberSecurity = () => {
 
         {/* Button container for centering */}
         <div className="flex justify-center">
-          <button onClick={handleGetInTouch} className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+          <button onClick={handleGetInTouchClick} className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
             Get in Touch
           </button>
         </div>

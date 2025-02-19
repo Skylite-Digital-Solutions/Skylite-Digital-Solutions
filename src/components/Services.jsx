@@ -5,6 +5,10 @@ import { Shield, Code, BarChart2, Zap, BookOpen } from 'lucide-react';
 const Services = () => {
   const navigate = useNavigate();
 
+  const handleGetInTouchClick = () => {
+    navigate('/contact-us');
+  };
+
   const services = [
     {
       title: "Web Development",
@@ -29,6 +33,12 @@ const Services = () => {
       description: "We provide comprehensive cyber security solutions that protect your digital assets and safeguard your business from potential threats and vulnerabilities.",
       icon: <Shield className="w-10 h-10 text-red-500 mb-4" />,
       path: "/cyber-security",
+    },
+    {
+      title: "Consultancy",
+      description: "Explore our insights and expertise through our blog. From tech trends to practical tips, we share knowledge to help you stay informed and make strategic technology decisions.",
+      icon: <BookOpen className="w-10 h-10 text-amber-500 mb-4" />,
+      path: "/it-consulting",
     },
     {
       title: "Blogs",
@@ -86,10 +96,7 @@ const Services = () => {
         
         <div className="mt-16 text-center">
           <p className="text-gray-500 mb-6">Need a custom solution for your business?</p>
-          <button 
-            onClick={() => navigate('/contact')}
-            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
-          >
+          <button onClick={handleGetInTouchClick} className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
             Get in Touch
           </button>
         </div>

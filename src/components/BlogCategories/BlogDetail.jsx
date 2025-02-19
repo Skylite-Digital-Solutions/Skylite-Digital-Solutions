@@ -2,11 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { getFirestore, doc, getDoc, collection, query, where, getDocs, limit } from "firebase/firestore";
 import { app } from "../../Firebase/firebaseConfig"; // Firebase configuration
+import { 
+  Clock, 
+  User, 
+  Tag, 
+  Share, 
+  Bookmark, 
+  Heart,
+  ChevronDown,
+  ChevronUp 
+} from 'lucide-react';
 
 const BlogDetail = () => {
   const { blogId } = useParams(); // Get the blogId from the URL
   const [blog, setBlog] = useState(null);
   const [categories, setCategories] = useState([]); // Store categories with their blogs
+  const [isLiked, setIsLiked] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -83,63 +96,155 @@ const BlogDetail = () => {
   if (error) {
     return <p className="text-red-500 text-center text-lg">{error}</p>;
   }
-
-  return (
-    <div className="max-w-4xl mx-auto p-6">
-      <div className="bg-white border border-gray-300 rounded-lg shadow-lg p-6">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">{blog?.title || "Untitled Blog"}</h2>
-        <div className="blog-body text-gray-700 text-base leading-relaxed">
-          {Array.isArray(blog?.body) ? (
-            blog.body.map((section, index) => <p key={index} className="mb-4 text-justify">{section}</p>)
-          ) : (
-            <p className="text-justify">{blog?.body || "No content available."}</p>
-          )}
-        </div>
-        <Link
-          to={`/category/${blog?.category || ""}`}
-          className="inline-block mt-6 py-2 px-6 bg-blue-600 text-white rounded-md transition-all duration-200 hover:bg-blue-700 transform hover:scale-105"
-        >
-          Back to {blog?.category || "Category"}
-        </Link>
-      </div>
-
-      <div className="bg-gray-100 rounded-lg shadow-lg mt-8 p-6">
-        <h3 className="text-2xl font-semibold text-gray-800 text-center mb-4">Blog Categories</h3>
-        <ul className="space-y-4">
-          {categories.length > 0 ? (
-            categories.map((category) => (
-              <li key={category.id} className="space-y-2">
-                <Link
-                  to={`/category/${category.name}`}
-                  className="block text-xl text-blue-600 hover:text-blue-700"
+  
+    const toggleCategory = (categoryId) => {
+      setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+    };
+  
+    return (
+      <div className="max-w-4xl mx-auto p-4 md:p-6 space-y-6">
+        {/* Main Blog Content Card */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="p-6">
+            {/* Blog Header */}
+            <div className="space-y-4 mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+                {blog?.title || "Untitled Blog"}
+              </h2>
+              
+              {/* Meta Information */}
+              <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                <div className="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>5 min read</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <User size={16} />
+                  <span>By John Doe</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Tag size={16} />
+                  <Link 
+                    to={`/category/${blog?.category}`} 
+                    className="text-blue-600 hover:underline"
+                  >
+                    {blog?.category || "Uncategorized"}
+                  </Link>
+                </div>
+              </div>
+            </div>
+  
+            {/* Blog Content */}
+            <div className="prose max-w-none text-gray-700">
+              {Array.isArray(blog?.body) ? (
+                blog.body.map((section, index) => (
+                  <p key={index} className="mb-6 leading-relaxed">
+                    {section}
+                  </p>
+                ))
+              ) : (
+                <p className="leading-relaxed">
+                  {blog?.body || "No content available."}
+                </p>
+              )}
+            </div>
+  
+            {/* Interaction Buttons */}
+            <div className="flex justify-between items-center mt-8 pt-6 border-t">
+              <div className="flex gap-4">
+                <button
+                  onClick={() => setIsLiked(!isLiked)}
+                  className={`flex items-center gap-2 p-2 rounded-lg transition-colors
+                    ${isLiked ? 'text-red-500' : 'text-gray-600 hover:text-red-500'}`}
                 >
-                  {category.name}
-                </Link>
-                {category.blogs && category.blogs.length > 0 ? (
-                  <ul className="ml-4 space-y-2">
-                    {category.blogs.map((blog) => (
-                      <li key={blog.id}>
-                        <Link
-                          to={`/blogs/${blog.id}`}
-                          className="text-gray-600 hover:text-blue-600"
-                        >
-                          {blog.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-gray-500">No blogs available in this category.</p>
-                )}
-              </li>
-            ))
-          ) : (
-            <p className="text-gray-500">No categories available.</p>
-          )}
-        </ul>
+                  <Heart size={20} fill={isLiked ? "currentColor" : "none"} />
+                  <span>Like</span>
+                </button>
+                <button
+                  onClick={() => setIsSaved(!isSaved)}
+                  className={`flex items-center gap-2 p-2 rounded-lg transition-colors
+                    ${isSaved ? 'text-blue-500' : 'text-gray-600 hover:text-blue-500'}`}
+                >
+                  <Bookmark size={20} fill={isSaved ? "currentColor" : "none"} />
+                  <span>Save</span>
+                </button>
+                <button 
+                  className="flex items-center gap-2 p-2 text-gray-600 hover:text-blue-500 
+                    rounded-lg transition-colors"
+                >
+                  <Share size={20} />
+                  <span>Share</span>
+                </button>
+              </div>
+  
+              <Link
+                to={`/category/${blog?.category}`}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg transition-all 
+                  hover:bg-blue-700 active:scale-95"
+              >
+                Back to Category
+              </Link>
+            </div>
+          </div>
+        </div>
+  
+        {/* Categories Section */}
+        <div className="bg-white rounded-lg shadow-lg">
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Explore Categories
+            </h3>
+            <div className="space-y-2">
+              {categories.length > 0 ? (
+                categories.map((category) => (
+                  <div key={category.id} className="border rounded-lg">
+                    <button
+                      onClick={() => toggleCategory(category.id)}
+                      className="w-full flex justify-between items-center p-3 hover:bg-gray-50"
+                    >
+                      <span className="font-medium text-gray-700">
+                        {category.name}
+                      </span>
+                      {expandedCategory === category.id ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </button>
+                    
+                    {expandedCategory === category.id && (
+                      <div className="p-3 pt-0">
+                        {category.blogs && category.blogs.length > 0 ? (
+                          <ul className="space-y-2">
+                            {category.blogs.map((blog) => (
+                              <li key={blog.id}>
+                                <Link
+                                  to={`/blogs/${blog.id}`}
+                                  className="block p-2 text-gray-600 hover:text-blue-600 
+                                    hover:bg-gray-50 rounded"
+                                >
+                                  {blog.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-gray-500 italic">
+                            No blogs in this category yet.
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <p className="text-gray-500 italic">No categories available.</p>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default BlogDetail;
+    );
+  };
+  
+  export default BlogDetail;

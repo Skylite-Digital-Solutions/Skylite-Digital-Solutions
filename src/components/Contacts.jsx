@@ -155,7 +155,7 @@ const Contacts = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium
+                  className="w-full py-3 bg-[var(--color-blue-700)] text-white rounded-lg font-medium
                     hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500/50 
                     transition-all duration-300 flex items-center justify-center gap-2"
                 >

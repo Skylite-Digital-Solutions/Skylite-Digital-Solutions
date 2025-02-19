@@ -6,8 +6,8 @@ import { ArrowRight, Eye, Target, Users } from 'lucide-react';
 const AboutUs = () => {
   const navigate = useNavigate();
   
-  const handleLearnMoreClick = () => {
-    navigate('/contacts');
+  const handleGetInTouchClick = () => {
+    navigate('/contact-us');
   };
 
   return (
@@ -44,7 +44,7 @@ const AboutUs = () => {
               </p>
               <button 
                 className="inline-flex items-center bg-blue-600 text-white font-medium py-2 px-5 rounded-lg hover:bg-blue-700 transition-all duration-200 group" 
-                onClick={handleLearnMoreClick}
+                onClick={handleGetInTouchClick}
               >
                 Get In Touch
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -128,15 +128,6 @@ const AboutUs = () => {
       {/* Contact Us Section */}
       <section className="w-full bg-white py-12 rounded-xl shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4 relative inline-block">
-              Get In Touch
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></div>
-            </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto mt-4">
-              Have questions or ready to start your project? We're here to help.
-            </p>
-          </div>
           <Contacts />
         </div>
       </section>

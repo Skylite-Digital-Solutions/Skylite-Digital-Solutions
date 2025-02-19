@@ -20,6 +20,7 @@ import CategoryPage from './components/BlogCategories/CategoryPage';
 import BlogList from './components/BlogCategories/BlogList';
 import Contacts from './components/Contacts';
 import CyberSecurity from './components/CyberSecurity';
+import ItConsultancy from './components/ItConsultancy';
 
 function App() {
   const handleLoginSuccess = (user) => {
@@ -45,6 +46,7 @@ function App() {
           <Route path="quality-assurance" element={<QualityAssurance />} />
           <Route path="digital-seo" element={<DigitalSEO />} />
           <Route path="cyber-security" element={<CyberSecurity />} />
+          <Route path="it-consulting" element={<ItConsultancy />} />
 
           {/* Know More Routes */}
           <Route path="our-services" element={<Ourservices />} />

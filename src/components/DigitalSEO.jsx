@@ -1,94 +1,147 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaPenNib, FaShareAlt, FaChartBar, FaSearch, FaLink, FaCogs } from 'react-icons/fa'; // Importing icons
+import { 
+  FaPenNib, 
+  FaShareAlt, 
+  FaChartBar, 
+  FaSearch, 
+  FaLink, 
+  FaCogs,
+  FaArrowRight,
+  FaCheckCircle
+} from 'react-icons/fa';
 
 const DigitalSEO = () => {
   const navigate = useNavigate();
+  const [hoveredService, setHoveredService] = useState(null);
 
   const handleGetInTouch = () => {
     navigate('/contact-us');
   };
 
+  const ServiceCard = ({ icon: Icon, title, description, index }) => (
+    <div
+      className="relative bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+      onMouseEnter={() => setHoveredService(index)}
+      onMouseLeave={() => setHoveredService(null)}
+    >
+      <div className="flex items-start gap-4">
+        <div className="flex-shrink-0">
+          <Icon className={`text-4xl ${hoveredService === index ? 'text-blue-600' : 'text-blue-500'} transition-colors duration-300`} />
+        </div>
+        <div className="space-y-2">
+          <h4 className="text-xl font-bold text-gray-800">{title}</h4>
+          <p className="text-gray-600 leading-relaxed">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="bg-gray-50 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-semibold text-center text-blue-600 mb-6">Our Services for Digital Marketing and SEO</h2>
-        <p className="text-lg text-gray-700 mb-8">
-          At <strong>Skylite Digital Solutions</strong>, we specialize in empowering businesses to thrive in the digital landscape through our comprehensive Digital Marketing and SEO services. Our approach is designed to enhance your online presence, drive targeted traffic, and ultimately boost conversions. We leverage powerful tools like Google Analytics, SEMrush, Moz, and Ahrefs to analyze performance, optimize strategies, and ensure your brand stands out in a crowded marketplace.
-        </p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Hero Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
+            Digital Marketing & SEO Services
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Empower your business with <span className="text-blue-600 font-semibold">Skylite Digital Solutions</span>. 
+            We drive growth through strategic digital marketing and advanced SEO techniques.
+          </p>
+        </div>
+      </div>
 
-        {/* Digital Marketing section */}
-        <ul className="space-y-6 mb-10">
-          <h3 className="text-2xl font-semibold text-center text-blue-600 mb-4">Key Features and Expertise in Digital Marketing</h3>
-          <li className="flex items-start space-x-4">
-            <FaPenNib className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Content Marketing</strong>
-              <p className="text-gray-600">
-                We create engaging, high-quality content that resonates with your audience and establishes your brand as an authority in your industry. Our content marketing strategies focus on storytelling and value-driven approaches to enhance user engagement and drive conversions.
-              </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {[
+            { label: 'Successful Projects', value: '500+' },
+            { label: 'Client Satisfaction', value: '98%' },
+            { label: 'ROI Increase', value: '150%' }
+          ].map((stat, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+              <div className="text-gray-600">{stat.label}</div>
             </div>
-          </li>
-          <li className="flex items-start space-x-4">
-            <FaShareAlt className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Social Media Marketing</strong>
-              <p className="text-gray-600">
-                Harnessing the power of social media platforms, we develop tailored campaigns that foster community engagement and brand loyalty. We utilize tools like Hootsuite and Buffer for effective social media management, ensuring consistent brand messaging across all channels.
-              </p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-            <FaChartBar className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Analytics and Reporting</strong>
-              <p className="text-gray-600">
-                We believe in data-driven decision-making. Our team uses advanced analytics tools to track performance metrics, analyze user behavior, and provide actionable insights to continuously refine your marketing strategies for optimal results.
-              </p>
-            </div>
-          </li>
-        </ul>
+          ))}
+        </div>
 
-        {/* SEO section */}
-        <ul className="space-y-6">
-          <h3 className="text-2xl font-semibold text-center text-blue-600 mb-4">Expertise in Search Engine Optimization</h3>
-          <li className="flex items-start space-x-4">
-            <FaSearch className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Search Engine Optimization (SEO)</strong>
-              <p className="text-gray-600">
-                Our expert team conducts thorough keyword research, on-page optimization, and backlink strategies to elevate your site’s rankings. We focus on optimizing content and website structure to ensure search engines recognize your site as a valuable resource.
-              </p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-            <FaLink className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Link Building</strong>
-              <p className="text-gray-600">
-                Our link-building strategies focus on acquiring high-quality backlinks from reputable sources, enhancing your website’s authority and improving its search rankings. We employ ethical practices to ensure sustainable results.
-              </p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-            <FaCogs className="text-4xl text-blue-500" />
-            <div>
-              <strong className="text-xl text-gray-800">Technical and Local SEO</strong>
-              <p className="text-gray-600">
-                We perform comprehensive technical audits to ensure your website is search engine friendly, optimizing site speed, improving mobile responsiveness, and ensuring proper indexing for a seamless user experience. Additionally, for businesses targeting local customers, our local SEO strategies enhance visibility in local search results by optimizing your Google My Business profile and implementing local keywords to effectively attract nearby customers.
-              </p>
-            </div>
-          </li>
-        </ul>
+        {/* Digital Marketing Services */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            Digital Marketing Excellence
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+            Transform your online presence with our comprehensive digital marketing solutions
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ServiceCard
+              icon={FaPenNib}
+              title="Content Marketing"
+              description="Create engaging, value-driven content that establishes your brand as an industry authority."
+              index={0}
+            />
+            <ServiceCard
+              icon={FaShareAlt}
+              title="Social Media Marketing"
+              description="Build strong community engagement and brand loyalty across social platforms."
+              index={1}
+            />
+            <ServiceCard
+              icon={FaChartBar}
+              title="Analytics & Reporting"
+              description="Make data-driven decisions with advanced analytics and actionable insights."
+              index={2}
+            />
+          </div>
+        </section>
 
-        <p className="text-lg text-gray-700 mb-10">
-          Partner with us to boost your digital marketing and SEO initiatives, enabling your business to flourish in an ever-changing online world. Together, we can enhance your online presence and drive meaningful results.
-        </p>
+        {/* SEO Services */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            SEO Strategies
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+            Boost your search engine rankings with our proven SEO techniques
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ServiceCard
+              icon={FaSearch}
+              title="Search Engine Optimization"
+              description="Elevate your site's rankings through thorough keyword research and optimization."
+              index={3}
+            />
+            <ServiceCard
+              icon={FaLink}
+              title="Link Building"
+              description="Acquire high-quality backlinks to enhance your website's authority."
+              index={4}
+            />
+            <ServiceCard
+              icon={FaCogs}
+              title="Technical & Local SEO"
+              description="Optimize your site's technical aspects and local presence for maximum visibility."
+              index={5}
+            />
+          </div>
+        </section>
 
-        {/* Button container for centering */}
-        <div className="flex justify-center">
-          <button onClick={handleGetInTouch} className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-            Get in Touch
+        {/* CTA Section */}
+        <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready to Grow Your Digital Presence?
+          </h3>
+          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Partner with us to transform your digital marketing and SEO initiatives.
+            Let's create meaningful results together.
+          </p>
+          <button
+            onClick={handleGetInTouch}
+            className="inline-flex items-center gap-2 bg-white text-blue-600 py-3 px-8 rounded-lg font-semibold shadow-lg hover:bg-blue-50 transition-all duration-300 group"
+          >
+            Get Started Today
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>
