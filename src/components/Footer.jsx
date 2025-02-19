@@ -66,7 +66,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-r from-[#4c6eb1] via-[#2b4c88] to-[#0a2a48] text-white sticky top-0 z-50 shadow-lg border-b border-[#0b86a5] transition-all">s
+    <footer className="relative bg-gradient-to-r from-[#4c6eb1] via-[#2b4c88] to-[#0a2a48] text-white sticky top-0 z-50 shadow-lg border-b border-[#0b86a5] transition-all">
       <div className="w-full overflow-hidden relative h-20">
         <svg 
           className={`w-full h-full fill-current text-white/10 transition-all duration-1000 ${animateWave ? 'opacity-100' : 'opacity-40'}`}
