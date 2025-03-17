@@ -185,7 +185,7 @@ const SoftwareDev = () => {
             onClick={handleGetInTouch}
             className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition duration-200 shadow-lg"
           >
-            Get in Touch
+            Schedule Consultation
           </button>
         </div>
       </div>

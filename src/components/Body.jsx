@@ -9,24 +9,23 @@ import OurClient from './OurClients';
   // Add this at the top of your component
   const slides = [
     {
-      title: "Main Slide",
+      title: "Why H-Tech",
       tag: "Welcome",
       text: "Transforming Businesses with Innovative Solutions",
       subtext: "We provide cutting-edge services tailored to meet your unique business needs and drive growth.",
       gradient: "linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)",
       decorative: "default",
-      route: '/all-services'
+      route: '/success'
     },
-    // {
-    //   // url: 'placeholder.png',
-    //   text: 'Quality Assurance Guaranteed',
-    //   route: '/quality',
-    // },
-    // {
-    //   // url: 'placeholder.png',
-    //   text: 'Your Success is Our Priority',
-    //   route: '/success',
-    // },
+    {
+      title: "Quality Assurance Guaranteed",
+      tag: "Quality First",
+      text: "Quality Assurance Guaranteed",
+      subtext: "We ensure the highest quality standards in every project we undertake, delivering exceptional results that exceed expectations.",
+      gradient: "linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%)",
+      decorative: "default",
+      route: '/quality'
+    },
     {
       title: "Our Services",
       tag: "Services",
@@ -34,7 +33,7 @@ import OurClient from './OurClients';
       subtext: "From strategy to execution, we offer end-to-end solutions designed to help your business thrive in today's competitive landscape.",
       gradient: "linear-gradient(135deg, #0EA5E9 0%, #3B82F6 50%, #1E40AF 100%)",
       decorative: "default",
-      route: '/our-services'
+      route: '/services'
     },
     {
       title: "Cyber Security",
@@ -42,7 +41,8 @@ import OurClient from './OurClients';
       text: "Enterprise-Grade Cyber Security Solutions",
       subtext: "Protect your business with our advanced threat detection, prevention, and response capabilities tailored to your industry.",
       gradient: "linear-gradient(135deg, #18181B 0%, #3B0764 50%, #581C87 100%)",
-      decorative: "cyber"
+      decorative: "cyber",
+      route: '/cyber-security'
     },
     {
       title: "Digital Marketing & SEO",
@@ -50,7 +50,8 @@ import OurClient from './OurClients';
       text: "Strategic Digital Marketing & SEO",
       subtext: "Drive traffic, increase conversions, and establish your online presence with data-driven marketing strategies and SEO optimization.",
       gradient: "linear-gradient(135deg, #F97316 0%, #EA580C 50%, #7C2D12 100%)",
-      decorative: "marketing"
+      decorative: "marketing",
+      route: '/digital-seo'
     }
   ];
 
@@ -75,47 +76,6 @@ const Body = () => {
   //   navigate('/contact-us');
   // };
 
-  // const handleKnowMoreClick = () => {
-  //   navigate(images[currentSlide].route);
-  // };
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     handleNextSlide();
-  //   }, 5000);
-
-  //   return () => clearInterval(timer);
-  // }, [currentSlide]);
-
-  // const handleNextSlide = () => {
-  //   if (isAnimating) return;
-  //   setSlideDirection('right');
-  //   setIsAnimating(true);
-  //   setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  //   setTimeout(() => setIsAnimating(false), 500);
-  // };
-
-  // const handlePrevSlide = () => {
-  //   if (isAnimating) return;
-  //   setSlideDirection('left');
-  //   setIsAnimating(true);
-  //   setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  //   setTimeout(() => setIsAnimating(false), 500);
-  // };
-
-  // const goToSlide = (index) => {
-  //   if (isAnimating || index === currentSlide) return;
-  //   setSlideDirection(index > currentSlide ? 'right' : 'left');
-  //   setIsAnimating(true);
-  //   setCurrentSlide(index);
-  //   setTimeout(() => setIsAnimating(false), 500);
-  // };
-
-
-// // Add these functions for slider functionality
-// const [currentSlide, setCurrentSlide] = useState(0);
-// const [slideDirection, setSlideDirection] = useState('right');
-// const totalSlides = slides.length;
 
 const handleNextSlide = () => {
   setSlideDirection('right');
@@ -132,17 +92,35 @@ const goToSlide = (index) => {
   setCurrentSlide(index);
 };
 
-// User action handlers
 const handleKnowMoreClick = () => {
-  // Scroll to relevant section based on current slide
-  const sections = ['about-us', 'services', 'cyber-security', 'digital-marketing'];
-  const elementId = sections[currentSlide] || navigate('/contact-us');
-  document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' });
+  const sectionIds = ["about-us", "services", "cyber-security", "digital-seo"];
+  const elementId = sectionIds[currentSlide];
+
+  if (elementId) {
+    const sectionElement = document.getElementById(elementId);
+
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to the respective page if the section isn't in the DOM
+      const routes = {
+        "about-us": "/about-us",
+        "services": "/services",
+        "cyber-security": "/cyber-security",
+        "digital-seo": "/digital-marketing-seo"
+      };
+
+      if (routes[elementId]) {
+        navigate(routes[elementId]);
+      }
+    }
+  }
 };
 
+// Implement your scheduling functionality here
 const handleScheduleCallClick = () => {
-  // Implement your scheduling functionality here
-  console.log(`Schedule consultation for: ${slides[currentSlide].title}`);
+  navigate("/contact-us");
+  // console.log(`Schedule consultation for: ${slides[currentSlide].title}`);
 };
 
 // Add a useEffect for auto-sliding (optional)
@@ -240,6 +218,7 @@ useEffect(() => {
                         Schedule Consultation
                         <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                       </button>
+
                     </div>
                   </div>
                 </div>

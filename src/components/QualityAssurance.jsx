@@ -63,13 +63,6 @@ const QualityAssurance = () => {
             delivering a seamless experience for end-users. Our team utilizes industry-leading tools and 
             technologies to conduct rigorous testing for web, mobile, and API interfaces.
           </p>
-          {/* <button 
-                className="inline-flex items-center bg-blue-600 text-white font-medium py-2 px-5 rounded-lg hover:bg-blue-700 transition-all duration-200 group" 
-                onClick={handleGetInTouchClick}
-              >
-                Get In Touch
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-              </button> */}
         </div>
 
         {/* Features Grid */}
@@ -96,18 +89,22 @@ const QualityAssurance = () => {
           ))}
         </div>
 
-        {/* Contact Us Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4 relative inline-block">
-              Get In Touch
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-600 rounded-full"></div>
-            </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto mt-4">
-              Have questions or ready to start your project? We're here to help.
-            </p>
-          </div>
-          <Contacts />
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white">
+          <h3 className="text-2xl font-bold mb-6">
+            Ready to Build Your Next Digital Solution?
+          </h3>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">
+            With our extensive experience, dedication to quality, and cutting-edge technology stack, 
+            we bring your digital vision to life. Let us help you create an online presence that drives 
+            engagement, supports growth, and elevates your business.
+          </p>
+          <button
+            onClick={handleGetInTouchClick}
+            className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition duration-200 shadow-lg"
+          >
+            Schedule Consultation
+          </button>
         </div>
       </div>
     </div>

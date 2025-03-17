@@ -194,18 +194,21 @@ const OurClient = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Become a Partner</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-8">
-            Join our partner ecosystem and discover new opportunities for growth and innovation.
-          </p>
+     {/* CTA Section */}
+    <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-bold mb-6">Become a Partner</h2>
+        <p className="text-xl max-w-3xl mx-auto mb-8">
+          Join our partner ecosystem and discover new opportunities for growth and innovation.
+        </p>
+        <a href="/partnership">
           <button className="px-8 py-4 bg-white text-blue-700 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-1">
             Apply for Partnership
           </button>
-        </div>
-      </section>
+        </a>
+      </div>
+    </section>
+
 
       {/* CSS Animation */}
       <style jsx>{`

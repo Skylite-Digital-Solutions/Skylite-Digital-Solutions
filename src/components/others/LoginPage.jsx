@@ -6,7 +6,7 @@ import {
   signInWithRedirect,
   getRedirectResult,
   signInWithEmailAndPassword,
-} from "../Firebase/firebaseConfig";
+} from "../../Firebase/firebaseConfig";
 
 const LoginPage = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState("");

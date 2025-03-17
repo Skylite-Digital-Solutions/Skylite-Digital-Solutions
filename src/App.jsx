@@ -12,15 +12,17 @@ import Services from './components/Services';
 import Ourservices from './components/Ourservices';
 import Quality from './components/Quality';
 import Success from './components/Success';
-import Chatbot from './components/Chatboat';
+import Chatbot from './components/others/Chatboat';
 import CreateBlog from './components/BlogCategories/CreateBlog';
-import LoginPage from './components/LoginPage';
 import BlogDetail from './components/BlogCategories/BlogDetail';
 import CategoryPage from './components/BlogCategories/CategoryPage';
 import BlogList from './components/BlogCategories/BlogList';
 import Contacts from './components/Contacts';
 import CyberSecurity from './components/CyberSecurity';
 import ItConsultancy from './components/ItConsultancy';
+import Partnership from './components/subcomponents/Partnership';
+import ApplyPartnership from './components/subcomponents/ApplyPartnership';
+import LoginPage from './components/others/LoginPage';
 
 function App() {
   const handleLoginSuccess = (user) => {
@@ -59,6 +61,10 @@ function App() {
           <Route path="blogs" element={<BlogList />} />
           <Route path="blogs/:blogId" element={<BlogDetail />} />
           <Route path="/category/:category" element={<CategoryPage />} />
+
+          {/* Partnership Routes */}
+          <Route path="/partnership" element={<Partnership />} />
+          <Route path="/apply-partnership" element={<ApplyPartnership />} />
         </Routes>
       </main>
       <Footer />

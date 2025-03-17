@@ -97,7 +97,7 @@ const Services = () => {
         <div className="mt-16 text-center">
           <p className="text-gray-500 mb-6">Need a custom solution for your business?</p>
           <button onClick={handleGetInTouchClick} className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-            Get in Touch
+          Schedule Consultation
           </button>
         </div>
       </div>
