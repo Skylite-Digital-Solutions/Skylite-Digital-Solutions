@@ -77,7 +77,7 @@ function Header() {
               <img src="/logo.svg" alt="Company Logo" className="h-8 md:h-10 object-contain transition-transform hover:scale-105" />
             </Link>
             <div className="text-white">
-              <h3 className="text-lg md:text-xl font-bold">Tudip Digital</h3>
+              <h3 className="text-lg md:text-xl font-bold">Skylite Digital Solution</h3>
               <h5 className="italic text-xs md:text-sm hidden sm:block">INSPIRED BY YOU, CRAFTING BY US</h5>
             </div>
           </div>

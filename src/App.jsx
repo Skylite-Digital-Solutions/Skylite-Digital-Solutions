@@ -54,7 +54,6 @@ function App() {
           <Route path="our-services" element={<Ourservices />} />
           <Route path="quality" element={<Quality />} />
           <Route path="success" element={<Success />} />
-          <Route path='chatbot' element={<Chatbot />} />
 
           {/* Blog Routes */}
           <Route path="create-blog" element={<CreateBlog />} />
