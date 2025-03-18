@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider, getRedirectResult, signOut, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, setPersistence, browserSessionPersistence, browserLocalPersistence } from "firebase/auth";
 import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
 // import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
@@ -56,4 +56,4 @@ const sendMessageToFirestore = async (chatId, message) => {
 };
 
 // Exports for use in other components
-export { auth, provider, signInWithRedirect, signInWithEmailAndPassword, getRedirectResult, signOut, app, db, storage, handleGoogleLogin, listenForChatMessages, sendMessageToFirestore };
+export { auth, provider, signInWithRedirect, signInWithPopup, signInWithEmailAndPassword, getRedirectResult, sendPasswordResetEmail, onAuthStateChanged, setPersistence, browserSessionPersistence, browserLocalPersistence, signOut, app, db, storage, handleGoogleLogin, listenForChatMessages, sendMessageToFirestore };

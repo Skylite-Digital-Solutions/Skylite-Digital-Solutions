@@ -12,7 +12,6 @@ import Services from './components/Services';
 import Ourservices from './components/Ourservices';
 import Quality from './components/Quality';
 import Success from './components/Success';
-import Chatbot from './components/others/Chatboat';
 import CreateBlog from './components/BlogCategories/CreateBlog';
 import BlogDetail from './components/BlogCategories/BlogDetail';
 import CategoryPage from './components/BlogCategories/CategoryPage';
@@ -22,7 +21,8 @@ import CyberSecurity from './components/CyberSecurity';
 import ItConsultancy from './components/ItConsultancy';
 import Partnership from './components/subcomponents/Partnership';
 import ApplyPartnership from './components/subcomponents/ApplyPartnership';
-import LoginPage from './components/others/LoginPage';
+import LoginPage from './components/Authentication/LoginPage';
+import Chatbot from './components/ChatBoat/Chatboat';
 
 function App() {
   const handleLoginSuccess = (user) => {
