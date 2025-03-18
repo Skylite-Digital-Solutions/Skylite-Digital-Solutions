@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "skydigital-solutions",
+    "prod": "skylite-digital-solution-e3b6a"
+  },
+  "targets": {},
+  "etags": {}
+}
