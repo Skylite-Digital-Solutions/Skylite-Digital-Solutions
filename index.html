@@ -2,12 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Important for mobile devices -->
+    <meta name="google-site-verification" content="google855615b3873711c3.html" />
     <title>Skylite Digital Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDZT82842F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BDZT82842F'); // Replace with your GA4 measurement ID
+    </script>
   </head>
   <body>
+    <!-- React App Root -->
     <div id="root"></div>
+    
+    <!-- React App JavaScript -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
